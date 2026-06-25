@@ -2,6 +2,50 @@
   "version": "2.0",
   "resources": [
     {
+      "resource": "EventTrigger",
+      "key": "18a2716c-7b8c-4484-ac0d-fef63b5d1c32_Event_start",
+      "id": "EventTrigger18a2716c-7b8c-4484-ac0d-fef63b5d1c32_Event_start",
+      "value": {
+        "ConnectionId": {
+          "defaultValue": "18a2716c-7b8c-4484-ac0d-fef63b5d1c32",
+          "isExpression": false
+        },
+        "EntryPointUniqueId": {
+          "defaultValue": "01bc0daf-446b-44ee-b446-62a1b659e1e5",
+          "isExpression": false
+        }
+      },
+      "metadata": {
+        "UseConnectionService": "true",
+        "Connector": "uipath-microsoft-github",
+        "ActivityName": "Start event",
+        "BindingsVersion": "2.2",
+        "ObjectName": "issues_in_repo",
+        "Operation": "ISSUE_CREATED_IN_REPO",
+        "FilterExpression": "((contains(`[\"open\"]`, state)))"
+      }
+    },
+    {
+      "resource": "Property",
+      "key": "ISSUE_CREATED_IN_REPO_EventTrigger.18a2716c-7b8c-4484-ac0d-fef63b5d1c32_Event_start",
+      "value": {
+        "repo": {
+          "defaultValue": "https://github.com/agenthack-2026-qbotica/servicenow-test-automation-demo",
+          "isExpression": false
+        }
+      },
+      "activityDisplayName": "Connector",
+      "metadata": {
+        "ActivityName": "Start event",
+        "BindingsVersion": "2.2",
+        "ObjectName": "issues_in_repo",
+        "ParentResourceKey": "EventTrigger.18a2716c-7b8c-4484-ac0d-fef63b5d1c32_Event_start",
+        "TriggerCreateParameters": "repo",
+        "DebugQueryParameters": "repo"
+      },
+      "id": "Property_Event_start"
+    },
+    {
       "resource": "Connection",
       "key": "18a2716c-7b8c-4484-ac0d-fef63b5d1c32",
       "id": "Connection18a2716c-7b8c-4484-ac0d-fef63b5d1c32",
@@ -13,7 +57,7 @@
         }
       },
       "metadata": {
-        "ActivityName": "Get Requirement/Issue by Number",
+        "ActivityName": "Start event",
         "BindingsVersion": "2.2",
         "DisplayLabel": "uipath-microsoft-github connection",
         "UseConnectionService": "true",
@@ -33,6 +77,25 @@
       },
       "metadata": {
         "ActivityName": "ServiceNow Requirement Analysis Agent",
+        "BindingsVersion": "2.2",
+        "DisplayLabel": "name",
+        "SolutionsSupport": "true",
+        "subType": "Agent"
+      }
+    },
+    {
+      "resource": "process",
+      "key": "Risk Analysis Agent",
+      "id": "processRisk Analysis Agent",
+      "value": {
+        "name": {
+          "defaultValue": "Risk Analysis Agent",
+          "isExpression": false,
+          "displayName": "Process name"
+        }
+      },
+      "metadata": {
+        "ActivityName": "Risk Analysis Agent",
         "BindingsVersion": "2.2",
         "DisplayLabel": "name",
         "SolutionsSupport": "true",

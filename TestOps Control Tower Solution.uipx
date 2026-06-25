@@ -1,13 +1,18 @@
 {
-  "DocVersion": "1.0.0",
-  "StudioMinVersion": "2025.04.0",
   "SolutionId": "c350ed65-8deb-4f02-d9ce-08decd144e2e",
   "Projects": [
     {
+      "Id": "fccd27b2-72f9-440d-a315-472e49d60b01",
       "Type": "ProcessOrchestration",
-      "ProjectRelativePath": "Maestro BPMN/project.uiproj",
-      "Id": "fccd27b2-72f9-440d-a315-472e49d60b01"
+      "ProjectRelativePath": "Maestro BPMN/project.uiproj"
+    },
+    {
+      "Id": "492555a2-1226-477a-a05b-efc14712d33c",
+      "Type": "Agent",
+      "ProjectRelativePath": "Risk Analysis Agent/project.uiproj"
     }
   ],
+  "DocVersion": "1.0.0",
+  "StudioMinVersion": "2025.04.0",
   "AutomationHubIdeaUrl": null
 }
