@@ -1,0 +1,29 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "Http Connection #1",
+    "kind": "connection",
+    "type": "uipath-uipath-http",
+    "apiVersion": "integrationservice.uipath.com/v1",
+    "isOverridable": true,
+    "dependencies": [],
+    "runtimeDependencies": [],
+    "files": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "connectorName": "HTTP",
+      "name": "Http Connection #1",
+      "description": null,
+      "authenticationType": "AuthenticateAfterDeployment",
+      "connectorVersion": "1.4.44",
+      "connectorKey": "uipath-uipath-http",
+      "pollingInterval": 5
+    },
+    "locks": [],
+    "key": "ab37186c-4b0b-4e1f-8f6d-a725cc6a2fb9"
+  }
+}

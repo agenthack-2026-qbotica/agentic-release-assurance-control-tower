@@ -1,0 +1,6 @@
+{
+  "Name": "Select and Execute Testset",
+  "MainFile": "Main.xaml",
+  "ProjectType": "Process",
+  "Description": null
+}

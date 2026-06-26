@@ -66,11 +66,11 @@
     },
     {
       "resource": "process",
-      "key": "ServiceNow.Requirement.Analysis.Agent.agent.Agent",
-      "id": "processServiceNow.Requirement.Analysis.Agent.agent.Agent",
+      "key": "ServiceNow Requirement Analysis Agent",
+      "id": "processServiceNow Requirement Analysis Agent",
       "value": {
         "name": {
-          "defaultValue": "ServiceNow.Requirement.Analysis.Agent.agent.Agent",
+          "defaultValue": "ServiceNow Requirement Analysis Agent",
           "isExpression": false,
           "displayName": "Process name"
         }
@@ -85,8 +85,8 @@
     },
     {
       "resource": "process",
-      "key": "Risk Analysis Agent",
-      "id": "processRisk Analysis Agent",
+      "key": "Risk Analysis ServiceNow Requirement Analysis Agent",
+      "id": "processRisk Analysis ServiceNow Requirement Analysis Agent",
       "value": {
         "name": {
           "defaultValue": "Risk Analysis Agent",

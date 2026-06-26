@@ -10,6 +10,21 @@
       "Id": "492555a2-1226-477a-a05b-efc14712d33c",
       "Type": "Agent",
       "ProjectRelativePath": "Risk Analysis Agent/project.uiproj"
+    },
+    {
+      "Id": "0e3089fc-12c0-401c-a0c4-25945f1022af",
+      "Type": "Api",
+      "ProjectRelativePath": "Test Set Execution APIs/project.uiproj"
+    },
+    {
+      "Id": "d8e9d627-f3fe-4d80-9ec9-e9d899e958c6",
+      "Type": "Agent",
+      "ProjectRelativePath": "ServiceNow Requirement Analysis Agent/project.uiproj"
+    },
+    {
+      "Id": "fc4b1a8e-5761-4f70-bf79-cdf5f53ba691",
+      "Type": "Process",
+      "ProjectRelativePath": "Select and Execute Testset/project.uiproj"
     }
   ],
   "DocVersion": "1.0.0",
