@@ -1,15 +1,15 @@
 {
   "docVersion": "1.0.0",
   "resource": {
-    "name": "Maestro BPMN",
+    "name": "Select and Execute Testset",
     "kind": "process",
-    "type": "processOrchestration",
+    "type": "process",
     "apiVersion": "orchestrator.uipath.com/v1",
-    "projectKey": "fccd27b2-72f9-440d-a315-472e49d60b01",
+    "projectKey": "fc4b1a8e-5761-4f70-bf79-cdf5f53ba691",
     "isOverridable": true,
     "dependencies": [
       {
-        "name": "Maestro BPMN",
+        "name": "Select and Execute Testset",
         "kind": "package"
       }
     ],
@@ -26,20 +26,26 @@
       "outputArgumentsSchema": null,
       "inputArgumentsSchemaV2": null,
       "outputArgumentsSchemaV2": null,
-      "type": "ProcessOrchestration",
-      "name": "Maestro BPMN",
+      "type": "Process",
+      "name": "Select and Execute Testset",
       "description": null,
       "package": {
-        "key": "bf76982d-d673-4fb5-aafc-e0a43851ba24"
+        "key": "ab6ce171-7180-4d57-866b-2fe52de55d7b"
       },
-      "packageName": "TestOps.Control.Tower.Solution.agentic.Maestro.BPMN",
+      "packageName": "TestOps.Control.Tower.Solution.process.Select.and.Execute.Testset",
       "packageVersion": null,
       "entryPointName": null,
       "inputArguments": null,
+      "jobPriority": "Medium",
       "hiddenForAttendedUser": false,
       "alwaysRunning": false,
       "autoStartProcess": false,
+      "jobRecording": "Disabled",
       "targetFrameworkValue": "Portable",
+      "duration": 40,
+      "frequency": 500,
+      "quality": 100,
+      "remoteControlAccess": "None",
       "retentionAction": "Delete",
       "retentionPeriod": 30,
       "retentionBucketRef": null,
@@ -51,6 +57,6 @@
       "tags": []
     },
     "locks": [],
-    "key": "4a610f19-114e-44f9-b55f-dbc2044341e9"
+    "key": "be34e507-e631-4093-936d-d8f59a40752e"
   }
 }

@@ -1,15 +1,15 @@
 {
   "docVersion": "1.0.0",
   "resource": {
-    "name": "RPA Workflow 1",
+    "name": "Go - No-Go Decision Agent",
     "kind": "process",
-    "type": "process",
+    "type": "agent",
     "apiVersion": "orchestrator.uipath.com/v1",
-    "projectKey": "fc4b1a8e-5761-4f70-bf79-cdf5f53ba691",
+    "projectKey": "4949c9bd-ada2-4388-88fd-08dfd77ce3f2",
     "isOverridable": true,
     "dependencies": [
       {
-        "name": "RPA Workflow 1",
+        "name": "Go - No-Go Decision Agent",
         "kind": "package"
       }
     ],
@@ -21,31 +21,29 @@
       }
     ],
     "spec": {
+      "targetRuntime": null,
+      "referencedAssets": null,
       "entryPointUniqueId": null,
       "inputArgumentsSchema": null,
       "outputArgumentsSchema": null,
       "inputArgumentsSchemaV2": null,
       "outputArgumentsSchemaV2": null,
-      "type": "Process",
-      "name": "RPA Workflow 1",
+      "type": "Agent",
+      "name": "Go - No-Go Decision Agent",
       "description": null,
       "package": {
-        "key": "5e741960-6adf-48e3-9ed2-332950af77b1"
+        "key": "2fc1571f-e947-4cde-bfcc-2d2d21433f91"
       },
-      "packageName": "TestOps.Control.Tower.Solution.process.RPA.Workflow.1",
+      "packageName": "TestOps.Control.Tower.Solution.agent.Go.No-Go.Decision.Agent",
       "packageVersion": null,
       "entryPointName": null,
       "inputArguments": null,
-      "jobPriority": "Medium",
       "hiddenForAttendedUser": false,
       "alwaysRunning": false,
       "autoStartProcess": false,
-      "jobRecording": "Disabled",
       "targetFrameworkValue": "Portable",
-      "duration": 40,
-      "frequency": 500,
-      "quality": 100,
-      "remoteControlAccess": "None",
+      "agentMemory": false,
+      "environmentVariables": null,
       "retentionAction": "Delete",
       "retentionPeriod": 30,
       "retentionBucketRef": null,
@@ -57,6 +55,6 @@
       "tags": []
     },
     "locks": [],
-    "key": "493ed13d-6095-4f10-9772-1a7a73a8c5f7"
+    "key": "8db9195d-28cb-443b-b952-e9a899256c02"
   }
 }

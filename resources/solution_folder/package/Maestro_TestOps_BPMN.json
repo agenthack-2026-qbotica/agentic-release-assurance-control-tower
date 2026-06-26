@@ -1,7 +1,7 @@
 {
   "docVersion": "1.0.0",
   "resource": {
-    "name": "Maestro BPMN",
+    "name": "Maestro TestOps BPMN",
     "kind": "package",
     "apiVersion": "orchestrator.uipath.com/v1",
     "projectKey": "fccd27b2-72f9-440d-a315-472e49d60b01",
@@ -17,7 +17,7 @@
     "spec": {
       "fileName": null,
       "fileReference": null,
-      "name": "Maestro BPMN",
+      "name": "Maestro TestOps BPMN",
       "description": null
     },
     "locks": [],

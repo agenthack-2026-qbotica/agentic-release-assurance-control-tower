@@ -1,7 +1,7 @@
 {
   "docVersion": "1.0.0",
   "resource": {
-    "name": "RPA Workflow 1",
+    "name": "Select and Execute Testset",
     "kind": "package",
     "apiVersion": "orchestrator.uipath.com/v1",
     "projectKey": "fc4b1a8e-5761-4f70-bf79-cdf5f53ba691",
@@ -17,10 +17,10 @@
     "spec": {
       "fileName": null,
       "fileReference": null,
-      "name": "RPA Workflow 1",
+      "name": "Select and Execute Testset",
       "description": null
     },
     "locks": [],
-    "key": "5e741960-6adf-48e3-9ed2-332950af77b1"
+    "key": "ab6ce171-7180-4d57-866b-2fe52de55d7b"
   }
 }
