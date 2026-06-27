@@ -69,6 +69,8 @@
         <uipath:binding id="bkLJa4tLz" name="name" type="string" default="Requirement Readiness Agent" resource="process" resourceSubType="Agent" resourceKey="Requirement Readiness Agent" propertyAttribute="name" />
         <uipath:binding id="bwVBYXKty" name="folderPath" type="string" resource="process" resourceSubType="Agent" resourceKey="GitHub PR Reviewer Agent" propertyAttribute="folderPath" />
         <uipath:binding id="b8EsroPFj" name="name" type="string" default="GitHub PR Reviewer Agent" resource="process" resourceSubType="Agent" resourceKey="GitHub PR Reviewer Agent" propertyAttribute="name" />
+        <uipath:binding id="beosAk2JJ" name="folderPath" type="string" resource="process" resourceSubType="Agent" resourceKey="HITL PR Review Agent" propertyAttribute="folderPath" />
+        <uipath:binding id="b6XIE8nfO" name="name" type="string" default="HITL PR Review Agent" resource="process" resourceSubType="Agent" resourceKey="HITL PR Review Agent" propertyAttribute="name" />
       </uipath:bindings>
       <uipath:migrationVersion version="15" />
       <uipath:intsvcActivityConfig version="v2" />
@@ -325,12 +327,12 @@
         <uipath:activity version="v1">
           <uipath:type value="Orchestrator.StartAgentJob" version="v2" />
           <uipath:context>
-            <uipath:input name="name" type="string" value="=bindings.b8EsroPFj" />
-            <uipath:input name="folderPath" type="string" value="=bindings.bwVBYXKty" />
-            <uipath:input name="_label" type="string" value="GitHub PR Reviewer Agent" />
-            <uipath:inputSchema type="jsonSchema"><![CDATA[{"$schema":"http://json-schema.org/draft-07/schema#","type":"object","properties":{"repositoryName":{"type":"string"},"owner":{"type":"string"},"pullRequestNumber":{"type":"integer"},"title":{"type":"string"},"url":{"type":"string"},"summary":{"type":"string"},"comments":{"type":"array"},"changedFiles":{"type":"array"}},"required":["repositoryName","owner","pullRequestNumber","title","url","summary","comments","changedFiles"]}]]></uipath:inputSchema>
+            <uipath:input name="name" type="string" value="=bindings.b6XIE8nfO" />
+            <uipath:input name="folderPath" type="string" value="=bindings.beosAk2JJ" />
+            <uipath:input name="_label" type="string" value="HITL PR Review Agent" />
+            <uipath:inputSchema type="jsonSchema"><![CDATA[{"$schema":"http://json-schema.org/draft-07/schema#","type":"object","properties":{"repositoryName":{"type":"string","title":"repositoryName"},"owner":{"type":"string","title":"owner"},"pullRequestNumber":{"type":"integer","title":"pullRequestNumber"},"title":{"type":"string","title":"title"},"url":{"type":"string","title":"url"},"summary":{"type":"string","title":"summary"},"comments":{"type":"array","title":"comments"},"changedFiles":{"type":"array","title":"changedFiles"}},"required":["repositoryName","owner","pullRequestNumber","title","url","summary","comments","changedFiles"]}]]></uipath:inputSchema>
           </uipath:context>
-          <uipath:input name="JobArguments" type="json" target="bodyField"><![CDATA[{"repositoryName":"ui-path/hitl-pr-approval","owner":"ui-path-team","pullRequestNumber":123,"title":"Add GitHub PR approval escalation flow","url":"https://github.com/ui-path/hitl-pr-approval/pull/123","summary":"\"Add a new human-in-the-loop escalation review step for PRs that touch workflow logic or permissions","comments":["Reviewer note: this PR adds approval routing logic","Need to verify the connector payload structure","Check if CI tests cover the new path"],"changedFiles":["src/agent/prReviewAgent.js","src/app/hitlEscalationForm.html","src/workflow/approvalFlow.xaml","README.md"]}]]></uipath:input>
+          <uipath:input name="JobArguments" type="json" target="bodyField"><![CDATA[{"repositoryName":"=vars.response5[0].repository.name","owner":"=vars.response5[0].repository.owner.email","pullRequestNumber":"=vars.response5[0].id","title":"=vars.response5[0].title","url":"=vars.response5[0].url","summary":"=vars.response5[0].body","comments":["Reviewer note: this PR adds a new escalation path","Need to confirm connector payload mapping","Verify that workflow logic changes are safe"],"changedFiles":["src/agent/prReviewAgent.js","src/app/hitlEscalationForm.html","src/workflow/approvalFlow.xaml","README.md"]}]]></uipath:input>
           <uipath:output name="Error" type="jsonSchema" source="=Error" var="error11" />
           <uipath:output name="decision" type="string" source="=decision" var="decision" />
           <uipath:output name="reason" type="string" source="=reason" var="reason2" />

@@ -2,7 +2,7 @@
   "$resourceType": "escalation",
   "id": "6f6b15f8-cb45-4f89-b245-300e301e79bb",
   "name": "Human Review App",
-  "description": "",
+  "description": "Human-in-the-loop escalation for GitHub PR review. When the PR is ambiguous, high-risk, or touches approvals, workflow logic, permissions, connectors, or critical business processes, this app presents the full PR context to a human reviewer and captures their approve/reject/request-changes decision with comments",
   "channels": [
     {
       "id": "097fbd34-187c-4fac-be8f-3af7a31ce589",
