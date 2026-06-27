@@ -151,7 +151,7 @@
         "actionableMessageMetaData": {
           "fieldSet": {
             "type": "fieldSet",
-            "id": "2e79cc5a-317d-46f5-bb09-e67451d125a3",
+            "id": "3d1d37c6-14b3-4eef-973d-599f60691f14",
             "fields": [
               {
                 "id": "repositoryName",
@@ -253,7 +253,7 @@
           },
           "actionSet": {
             "type": "actionSet",
-            "id": "cf3779ec-8b24-44f4-ab09-34601e9f8e33",
+            "id": "cd5ede1b-e4e3-4271-b77f-65589bdcea63",
             "actions": [
               {
                 "id": "Approve",

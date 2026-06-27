@@ -1,7 +1,7 @@
 {
   "docVersion": "1.0.0",
   "resource": {
-    "name": "GitHub PR Reviewer Agent",
+    "name": "HITL PR Review Agent",
     "kind": "process",
     "type": "agent",
     "apiVersion": "orchestrator.uipath.com/v1",
@@ -9,7 +9,7 @@
     "isOverridable": true,
     "dependencies": [
       {
-        "name": "GitHub PR Reviewer Agent",
+        "name": "HITL PR Review Agent",
         "kind": "package"
       }
     ],
@@ -29,12 +29,12 @@
       "inputArgumentsSchemaV2": null,
       "outputArgumentsSchemaV2": null,
       "type": "Agent",
-      "name": "GitHub PR Reviewer Agent",
+      "name": "HITL PR Review Agent",
       "description": null,
       "package": {
-        "key": "2eaf0f31-76e8-4e3a-8965-7901861d0795"
+        "key": "c81b75a2-e9ab-416e-a011-e45b526b7ca7"
       },
-      "packageName": "agentic-testops-control-tower.agent.GitHub.PR.Reviewer.Agent",
+      "packageName": "agentic-testops-control-tower.agent.HITL.PR.Review.Agent",
       "packageVersion": null,
       "entryPointName": null,
       "inputArguments": null,
@@ -55,6 +55,6 @@
       "tags": []
     },
     "locks": [],
-    "key": "24042f35-a583-447b-96f2-31d3d41df525"
+    "key": "52d07273-9f42-4472-8607-5eacfb9e10da"
   }
 }

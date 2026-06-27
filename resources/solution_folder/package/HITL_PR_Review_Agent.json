@@ -1,7 +1,7 @@
 {
   "docVersion": "1.0.0",
   "resource": {
-    "name": "GitHub PR Reviewer Agent",
+    "name": "HITL PR Review Agent",
     "kind": "package",
     "apiVersion": "orchestrator.uipath.com/v1",
     "projectKey": "bb169e71-0ba9-471a-b6ea-1b590c4753be",
@@ -17,10 +17,10 @@
     "spec": {
       "fileName": null,
       "fileReference": null,
-      "name": "GitHub PR Reviewer Agent",
+      "name": "HITL PR Review Agent",
       "description": null
     },
     "locks": [],
-    "key": "2eaf0f31-76e8-4e3a-8965-7901861d0795"
+    "key": "c81b75a2-e9ab-416e-a011-e45b526b7ca7"
   }
 }
