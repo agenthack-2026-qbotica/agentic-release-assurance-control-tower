@@ -158,10 +158,10 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ManualTrigger Result="{x:Null}" DisplayName="Approve_Button : Clicked On Event" sap2010:WorkflowViewState.IdRef="ManualTrigger_1" />
-    <uwana:SubmitAction Result="{x:Null}" DisplayName="Submit Action / Update Task" sap2010:WorkflowViewState.IdRef="SubmitAction_1" Outcome="Approve">
+    <ui:ManualTrigger Result="{x:Null}" DisplayName="Reject_Button : Clicked On Event" sap2010:WorkflowViewState.IdRef="ManualTrigger_1" />
+    <uwana:SubmitAction Result="{x:Null}" DisplayName="Submit Action / Update Task" sap2010:WorkflowViewState.IdRef="SubmitAction_1" Outcome="Reject">
       <uwana:SubmitAction.OutcomeExpression>
-        <x:String x:Key="expressionId">id50371b0d232441759e904ced7c646b41</x:String>
+        <x:String x:Key="expressionId">id36d718e397b4463381989d61741cf074</x:String>
         <x:String x:Key="formId">id6d68b180c24e4fd48cb1ffec0715e4ca</x:String>
       </uwana:SubmitAction.OutcomeExpression>
       <uwana:SubmitAction.PropertyOverrides>
