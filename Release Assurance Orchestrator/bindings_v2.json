@@ -160,11 +160,11 @@
     },
     {
       "resource": "process",
-      "key": "GitHub PR Reviewer Agent",
-      "id": "processGitHub PR Reviewer Agent",
+      "key": "HITL PR Review Agent",
+      "id": "processHITL PR Review Agent",
       "value": {
         "name": {
-          "defaultValue": "GitHub PR Reviewer Agent",
+          "defaultValue": "HITL PR Review Agent",
           "isExpression": false,
           "displayName": "Process name"
         }
