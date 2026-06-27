@@ -157,6 +157,25 @@
         "SolutionsSupport": "true",
         "subType": "Agent"
       }
+    },
+    {
+      "resource": "process",
+      "key": "GitHub PR Reviewer Agent",
+      "id": "processGitHub PR Reviewer Agent",
+      "value": {
+        "name": {
+          "defaultValue": "GitHub PR Reviewer Agent",
+          "isExpression": false,
+          "displayName": "Process name"
+        }
+      },
+      "metadata": {
+        "ActivityName": "PR has to be reviewed by Human",
+        "BindingsVersion": "2.2",
+        "DisplayLabel": "name",
+        "SolutionsSupport": "true",
+        "subType": "Agent"
+      }
     }
   ]
 }
