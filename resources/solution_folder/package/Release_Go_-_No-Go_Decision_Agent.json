@@ -1,0 +1,26 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "Release Go - No-Go Decision Agent",
+    "kind": "package",
+    "apiVersion": "orchestrator.uipath.com/v1",
+    "projectKey": "4949c9bd-ada2-4388-88fd-08dfd77ce3f2",
+    "isOverridable": true,
+    "dependencies": [],
+    "runtimeDependencies": [],
+    "files": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "fileName": null,
+      "fileReference": null,
+      "name": "Release Go - No-Go Decision Agent",
+      "description": null
+    },
+    "locks": [],
+    "key": "2fc1571f-e947-4cde-bfcc-2d2d21433f91"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "Test Set Execution API Workflow",
+    "kind": "package",
+    "apiVersion": "orchestrator.uipath.com/v1",
+    "projectKey": "0e3089fc-12c0-401c-a0c4-25945f1022af",
+    "isOverridable": true,
+    "dependencies": [],
+    "runtimeDependencies": [],
+    "files": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "fileName": null,
+      "fileReference": null,
+      "name": "Test Set Execution API Workflow",
+      "description": null
+    },
+    "locks": [],
+    "key": "2a340da4-5d3e-4ca0-8beb-845006ceb95a"
+  }
+}

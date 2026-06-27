@@ -1,0 +1,26 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "Test Failure Triage Agent",
+    "kind": "package",
+    "apiVersion": "orchestrator.uipath.com/v1",
+    "projectKey": "2b897727-b2ef-41c7-9e2c-16fbb50937e8",
+    "isOverridable": true,
+    "dependencies": [],
+    "runtimeDependencies": [],
+    "files": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "fileName": null,
+      "fileReference": null,
+      "name": "Test Failure Triage Agent",
+      "description": null
+    },
+    "locks": [],
+    "key": "0308b988-6430-4aac-b913-ba4e93587bd0"
+  }
+}
