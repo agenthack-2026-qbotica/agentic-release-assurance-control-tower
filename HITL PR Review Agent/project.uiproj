@@ -1,0 +1,6 @@
+{
+  "Name": "GitHub PR Reviewer Agent",
+  "MainFile": null,
+  "ProjectType": "Agent",
+  "Description": "Human review app for GitHub pull request approvals. It receives PR context from the agent, displays the summary, comments, changed files, and risk signals, and lets a reviewer approve, reject, or request changes with comments before returning the decision"
+}

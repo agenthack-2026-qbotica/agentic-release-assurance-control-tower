@@ -1,0 +1,128 @@
+{
+  "id": "ID848cb38128af4dc186e3100e3060eb09",
+  "dateCreated": "2026-06-27T15:03:07.882Z",
+  "dateLastOpened": "2026-06-27T15:03:07.882Z",
+  "type": "app",
+  "iconUrl": "assets/svg/expressions-editor/app-variable.svg",
+  "idCounter": 1011,
+  "ownerFqn": "",
+  "ownerId": "",
+  "createdByFqn": "",
+  "createdById": "",
+  "systemName": "IDa4435e2e95ce46c7aa4e7de68a5068ec",
+  "categorySystemName": "j-category-apps-organization",
+  "tenantId": "03a90acb-56d8-4803-ab03-3aedbebe8614",
+  "buildVersion": "2026.6.23-11.9.17-s196.9c9b2e1f5",
+  "modelVersion": 7,
+  "currentModelVersion": 1,
+  "dllVersion": 0,
+  "modelTypesVersion": 0,
+  "ownerDisplayName": "",
+  "rootReferences": {
+    "ID416907a503c443a7ae4eedacee1d1101": {
+      "id": "ID1003",
+      "instances": [
+        {
+          "id": "ID1004",
+          "instanceJPath": "$.defaultForm",
+          "titleIconUrl": "assets/svg/form.svg",
+          "titlePropertyName": "title",
+          "subTitles": []
+        }
+      ],
+      "titleIconUrl": "assets/svg/form.svg",
+      "titlePropertyName": "title",
+      "type": "form"
+    },
+    "IDe233b85efddb4e2ea56e658b4c446623": {
+      "id": "ID1006",
+      "instances": [
+        {
+          "id": "ID1007",
+          "instanceJPath": "$.defaultForm",
+          "titleIconUrl": "assets/svg/form.svg",
+          "titlePropertyName": "title",
+          "subTitles": []
+        }
+      ],
+      "titleIconUrl": "assets/svg/form.svg",
+      "titlePropertyName": "title",
+      "type": "form"
+    },
+    "ID2eded83615bb4723bfc2c78ab765f23c": {
+      "id": "ID1009",
+      "instances": [
+        {
+          "id": "ID1010",
+          "instanceJPath": "$.defaultForm",
+          "titleIconUrl": "assets/svg/form.svg",
+          "titlePropertyName": "title",
+          "subTitles": []
+        }
+      ],
+      "titleIconUrl": "assets/svg/form.svg",
+      "titlePropertyName": "title",
+      "type": "form"
+    }
+  },
+  "title": "EscalationApp",
+  "description": "",
+  "allModelErrors": {},
+  "valueBindingMetadata": {},
+  "defaultForm": {
+    "id": "ID1011",
+    "rootType": "form",
+    "rootSystemName": "ID2eded83615bb4723bfc2c78ab765f23c",
+    "instanceJPath": "$.rootReferences.ID2eded83615bb4723bfc2c78ab765f23c.instances[?(@.id==\"ID1010\")]",
+    "objectJPath": "$",
+    "itemType": "form"
+  },
+  "appFields": [],
+  "expressionLanguage": "VB",
+  "appIcon": {
+    "id": "ID1002"
+  },
+  "cacheKey": "1782572587882",
+  "isPublic": false,
+  "theme": {
+    "id": "robottorney",
+    "type": "OOB"
+  },
+  "isExpressionEnabled": false,
+  "isSharedWithinTenant": true,
+  "collaborators": [],
+  "latestPublishedVersion": null,
+  "lastPublishedDate": null,
+  "latestPublishType": null,
+  "tenants": [],
+  "isLazyHydrationEnabled": true,
+  "datatableDeserializationDefaultingToObject": true,
+  "isAppPublic": false,
+  "appUsageType": 1,
+  "actionDefinitionId": "380d6751-1c07-40e5-9518-ae5eeda32d91",
+  "actionDefinitionVersion": 0,
+  "migrationFlagVersions": {
+    "vb_assembly_regen_flag_version": 1,
+    "vb_force_lazy_hydration_flag_version": 1,
+    "uts_enabled": 1
+  },
+  "isUnifiedProject": true,
+  "unifiedProjectId": "e0407269-a948-49c3-8e27-ba068a11a1d6",
+  "isLinkedToSolution": false,
+  "unifiedBuildSolutionId": "",
+  "unifiedProjectContext": {
+    "escalationAppPrompt": "“Build a low-code UiPath app that acts as a human approval screen for GitHub pull requests. It should receive an input payload from an Integration Service connector containing the pull request details, repository, PR number, summary, and URL. The app should present that information in a readable review UI for the assigned reviewer. It should include a comment box and Approve/Reject buttons. On submit, it should produce an output payload with the decision, reviewer comment, timestamp, reviewer name, and PR number so it can be passed to a second Integration Service connector for updating the PR status or posting a comment. Use temporary dummy values for demo purposes, such as sample PR metadata, sample reviewer name, and sample comments. Keep the design user-friendly and suitable for a HITL approval workflow.”",
+    "appUsageType": "1",
+    "isLocalWorkspace": "true",
+    "userPrompt": "",
+    "systemPrompt": "",
+    "schemas": "{}",
+    "escalationDescription": ""
+  },
+  "appMetadata": {},
+  "appSettings": {},
+  "documentReferences": {},
+  "unifiedProjectType": "Process",
+  "isSWFileSystemEnabled": true,
+  "runtimeLanguage": "en"
+}

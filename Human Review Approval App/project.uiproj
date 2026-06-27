@@ -1,0 +1,9 @@
+{
+  "Name": "Human Review Approval App",
+  "MainFile": "Main.xaml",
+  "ProjectType": "WebApp",
+  "WebAppSettings": {
+    "AppId": "IDa4435e2e95ce46c7aa4e7de68a5068ec",
+    "IsCoreProject": true
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "version": "3.0.0.0",
+  "bundleHash": "VcqSfBxGmwe2dpseSxfciMm5GnfQ6aWH66QQQdOLX1k",
+  "addedAssemblyNames": [],
+  "discardedAssemblyNames": [
+    "Apps.action.g8zaI013U3gg",
+    "Apps.form.MainPage.Expressions.YsCTF4EN8TF1jRT104FoMHO4",
+    "Apps.form.MainPage.gyzuLzV3U3gg",
+    "Apps.form.ActionSchemaPagePage.gEIAUR1U3gg",
+    "Apps.form.ActionSchemaPagePage.Expressions.qBMH7suOWI1736p92Ipvl82",
+    "Apps.form.MainPage.gEG04PFU3gg",
+    "Apps.form.ActionSchemaPagePage.gCBn7SFU3gg",
+    "Apps.form.MainPage.Expressions.KqOYv6DXZM1ygw4928WjX6",
+    "Apps.form.ActionSchemaPagePage.Expressions.lVGdS2F81JC1V2VPN1N5Dhw2",
+    "Apps.form.PullRequestReviewPagePage.Expressions.m9K9X2XyoCG1Cdv98uofbD3",
+    "Apps.form.PullRequestReviewPagePage.gUQUf4mnU3gg",
+    "Apps.form.ActionSchemaPagePage.gieScV1U3gg",
+    "Apps.form.PullRequestReviewPagePage.Expressions.failed.ohVbG3IMENP1juZjZ3Y8VYN4",
+    "Apps.form.PullRequestReviewPagePage.gf7HA42nU3gg",
+    "Apps.form.ActionSchemaPagePage.Expressions.EEKGo1SQcQS1tG6TR3nbJ0E"
+  ],
+  "discardedAssemblyReplacements": {
+    "Apps.action.g8zaI013U3gg": "Apps.action.ga4eoOVU3gg",
+    "Apps.form.MainPage.gyzuLzV3U3gg": "Apps.form.MainPage.gEG04PFU3gg",
+    "Apps.form.ActionSchemaPagePage.gEIAUR1U3gg": "Apps.form.ActionSchemaPagePage.gCBn7SFU3gg",
+    "Apps.form.MainPage.gEG04PFU3gg": null,
+    "Apps.form.ActionSchemaPagePage.gCBn7SFU3gg": "Apps.form.ActionSchemaPagePage.gieScV1U3gg",
+    "Apps.form.PullRequestReviewPagePage.gUQUf4mnU3gg": "Apps.form.PullRequestReviewPagePage.gf7HA42nU3gg",
+    "Apps.form.ActionSchemaPagePage.gieScV1U3gg": null,
+    "Apps.form.PullRequestReviewPagePage.gf7HA42nU3gg": "Apps.form.PullRequestReviewPagePage.gbgQh7WnU3gg"
+  },
+  "assembliesJitInfo": {}
+}

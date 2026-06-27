@@ -1,0 +1,156 @@
+{
+  "$schema": "https://cloud.uipath.com/draft/2024-12/entry-point",
+  "$id": "entry-points.json",
+  "entryPoints": [
+    {
+      "filePath": "/content/agent.json",
+      "type": "agent",
+      "uniqueId": "eef42ead-528e-431b-98c3-ba9492f670f3",
+      "input": {
+        "type": "object",
+        "properties": {
+          "repositoryName": {
+            "type": "string",
+            "description": "Name of the GitHub repository"
+          },
+          "owner": {
+            "type": "string",
+            "description": "Owner of the GitHub repository"
+          },
+          "pullRequestNumber": {
+            "type": "integer",
+            "description": "Pull request number"
+          },
+          "title": {
+            "type": "string",
+            "description": "Pull request title"
+          },
+          "url": {
+            "type": "string",
+            "description": "Pull request URL"
+          },
+          "summary": {
+            "type": "string",
+            "description": "Pull request summary or description"
+          },
+          "comments": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Comments on the pull request"
+          },
+          "changedFiles": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of changed files in the pull request"
+          }
+        },
+        "required": [
+          "repositoryName",
+          "owner",
+          "pullRequestNumber",
+          "title",
+          "url",
+          "summary",
+          "comments",
+          "changedFiles"
+        ]
+      },
+      "output": {
+        "type": "object",
+        "properties": {
+          "decision": {
+            "type": "string",
+            "enum": [
+              "approved",
+              "rejected",
+              "escalated"
+            ],
+            "description": "Decision on the pull request"
+          },
+          "reason": {
+            "type": "string",
+            "description": "Explanation for the decision"
+          },
+          "confidence": {
+            "type": "string",
+            "enum": [
+              "low",
+              "medium",
+              "high"
+            ],
+            "description": "Confidence level in the decision"
+          },
+          "comment": {
+            "type": "string",
+            "description": "Suggested comment for the reviewer or downstream system"
+          },
+          "escalationRequired": {
+            "type": "boolean",
+            "description": "Whether escalation to human review is required"
+          },
+          "escalationPayload": {
+            "type": "object",
+            "properties": {
+              "repositoryName": {
+                "type": "string"
+              },
+              "owner": {
+                "type": "string"
+              },
+              "pullRequestNumber": {
+                "type": "integer"
+              },
+              "title": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              },
+              "summary": {
+                "type": "string"
+              },
+              "comments": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "changedFiles": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "escalationReason": {
+                "type": "string"
+              }
+            },
+            "description": "Structured PR context to send to the escalation app"
+          },
+          "finalDecision": {
+            "type": "string",
+            "description": "Final decision to surface after HITL review"
+          },
+          "finalComment": {
+            "type": "string",
+            "description": "Final comment to surface after HITL review"
+          }
+        },
+        "required": [
+          "decision",
+          "reason",
+          "confidence",
+          "comment",
+          "escalationRequired",
+          "escalationPayload",
+          "finalDecision",
+          "finalComment"
+        ]
+      }
+    }
+  ]
+}

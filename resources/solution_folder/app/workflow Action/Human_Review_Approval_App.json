@@ -1,0 +1,45 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "Human Review Approval App",
+    "kind": "app",
+    "type": "workflow Action",
+    "apiVersion": "apps.uipath.com/v1",
+    "projectKey": "17515903-3445-47a5-ae37-cbe009076b66",
+    "isOverridable": true,
+    "dependencies": [
+      {
+        "name": "Human Review Approval App",
+        "kind": "appVersion"
+      },
+      {
+        "name": "Human Review Approval App",
+        "kind": "process"
+      }
+    ],
+    "runtimeDependencies": [],
+    "files": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "name": "Human Review Approval App",
+      "description": null,
+      "type": "workflow Action",
+      "version": null,
+      "appSystemName": null,
+      "appVersionRef": {
+        "key": "592e2689-ce1d-470f-9ec8-7bbcba0d42bc"
+      },
+      "codeBehindProcess": {
+        "key": "a02f5c77-8e19-493d-a2ca-10a5b903a503"
+      },
+      "actionSchema": null,
+      "manualActivationActions": null
+    },
+    "locks": [],
+    "key": "6b53a7b4-1c46-44fe-b2ca-d635049306d5"
+  }
+}

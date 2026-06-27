@@ -35,6 +35,16 @@
       "Id": "fccd27b2-72f9-440d-a315-472e49d60b01",
       "Type": "ProcessOrchestration",
       "ProjectRelativePath": "Release Assurance Orchestrator/project.uiproj"
+    },
+    {
+      "Id": "17515903-3445-47a5-ae37-cbe009076b66",
+      "Type": "Process",
+      "ProjectRelativePath": "Human Review Approval App/project.uiproj"
+    },
+    {
+      "Id": "bb169e71-0ba9-471a-b6ea-1b590c4753be",
+      "Type": "Agent",
+      "ProjectRelativePath": "HITL PR Review Agent/project.uiproj"
     }
   ],
   "DocVersion": "1.0.0",

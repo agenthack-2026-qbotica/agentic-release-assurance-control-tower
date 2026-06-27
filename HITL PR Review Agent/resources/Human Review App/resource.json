@@ -1,0 +1,285 @@
+{
+  "$resourceType": "escalation",
+  "id": "6f6b15f8-cb45-4f89-b245-300e301e79bb",
+  "name": "Human Review App",
+  "description": "",
+  "channels": [
+    {
+      "id": "097fbd34-187c-4fac-be8f-3af7a31ce589",
+      "name": "Channel",
+      "description": "Channel description",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "repositoryName": {
+            "type": "string",
+            "description": "The name of the GitHub repository."
+          },
+          "owner": {
+            "type": "string",
+            "description": "The owner of the GitHub repository."
+          },
+          "pullRequestNumber": {
+            "type": "integer",
+            "description": "The unique identifier for the Pull Request."
+          },
+          "title": {
+            "type": "string",
+            "description": "The title of the Pull Request."
+          },
+          "url": {
+            "type": "string",
+            "description": "The URL to view the Pull Request on GitHub."
+          },
+          "summary": {
+            "type": "string",
+            "description": "A brief summary or description of the Pull Request."
+          },
+          "comments": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Comments on the Pull Request."
+          },
+          "changedFiles": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of changed files in the Pull Request."
+          },
+          "escalationReason": {
+            "type": "string",
+            "description": "Reason for escalating to human review."
+          }
+        },
+        "required": [
+          "repositoryName",
+          "owner",
+          "pullRequestNumber",
+          "title",
+          "url",
+          "summary",
+          "escalationReason"
+        ]
+      },
+      "inputSchemaDotnetTypeMapping": {
+        "repositoryName": "System.String",
+        "owner": "System.String",
+        "pullRequestNumber": "System.Int32",
+        "title": "System.String",
+        "url": "System.String",
+        "summary": "System.String",
+        "comments": "System.String",
+        "changedFiles": "System.String",
+        "escalationReason": "System.String"
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "pullRequestNumber": {
+            "type": "integer",
+            "description": "Pull request number."
+          },
+          "decision": {
+            "type": "string",
+            "description": "Human reviewer decision (approved or rejected)."
+          },
+          "comment": {
+            "type": "string",
+            "description": "Reviewer comment."
+          },
+          "reviewer": {
+            "type": "string",
+            "description": "Name of the reviewer."
+          },
+          "updatedAt": {
+            "type": "string",
+            "description": "Timestamp of the review."
+          },
+          "targetConnector": {
+            "type": "string",
+            "description": "Target connector name."
+          },
+          "finalDecision": {
+            "type": "string",
+            "description": "Final decision to surface after HITL review."
+          },
+          "finalComment": {
+            "type": "string",
+            "description": "Final comment to surface after HITL review."
+          }
+        },
+        "required": [
+          "pullRequestNumber",
+          "decision",
+          "reviewer",
+          "updatedAt",
+          "targetConnector",
+          "finalDecision"
+        ]
+      },
+      "outputSchemaDotnetTypeMapping": {
+        "pullRequestNumber": "System.Int32",
+        "decision": "System.String",
+        "comment": "System.String",
+        "reviewer": "System.String",
+        "updatedAt": "System.String",
+        "targetConnector": "System.String",
+        "finalDecision": "System.String",
+        "finalComment": "System.String"
+      },
+      "outcomeMapping": {
+        "Approve": "continue",
+        "Reject": "continue"
+      },
+      "recipients": [
+        {
+          "type": 1,
+          "value": "9932b17c-cf35-47da-b170-aad463f7b63f",
+          "displayName": "Logesh Velu"
+        }
+      ],
+      "type": "actionCenter",
+      "properties": {
+        "appName": "Human Review Approval App",
+        "appVersion": 1,
+        "folderName": null,
+        "resourceKey": "6b53a7b4-1c46-44fe-b2ca-d635049306d5",
+        "isActionableMessageEnabled": true,
+        "actionableMessageMetaData": {
+          "fieldSet": {
+            "type": "fieldSet",
+            "id": "ad2ae34f-02fb-491f-abbf-f2aac7b64af3",
+            "fields": [
+              {
+                "id": "repositoryName",
+                "name": "repositoryName",
+                "type": "Fact",
+                "placeHolderText": ""
+              },
+              {
+                "id": "owner",
+                "name": "owner",
+                "type": "Fact",
+                "placeHolderText": ""
+              },
+              {
+                "id": "pullRequestNumber",
+                "name": "pullRequestNumber",
+                "type": "Input.Number",
+                "placeHolderText": ""
+              },
+              {
+                "id": "title",
+                "name": "title",
+                "type": "Fact",
+                "placeHolderText": ""
+              },
+              {
+                "id": "url",
+                "name": "url",
+                "type": "Fact",
+                "placeHolderText": ""
+              },
+              {
+                "id": "summary",
+                "name": "summary",
+                "type": "Fact",
+                "placeHolderText": ""
+              },
+              {
+                "id": "comments",
+                "name": "comments",
+                "type": "Fact",
+                "placeHolderText": ""
+              },
+              {
+                "id": "changedFiles",
+                "name": "changedFiles",
+                "type": "Fact",
+                "placeHolderText": ""
+              },
+              {
+                "id": "escalationReason",
+                "name": "escalationReason",
+                "type": "Fact",
+                "placeHolderText": ""
+              },
+              {
+                "id": "decision",
+                "name": "decision",
+                "type": "Input.Text",
+                "placeHolderText": ""
+              },
+              {
+                "id": "comment",
+                "name": "comment",
+                "type": "Input.Text",
+                "placeHolderText": ""
+              },
+              {
+                "id": "reviewer",
+                "name": "reviewer",
+                "type": "Input.Text",
+                "placeHolderText": ""
+              },
+              {
+                "id": "updatedAt",
+                "name": "updatedAt",
+                "type": "Input.Text",
+                "placeHolderText": ""
+              },
+              {
+                "id": "targetConnector",
+                "name": "targetConnector",
+                "type": "Input.Text",
+                "placeHolderText": ""
+              },
+              {
+                "id": "finalDecision",
+                "name": "finalDecision",
+                "type": "Input.Text",
+                "placeHolderText": ""
+              },
+              {
+                "id": "finalComment",
+                "name": "finalComment",
+                "type": "Input.Text",
+                "placeHolderText": ""
+              }
+            ]
+          },
+          "actionSet": {
+            "type": "actionSet",
+            "id": "06239207-3b51-4593-ba62-b7011954363a",
+            "actions": [
+              {
+                "id": "Approve",
+                "name": "Approve",
+                "title": "Approve",
+                "type": "Action.Http",
+                "isPrimary": true
+              },
+              {
+                "id": "Reject",
+                "name": "Reject",
+                "title": "Reject",
+                "type": "Action.Http",
+                "isPrimary": true
+              }
+            ]
+          }
+        }
+      },
+      "argumentProperties": {}
+    }
+  ],
+  "isAgentMemoryEnabled": false,
+  "governanceProperties": {
+    "isEscalatedAtRuntime": false
+  },
+  "escalationType": 0,
+  "properties": {}
+}

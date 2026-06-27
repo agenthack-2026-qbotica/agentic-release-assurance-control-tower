@@ -1,0 +1,26 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "GitHub PR Reviewer Agent",
+    "kind": "package",
+    "apiVersion": "orchestrator.uipath.com/v1",
+    "projectKey": "bb169e71-0ba9-471a-b6ea-1b590c4753be",
+    "isOverridable": true,
+    "dependencies": [],
+    "runtimeDependencies": [],
+    "files": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "fileName": null,
+      "fileReference": null,
+      "name": "GitHub PR Reviewer Agent",
+      "description": null
+    },
+    "locks": [],
+    "key": "2eaf0f31-76e8-4e3a-8965-7901861d0795"
+  }
+}
