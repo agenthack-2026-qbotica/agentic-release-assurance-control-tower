@@ -14,28 +14,18 @@
       }
     ],
     "runtimeDependencies": [],
-    "files": [],
     "folders": [
       {
         "fullyQualifiedName": "solution_folder"
       }
     ],
     "spec": {
-      "entryPointUniqueId": null,
-      "inputArgumentsSchema": null,
-      "outputArgumentsSchema": null,
-      "inputArgumentsSchemaV2": null,
-      "outputArgumentsSchemaV2": null,
       "type": "Process",
       "name": "RPA Workflow",
-      "description": null,
       "package": {
         "key": "c376e2ea-58c9-433a-90ec-da552448f52e"
       },
       "packageName": "Agentic.Release.Assurance.Control.Tower.process.RPA.Workflow",
-      "packageVersion": null,
-      "entryPointName": null,
-      "inputArguments": null,
       "jobPriority": "Medium",
       "hiddenForAttendedUser": false,
       "alwaysRunning": false,
@@ -48,15 +38,12 @@
       "remoteControlAccess": "None",
       "retentionAction": "Delete",
       "retentionPeriod": 30,
-      "retentionBucketRef": null,
       "staleRetentionAction": "Delete",
       "staleRetentionPeriod": 180,
-      "staleRetentionBucketRef": null,
-      "entryPoints": null,
-      "connections": null,
       "tags": []
     },
     "locks": [],
-    "key": "34c1da6a-a075-4a65-bd6f-3dfccb3f624b"
+    "key": "34c1da6a-a075-4a65-bd6f-3dfccb3f624b",
+    "files": []
   }
 }

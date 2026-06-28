@@ -2,9 +2,8 @@
   "docVersion": "1.0.0",
   "resource": {
     "name": "Human Review Approval App",
-    "kind": "appVersion",
-    "apiVersion": "apps.uipath.com/v2",
-    "projectKey": "17515903-3445-47a5-ae37-cbe009076b66",
+    "kind": "app",
+    "apiVersion": "apps.uipath.com/v1",
     "isOverridable": true,
     "dependencies": [],
     "runtimeDependencies": [],
@@ -15,10 +14,11 @@
     ],
     "spec": {
       "name": "Human Review Approval App",
-      "isAppPublic": false
+      "version": "",
+      "appVersionRef": ""
     },
     "locks": [],
-    "key": "b2272dab-8af1-4bd9-b6ca-06ea43d5ca27",
+    "key": "8cc83c98-27c2-4948-9a96-c78f9f89447d",
     "files": []
   }
 }

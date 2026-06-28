@@ -8,19 +8,16 @@
     "isOverridable": true,
     "dependencies": [],
     "runtimeDependencies": [],
-    "files": [],
     "folders": [
       {
         "fullyQualifiedName": "solution_folder"
       }
     ],
     "spec": {
-      "fileName": null,
-      "fileReference": null,
-      "name": "Release Assurance Orchestrator",
-      "description": null
+      "name": "Release Assurance Orchestrator"
     },
     "locks": [],
-    "key": "bf76982d-d673-4fb5-aafc-e0a43851ba24"
+    "key": "bf76982d-d673-4fb5-aafc-e0a43851ba24",
+    "files": []
   }
 }

@@ -13,44 +13,51 @@
         "kind": "package"
       }
     ],
-    "runtimeDependencies": [],
-    "files": [],
+    "runtimeDependencies": [
+      {
+        "bindingType": "Connection",
+        "bindingKey": "",
+        "bindingValues": {
+          "connectionId": {
+            "defaultValue": "",
+            "isExpression": false
+          }
+        },
+        "bindingMetadata": {
+          "activityName": "HTTP Request - Get All Test Cases",
+          "bindingsVersion": "2.2",
+          "solutionsSupport": "true",
+          "connector": "uipath-uipath-http",
+          "useConnectionService": "true"
+        },
+        "resourceKind": "Connection",
+        "resourceType": "uipath-uipath-http"
+      }
+    ],
     "folders": [
       {
         "fullyQualifiedName": "solution_folder"
       }
     ],
     "spec": {
-      "entryPointUniqueId": null,
-      "inputArgumentsSchema": null,
-      "outputArgumentsSchema": null,
-      "inputArgumentsSchemaV2": null,
-      "outputArgumentsSchemaV2": null,
       "type": "Api",
       "name": "Test Set Execution API Workflow",
-      "description": null,
       "package": {
         "key": "2a340da4-5d3e-4ca0-8beb-845006ceb95a"
       },
       "packageName": "TestOps.Control.Tower.Solution.api.Test.Set.Execution.APIs",
-      "packageVersion": null,
-      "entryPointName": null,
-      "inputArguments": null,
       "hiddenForAttendedUser": false,
       "alwaysRunning": false,
       "autoStartProcess": false,
       "targetFrameworkValue": "Portable",
       "retentionAction": "Delete",
       "retentionPeriod": 30,
-      "retentionBucketRef": null,
       "staleRetentionAction": "Delete",
       "staleRetentionPeriod": 180,
-      "staleRetentionBucketRef": null,
-      "entryPoints": null,
-      "connections": null,
       "tags": []
     },
     "locks": [],
-    "key": "f28b336e-2706-4f2c-af31-57bbdd715a70"
+    "key": "f28b336e-2706-4f2c-af31-57bbdd715a70",
+    "files": []
   }
 }

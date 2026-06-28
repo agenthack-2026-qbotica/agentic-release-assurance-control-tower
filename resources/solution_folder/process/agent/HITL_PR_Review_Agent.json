@@ -13,48 +13,52 @@
         "kind": "package"
       }
     ],
-    "runtimeDependencies": [],
-    "files": [],
+    "runtimeDependencies": [
+      {
+        "bindingType": "app",
+        "bindingKey": "Human Review Approval App",
+        "bindingValues": {
+          "name": {
+            "defaultValue": "Human Review Approval App",
+            "isExpression": false
+          },
+          "folderPath": {
+            "defaultValue": "solution_folder",
+            "isExpression": false
+          }
+        },
+        "bindingMetadata": {
+          "bindingsVersion": "2.2",
+          "solutionsSupport": "true"
+        },
+        "resourceKind": "App"
+      }
+    ],
     "folders": [
       {
         "fullyQualifiedName": "solution_folder"
       }
     ],
     "spec": {
-      "targetRuntime": null,
-      "referencedAssets": null,
-      "entryPointUniqueId": null,
-      "inputArgumentsSchema": null,
-      "outputArgumentsSchema": null,
-      "inputArgumentsSchemaV2": null,
-      "outputArgumentsSchemaV2": null,
       "type": "Agent",
       "name": "HITL PR Review Agent",
-      "description": null,
       "package": {
         "key": "c81b75a2-e9ab-416e-a011-e45b526b7ca7"
       },
       "packageName": "Agentic.Release.Assurance.Control.Tower.agent.HITL.PR.Review.Agent",
-      "packageVersion": null,
-      "entryPointName": null,
-      "inputArguments": null,
       "hiddenForAttendedUser": false,
       "alwaysRunning": false,
       "autoStartProcess": false,
       "targetFrameworkValue": "Portable",
       "agentMemory": false,
-      "environmentVariables": null,
       "retentionAction": "Delete",
       "retentionPeriod": 30,
-      "retentionBucketRef": null,
       "staleRetentionAction": "Delete",
       "staleRetentionPeriod": 180,
-      "staleRetentionBucketRef": null,
-      "entryPoints": null,
-      "connections": null,
       "tags": []
     },
     "locks": [],
-    "key": "52d07273-9f42-4472-8607-5eacfb9e10da"
+    "key": "52d07273-9f42-4472-8607-5eacfb9e10da",
+    "files": []
   }
 }

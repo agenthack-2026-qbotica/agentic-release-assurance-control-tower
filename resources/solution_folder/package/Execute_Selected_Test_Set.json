@@ -8,19 +8,16 @@
     "isOverridable": true,
     "dependencies": [],
     "runtimeDependencies": [],
-    "files": [],
     "folders": [
       {
         "fullyQualifiedName": "solution_folder"
       }
     ],
     "spec": {
-      "fileName": null,
-      "fileReference": null,
-      "name": "Execute Selected Test Set",
-      "description": null
+      "name": "Execute Selected Test Set"
     },
     "locks": [],
-    "key": "ab6ce171-7180-4d57-866b-2fe52de55d7b"
+    "key": "ab6ce171-7180-4d57-866b-2fe52de55d7b",
+    "files": []
   }
 }

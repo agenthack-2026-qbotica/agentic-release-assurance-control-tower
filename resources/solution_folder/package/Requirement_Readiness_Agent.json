@@ -8,19 +8,16 @@
     "isOverridable": true,
     "dependencies": [],
     "runtimeDependencies": [],
-    "files": [],
     "folders": [
       {
         "fullyQualifiedName": "solution_folder"
       }
     ],
     "spec": {
-      "fileName": null,
-      "fileReference": null,
-      "name": "Requirement Readiness Agent",
-      "description": null
+      "name": "Requirement Readiness Agent"
     },
     "locks": [],
-    "key": "edf4e7f2-7c98-4f6c-b76c-f0a0a02486de"
+    "key": "edf4e7f2-7c98-4f6c-b76c-f0a0a02486de",
+    "files": []
   }
 }

@@ -332,7 +332,7 @@
             <uipath:input name="name" type="string" value="=bindings.b6XIE8nfO" />
             <uipath:input name="folderPath" type="string" value="=bindings.beosAk2JJ" />
             <uipath:input name="_label" type="string" value="HITL PR Review Agent" />
-            <uipath:inputSchema type="jsonSchema"><![CDATA[{"$schema":"http://json-schema.org/draft-07/schema#","type":"object","properties":{"repositoryName":{"type":"string","title":"repositoryName"},"owner":{"type":"string","title":"owner"},"pullRequestNumber":{"type":"integer","title":"pullRequestNumber"},"title":{"type":"string","title":"title"},"url":{"type":"string","title":"url"}},"required":["repositoryName","owner","pullRequestNumber","title","url"]}]]></uipath:inputSchema>
+            <uipath:inputSchema type="jsonSchema"><![CDATA[{"$schema":"http://json-schema.org/draft-07/schema#","type":"object","properties":{"repositoryName":{"type":"string"},"owner":{"type":"string"},"pullRequestNumber":{"type":"integer"},"title":{"type":"string"},"url":{"type":"string"}},"required":["repositoryName","owner","pullRequestNumber","title","url"]}]]></uipath:inputSchema>
           </uipath:context>
           <uipath:input name="JobArguments" type="json" target="bodyField"><![CDATA[{"repositoryName":"=vars.response5[0].repository.name","owner":"=vars.response5[0].repository.owner.email","pullRequestNumber":"=vars.response5[0].id","title":"=vars.response5[0].title","url":"=vars.response5[0].url"}]]></uipath:input>
           <uipath:output name="Error" type="jsonSchema" source="=Error" var="error11" />

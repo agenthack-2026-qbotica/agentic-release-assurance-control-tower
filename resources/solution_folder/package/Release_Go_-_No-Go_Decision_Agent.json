@@ -8,19 +8,16 @@
     "isOverridable": true,
     "dependencies": [],
     "runtimeDependencies": [],
-    "files": [],
     "folders": [
       {
         "fullyQualifiedName": "solution_folder"
       }
     ],
     "spec": {
-      "fileName": null,
-      "fileReference": null,
-      "name": "Release Go - No-Go Decision Agent",
-      "description": null
+      "name": "Release Go - No-Go Decision Agent"
     },
     "locks": [],
-    "key": "2fc1571f-e947-4cde-bfcc-2d2d21433f91"
+    "key": "2fc1571f-e947-4cde-bfcc-2d2d21433f91",
+    "files": []
   }
 }

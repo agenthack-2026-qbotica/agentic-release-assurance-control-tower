@@ -5,7 +5,7 @@
     "kind": "process",
     "type": "webApp",
     "apiVersion": "orchestrator.uipath.com/v1",
-    "projectKey": "17515903-3445-47a5-ae37-cbe009076b66",
+    "projectKey": "65569661-0c9c-443b-91cd-acdf6c10a28a",
     "isOverridable": true,
     "dependencies": [
       {
@@ -14,28 +14,18 @@
       }
     ],
     "runtimeDependencies": [],
-    "files": [],
     "folders": [
       {
         "fullyQualifiedName": "solution_folder"
       }
     ],
     "spec": {
-      "entryPointUniqueId": null,
-      "inputArgumentsSchema": null,
-      "outputArgumentsSchema": null,
-      "inputArgumentsSchemaV2": null,
-      "outputArgumentsSchemaV2": null,
       "type": "WebApp",
       "name": "Human Review Approval App",
-      "description": null,
       "package": {
-        "key": "f603f8ab-9645-41af-8fef-c59a437c0e5b"
+        "key": "25634e6b-4856-41ad-af40-5df999ca54b4"
       },
-      "packageName": "Agentic.Release.Assurance.Control.Tower.webApp.Human.Review.Approval.App",
-      "packageVersion": null,
-      "entryPointName": null,
-      "inputArguments": null,
+      "inputArguments": "{}",
       "jobPriority": "Medium",
       "hiddenForAttendedUser": true,
       "alwaysRunning": true,
@@ -49,15 +39,11 @@
       "robotSize": "Automatic",
       "retentionAction": "Delete",
       "retentionPeriod": 30,
-      "retentionBucketRef": null,
       "staleRetentionAction": "Delete",
-      "staleRetentionPeriod": 180,
-      "staleRetentionBucketRef": null,
-      "entryPoints": null,
-      "connections": null,
-      "tags": []
+      "staleRetentionPeriod": 180
     },
     "locks": [],
-    "key": "a2c1e2db-d92f-4d61-95e2-69b7a9ca8097"
+    "key": "c2f1bd80-41bf-4af0-b4a3-2b4a4aedd31d",
+    "files": []
   }
 }

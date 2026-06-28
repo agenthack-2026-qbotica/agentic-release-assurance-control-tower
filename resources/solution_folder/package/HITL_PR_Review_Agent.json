@@ -8,19 +8,16 @@
     "isOverridable": true,
     "dependencies": [],
     "runtimeDependencies": [],
-    "files": [],
     "folders": [
       {
         "fullyQualifiedName": "solution_folder"
       }
     ],
     "spec": {
-      "fileName": null,
-      "fileReference": null,
-      "name": "HITL PR Review Agent",
-      "description": null
+      "name": "HITL PR Review Agent"
     },
     "locks": [],
-    "key": "c81b75a2-e9ab-416e-a011-e45b526b7ca7"
+    "key": "c81b75a2-e9ab-416e-a011-e45b526b7ca7",
+    "files": []
   }
 }

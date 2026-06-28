@@ -37,11 +37,6 @@
       "ProjectRelativePath": "Release Assurance Orchestrator/project.uiproj"
     },
     {
-      "Id": "17515903-3445-47a5-ae37-cbe009076b66",
-      "Type": "Process",
-      "ProjectRelativePath": "Human Review Approval App/project.uiproj"
-    },
-    {
       "Id": "bb169e71-0ba9-471a-b6ea-1b590c4753be",
       "Type": "Agent",
       "ProjectRelativePath": "HITL PR Review Agent/project.uiproj"
@@ -50,6 +45,11 @@
       "Id": "2434f5e0-36dc-49fd-ba6a-a0e6690af2e3",
       "Type": "Process",
       "ProjectRelativePath": "RPA Workflow/project.uiproj"
+    },
+    {
+      "Type": "WebApp",
+      "ProjectRelativePath": "Human Review Approval App/project.uiproj",
+      "Id": "65569661-0c9c-443b-91cd-acdf6c10a28a"
     }
   ],
   "DocVersion": "1.0.0",
