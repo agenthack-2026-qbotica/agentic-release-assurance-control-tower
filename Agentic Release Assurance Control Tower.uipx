@@ -20,7 +20,6 @@
     },
     {
       "Type": "Agent",
-<<<<<<< Updated upstream
       "ProjectRelativePath": "Release Go - No-Go Decision Agent/project.uiproj",
       "Id": "4949c9bd-ada2-4388-88fd-08dfd77ce3f2"
     },
@@ -48,9 +47,7 @@
       "Type": "Api",
       "ProjectRelativePath": "Test Set Execution API Workflow/project.uiproj",
       "Id": "0e3089fc-12c0-401c-a0c4-25945f1022af"
-=======
       "ProjectRelativePath": "HITL PR Review Agent/project.uiproj"
->>>>>>> Stashed changes
     }
   ]
 }
