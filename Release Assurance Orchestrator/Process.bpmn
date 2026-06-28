@@ -190,7 +190,6 @@
         </uipath:activity>
       </bpmn:extensionElements>
       <bpmn:incoming>edge_Activity_4KzsH3-Activity_cY5urhEBGspI</bpmn:incoming>
-      <bpmn:incoming>edge_UX8L97</bpmn:incoming>
       <bpmn:outgoing>edge_Activity_cY5urh-Gateway_6Cr8ts6lyrWN</bpmn:outgoing>
     </bpmn:serviceTask>
     <bpmn:exclusiveGateway id="Gateway_6Cr8ts">
@@ -217,6 +216,7 @@
       <bpmn:incoming>edge_FtiZkM</bpmn:incoming>
       <bpmn:incoming>edge_t9hKln</bpmn:incoming>
       <bpmn:incoming>edge_Gateway_QY47GL-Activity_GWqM6UTEW6uA</bpmn:incoming>
+      <bpmn:incoming>edge_lgkmcW</bpmn:incoming>
       <bpmn:outgoing>edge_Activity_GWqM6U-Activity_f21uUA6HfvWQ</bpmn:outgoing>
     </bpmn:serviceTask>
     <bpmn:sendTask id="Activity_f21uUA" name="Update Release Record and Evidence">
@@ -262,6 +262,7 @@
         </uipath:activity>
       </bpmn:extensionElements>
       <bpmn:incoming>edge_Gateway_6Cr8ts-Activity_6M1PFAVDuB3w</bpmn:incoming>
+      <bpmn:incoming>edge_3baNEN</bpmn:incoming>
       <bpmn:outgoing>edge_WlxhlO</bpmn:outgoing>
     </bpmn:serviceTask>
     <bpmn:parallelGateway id="Gateway_G3QP5E" name="">
@@ -351,12 +352,12 @@
     </bpmn:serviceTask>
     <bpmn:exclusiveGateway id="Gateway_GHE5sv">
       <bpmn:incoming>edge_EXFaZK</bpmn:incoming>
-      <bpmn:outgoing>edge_DruSyB</bpmn:outgoing>
       <bpmn:outgoing>edge_Gateway_GHE5sv-Gateway_QY47GLQZMShc</bpmn:outgoing>
+      <bpmn:outgoing>edge_Fimg9M</bpmn:outgoing>
     </bpmn:exclusiveGateway>
     <bpmn:task id="Activity_7XFL1M" name="Automation Fix Pull Request Merged">
-      <bpmn:incoming>edge_DruSyB</bpmn:incoming>
-      <bpmn:outgoing>edge_UX8L97</bpmn:outgoing>
+      <bpmn:incoming>edge_Fimg9M</bpmn:incoming>
+      <bpmn:outgoing>edge_pfHG91</bpmn:outgoing>
     </bpmn:task>
     <bpmn:endEvent id="Event_5nsSE4" name="Release Decision Recorded">
       <bpmn:incoming>edge_Activity_f21uUA-Event_5nsSE4MsAkVS</bpmn:incoming>
@@ -396,6 +397,15 @@
       <bpmn:outgoing>edge_2BFZwq</bpmn:outgoing>
       <bpmn:outgoing>edge_Gateway_QY47GL-Activity_GWqM6UTEW6uA</bpmn:outgoing>
     </bpmn:exclusiveGateway>
+    <bpmn:task id="Activity_nvKrF3" name="Re-run Failed Test Cases">
+      <bpmn:incoming>edge_pfHG91</bpmn:incoming>
+      <bpmn:outgoing>edge_SRkbet</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:exclusiveGateway id="Gateway_YPRgO4">
+      <bpmn:incoming>edge_SRkbet</bpmn:incoming>
+      <bpmn:outgoing>edge_lgkmcW</bpmn:outgoing>
+      <bpmn:outgoing>edge_3baNEN</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
     <bpmn:sequenceFlow id="edge_E8C6mC" sourceRef="Event_start" targetRef="Activity_01re7D" />
     <bpmn:sequenceFlow id="edge_BRrh6t" sourceRef="Activity_01re7D" targetRef="Activity_vwculv" />
     <bpmn:sequenceFlow id="edge_VHQ17A" sourceRef="Activity_vwculv" targetRef="Gateway_6dlaYF" />
@@ -418,10 +428,6 @@
     <bpmn:sequenceFlow id="edge_GIWjMq" sourceRef="Activity_SUrPUZ" targetRef="Activity_H96Hfm" />
     <bpmn:sequenceFlow id="edge_uWlgte" sourceRef="Activity_H96Hfm" targetRef="Activity_dDOVAx" />
     <bpmn:sequenceFlow id="edge_EXFaZK" sourceRef="Activity_dDOVAx" targetRef="Gateway_GHE5sv" />
-    <bpmn:sequenceFlow id="edge_DruSyB" name="Automation Fix Approved" sourceRef="Gateway_GHE5sv" targetRef="Activity_7XFL1M">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=True</bpmn:conditionExpression>
-    </bpmn:sequenceFlow>
-    <bpmn:sequenceFlow id="edge_UX8L97" sourceRef="Activity_7XFL1M" targetRef="Activity_cY5urh" />
     <bpmn:association id="edge_Event_start-Text_SbnOXY" sourceRef="Event_start" targetRef="Text_SbnOXY" />
     <bpmn:association id="edge_Activity_f21uUA-Text_CuMPTw" sourceRef="Activity_f21uUA" targetRef="Text_CuMPTw" />
     <bpmn:association id="edge_Activity_e4QZwO-Text_mpHPOs" sourceRef="Activity_e4QZwO" targetRef="Text_mpHPOs" />
@@ -454,6 +460,17 @@
     </bpmn:sequenceFlow>
     <bpmn:association id="edge_Activity_Wmfo8w-Text_oXErh2" sourceRef="Activity_Wmfo8w" targetRef="Text_oXErh2" />
     <bpmn:association id="edge_Event_5nsSE4-Text_FJhFZ0" sourceRef="Event_5nsSE4" targetRef="Text_FJhFZ0" />
+    <bpmn:sequenceFlow id="edge_lgkmcW" name="Passed" sourceRef="Gateway_YPRgO4" targetRef="Activity_GWqM6U">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=True</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="edge_3baNEN" name="Failed" sourceRef="Gateway_YPRgO4" targetRef="Activity_6M1PFA">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=True</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="edge_Fimg9M" name="Automation Fix Approved" sourceRef="Gateway_GHE5sv" targetRef="Activity_7XFL1M">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=True</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="edge_pfHG91" sourceRef="Activity_7XFL1M" targetRef="Activity_nvKrF3" />
+    <bpmn:sequenceFlow id="edge_SRkbet" sourceRef="Activity_nvKrF3" targetRef="Gateway_YPRgO4" />
     <bpmn:textAnnotation id="TextAnnotation_1">
       <bpmn:text>Pull change details, requirement text, PR metadata, impacted apps, and baseline approvals.</bpmn:text>
     </bpmn:textAnnotation>
@@ -602,9 +619,9 @@
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="S_Activity_7XFL1M" bpmnElement="Activity_7XFL1M">
-        <dc:Bounds x="1472" y="-96" width="120" height="80" />
+        <dc:Bounds x="2144" y="128" width="120" height="80" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="1472" y="-11" width="120" height="14" />
+          <dc:Bounds x="2144" y="213" width="120" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="S_Event_5nsSE4" bpmnElement="Event_5nsSE4">
@@ -668,9 +685,9 @@
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="S_Text_WDr1u9" bpmnElement="Text_WDr1u9">
-        <dc:Bounds x="1456" y="-208" width="148" height="80" />
+        <dc:Bounds x="2128" y="0" width="148" height="80" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="1456" y="-123" width="148" height="14" />
+          <dc:Bounds x="2128" y="85" width="148" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="S_Text_kEnchi" bpmnElement="Text_kEnchi">
@@ -725,6 +742,18 @@
         <dc:Bounds x="1216" y="912" width="132" height="80" />
         <bpmndi:BPMNLabel>
           <dc:Bounds x="1216" y="997" width="132" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S_Activity_nvKrF3" bpmnElement="Activity_nvKrF3">
+        <dc:Bounds x="2304" y="129" width="100" height="80" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2304" y="214" width="100" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S_Gateway_YPRgO4" bpmnElement="Gateway_YPRgO4">
+        <dc:Bounds x="2464" y="144" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2464" y="199" width="50" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="BPMNEdge_edge_E8C6mC" bpmnElement="edge_E8C6mC">
@@ -796,16 +825,6 @@
         <di:waypoint x="2008" y="168" />
         <di:waypoint x="2064" y="169" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="BPMNEdge_edge_DruSyB" bpmnElement="edge_DruSyB">
-        <di:waypoint x="2089" y="144" />
-        <di:waypoint x="2089" y="-56" />
-        <di:waypoint x="1592" y="-56" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="BPMNEdge_edge_UX8L97" bpmnElement="edge_UX8L97">
-        <di:waypoint x="1472" y="-56" />
-        <di:waypoint x="1052" y="-56" />
-        <di:waypoint x="1052" y="410" />
-      </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="BPMNEdge_edge_Event_start-Text_SbnOXY" bpmnElement="edge_Event_start-Text_SbnOXY">
         <di:waypoint x="210" y="468" />
         <di:waypoint x="210" y="544" />
@@ -819,8 +838,8 @@
         <di:waypoint x="1792" y="483.1807228915663" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="BPMNEdge_edge_Activity_7XFL1M-Text_WDr1u9" bpmnElement="edge_Activity_7XFL1M-Text_WDr1u9">
-        <di:waypoint x="1531.2857142857142" y="-96" />
-        <di:waypoint x="1530.7142857142858" y="-128" />
+        <di:waypoint x="2203.375" y="128" />
+        <di:waypoint x="2202.625" y="80" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="BPMNEdge_edge_Activity_SUrPUZ-Text_kEnchi" bpmnElement="edge_Activity_SUrPUZ-Text_kEnchi">
         <di:waypoint x="1563.2857142857142" y="128" />
@@ -911,6 +930,30 @@
       <bpmndi:BPMNEdge id="BPMNEdge_edge_Event_5nsSE4-Text_FJhFZ0" bpmnElement="edge_Event_5nsSE4-Text_FJhFZ0">
         <di:waypoint x="1282" y="836" />
         <di:waypoint x="1282" y="912" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_edge_lgkmcW" bpmnElement="edge_lgkmcW">
+        <di:waypoint x="2489" y="194" />
+        <di:waypoint x="2489" y="576" />
+        <di:waypoint x="1564" y="576" />
+        <di:waypoint x="1564" y="624" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_edge_3baNEN" bpmnElement="edge_3baNEN">
+        <di:waypoint x="2489" y="144" />
+        <di:waypoint x="2489" y="-96" />
+        <di:waypoint x="1356" y="-96" />
+        <di:waypoint x="1356" y="304" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_edge_Fimg9M" bpmnElement="edge_Fimg9M">
+        <di:waypoint x="2114" y="169" />
+        <di:waypoint x="2144" y="168" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_edge_pfHG91" bpmnElement="edge_pfHG91">
+        <di:waypoint x="2264" y="168" />
+        <di:waypoint x="2304" y="169" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_edge_SRkbet" bpmnElement="edge_SRkbet">
+        <di:waypoint x="2404" y="169" />
+        <di:waypoint x="2464" y="169" />
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
