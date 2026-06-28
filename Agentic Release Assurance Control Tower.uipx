@@ -37,9 +37,14 @@
       "ProjectRelativePath": "Test Failure Triage Agent/project.uiproj"
     },
     {
+      "Id": "2434f5e0-36dc-49fd-ba6a-a0e6690af2e3",
+      "Type": "Process",
+      "ProjectRelativePath": "RPA Workflow/project.uiproj"
+    },
+    {
       "Id": "0e3089fc-12c0-401c-a0c4-25945f1022af",
       "Type": "Api",
-      "ProjectRelativePath": "HITL PR Review Agent/project.uiproj"
+      "ProjectRelativePath": "Test Set Execution API Workflow/project.uiproj"
     }
   ],
   "DocVersion": "1.0.0",
