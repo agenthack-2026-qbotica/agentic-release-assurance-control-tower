@@ -449,7 +449,7 @@
     <bpmn:sequenceFlow id="edge_t9hKln" sourceRef="Activity_e4QZwO" targetRef="Activity_GWqM6U" />
     <bpmn:sequenceFlow id="edge_iioeFo" sourceRef="Activity_Wmfo8w" targetRef="Event_5nsSE4" />
     <bpmn:association id="edge_Activity_JfNGKk-Text_yrQwo0" sourceRef="Activity_JfNGKk" targetRef="Text_yrQwo0" />
-    <bpmn:sequenceFlow id="edge_Gateway_GHE5sv-Gateway_QY47GLQZMShc" name="Automation Fix Rejected" sourceRef="Gateway_GHE5sv" targetRef="Gateway_QY47GL">
+    <bpmn:sequenceFlow id="edge_Gateway_GHE5sv-Gateway_QY47GLQZMShc" name="Fix Rejected" sourceRef="Gateway_GHE5sv" targetRef="Gateway_QY47GL">
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=True</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="edge_2BFZwq" name="Retry" sourceRef="Gateway_QY47GL" targetRef="Activity_SUrPUZ">
@@ -466,7 +466,7 @@
     <bpmn:sequenceFlow id="edge_3baNEN" name="Failed" sourceRef="Gateway_YPRgO4" targetRef="Activity_6M1PFA">
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=True</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
-    <bpmn:sequenceFlow id="edge_Fimg9M" name="Automation Fix Approved" sourceRef="Gateway_GHE5sv" targetRef="Activity_7XFL1M">
+    <bpmn:sequenceFlow id="edge_Fimg9M" name="Fix Approved" sourceRef="Gateway_GHE5sv" targetRef="Activity_7XFL1M">
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=True</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="edge_pfHG91" sourceRef="Activity_7XFL1M" targetRef="Activity_nvKrF3" />
