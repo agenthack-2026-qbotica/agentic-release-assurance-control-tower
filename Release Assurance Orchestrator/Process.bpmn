@@ -180,10 +180,10 @@
           <uipath:context>
             <uipath:input name="name" type="string" value="=bindings.bbgfVUOHg" />
             <uipath:input name="folderPath" type="string" value="=bindings.bZMbapxte" />
-            <uipath:input name="_label" type="string" value="Select and Execute Testset" />
-            <uipath:inputSchema type="jsonSchema"><![CDATA[{"$schema":"http://json-schema.org/draft-07/schema#","type":"object","properties":{"listofselectedTestCases":{"type":"array","title":"listofselectedTestCases"}},"required":[]}]]></uipath:inputSchema>
+            <uipath:input name="_label" type="string" value="Execute Selected Test Set" />
+            <uipath:inputSchema type="jsonSchema"><![CDATA[{"$schema":"http://json-schema.org/draft-07/schema#","type":"object","properties":{"listofselectedTestCases":{"type":"array"}},"required":[]}]]></uipath:inputSchema>
           </uipath:context>
-          <uipath:input name="JobArguments" type="json" target="bodyField"><![CDATA[{"listofselectedTestCases":null}]]></uipath:input>
+          <uipath:input name="JobArguments" type="json" target="bodyField"><![CDATA[{"listofselectedTestCases":"=vars.selectedTestCases"}]]></uipath:input>
           <uipath:output name="Error" type="jsonSchema" source="=Error" var="error5" />
           <uipath:output name="TestSetReport_json" type="jsonSchema" source="=TestSetReport_json" var="testSetReportJson" />
           <uipath:output name="jobErrors" type="jsonSchema" source="=jobErrors" var="jobErrors" />

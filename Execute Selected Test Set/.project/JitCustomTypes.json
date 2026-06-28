@@ -1,12 +1,5 @@
 {
   "version": "3.0.0.0",
-<<<<<<< Updated upstream
-  "bundleHash": null,
-  "addedAssemblyNames": [],
-  "discardedAssemblyNames": [],
-  "discardedAssemblyReplacements": {},
-  "assembliesJitInfo": {}
-=======
   "bundleHash": "6IEuaarkcLx7iAD88C4oigodry4FtufXX8IMoXynfc",
   "addedAssemblyNames": [],
   "discardedAssemblyNames": [],
@@ -29,5 +22,4 @@
       ]
     }
   }
->>>>>>> Stashed changes
 }
