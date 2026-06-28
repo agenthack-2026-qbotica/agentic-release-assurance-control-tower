@@ -1,8 +1,33 @@
 {
   "version": "3.0.0.0",
+<<<<<<< Updated upstream
   "bundleHash": null,
   "addedAssemblyNames": [],
   "discardedAssemblyNames": [],
   "discardedAssemblyReplacements": {},
   "assembliesJitInfo": {}
+=======
+  "bundleHash": "6IEuaarkcLx7iAD88C4oigodry4FtufXX8IMoXynfc",
+  "addedAssemblyNames": [],
+  "discardedAssemblyNames": [],
+  "discardedAssemblyReplacements": {},
+  "assembliesJitInfo": {
+    "GetExecutableTestCas.72WhM2EDDZN1QUx6g13SP9T": {
+      "createdAt": "2026-06-28T13:54:35.8056142+00:00",
+      "providerName": "CustomEntities",
+      "rootNamespace": "UiPath.System.Activities.ViewModels.SWEntities.GetExecutableTestCaseDetails_Input.Bundle",
+      "typeNames": [
+        "GetExecutableTestCaseDetails_Input"
+      ]
+    },
+    "GetExecutableTestCas.KEtCGZ7zJQ1iQsj13NI9x4": {
+      "createdAt": "2026-06-28T13:54:36.4286338+00:00",
+      "providerName": "CustomEntities",
+      "rootNamespace": "UiPath.System.Activities.ViewModels.SWEntities.GetExecutableTestCaseDetails_Output.Bundle",
+      "typeNames": [
+        "GetExecutableTestCaseDetails_Output"
+      ]
+    }
+  }
+>>>>>>> Stashed changes
 }
