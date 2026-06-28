@@ -70,7 +70,10 @@
       <Variable x:TypeArguments="x:String" Default="https://staging.uipath.com/identity_/connect/token" Name="tokenUrl" />
       <Variable x:TypeArguments="x:String" Default="https://staging.uipath.com/hackathon26_795/DefaultTenant/testmanager_" Name="tmBase" />
       <Variable x:TypeArguments="x:String" Default="d7f80251-45d0-0000-ec03-0b49c94aba8e" Name="projectId" />
-      <Variable x:TypeArguments="x:String" Default="74c89bad-2400-4364-ac6d-ffaed43323e8" Name="folderKey" />
+      <Variable x:TypeArguments="x:String" Default="a9235f06-419c-4007-8d9d-706225d646b0" Name="folderKey" />
+      <Variable x:TypeArguments="x:String" Default="e2fe5bba-2b51-4eec-a60f-cde18044f715" Name="robotUserKey" />
+      <Variable x:TypeArguments="x:String" Default="6f355051-d355-4e37-85d4-116b15ea976c" Name="machineKey" />
+      <Variable x:TypeArguments="x:String" Default="automationCloudTestAutomation" Name="runtimeType" />
       <Variable x:TypeArguments="x:String" Default="a92067ac-7f91-489a-ac62-9fc5b28af257" Name="clientId" />
       <Variable x:TypeArguments="x:String" Default="!QC8kw7qYQJ@2#Q%s1sfC2gU0BSSzRcr8?#GGXjxJZj5?Ank@eD$57UCyxoD5(6$" Name="clientSecret" />
       <Variable x:TypeArguments="x:String" Default="Agenthack.ServiceNow.Incidents" Name="packageName" />
@@ -123,12 +126,12 @@
       </uwah:NetHttpRequest.TimeoutInMiliseconds>
     </uwah:NetHttpRequest>
     <ui:DeserializeJson x:TypeArguments="njl:JObject" JsonSample="{x:Null}" Settings="{x:Null}" DisplayName="Parse Test Cases" sap2010:WorkflowViewState.IdRef="DeserializeJson_2" JsonObject="[tcObj]" JsonString="[tcSum.TextContent]" />
-    <Assign DisplayName="Match selected test cases to IDs" sap2010:WorkflowViewState.IdRef="Assign_2">
+    <Assign DisplayName="Assign filtered test case IDs to a list" sap2010:WorkflowViewState.IdRef="Assign_2">
       <Assign.To>
         <OutArgument x:TypeArguments="scg:List(x:String)">[selectedIds]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="scg:List(x:String)">[CType(tcObj("data"), Newtonsoft.Json.Linq.JArray).Children(Of Newtonsoft.Json.Linq.JObject)().Where(Function(t) t("packageEntryPointName") IsNot Nothing AndAlso t("packageEntryPointName").Type &lt;&gt; Newtonsoft.Json.Linq.JTokenType.Null AndAlso t("automationId") IsNot Nothing AndAlso t("automationId").Type &lt;&gt; Newtonsoft.Json.Linq.JTokenType.Null AndAlso listofselectedTestCases.Contains(t("packageEntryPointName").ToString.Replace("TestCases\", ""))).Select(Function(t) t("id").ToString).ToList()]</InArgument>
+        <InArgument x:TypeArguments="scg:List(x:String)">[CType(tcObj("data"), Newtonsoft.Json.Linq.JArray).Children(Of Newtonsoft.Json.Linq.JObject)().Where(Function(t) t("automationId") IsNot Nothing AndAlso t("automationId").Type &lt;&gt; Newtonsoft.Json.Linq.JTokenType.Null AndAlso ((t("packageEntryPointName") IsNot Nothing AndAlso t("packageEntryPointName").Type &lt;&gt; Newtonsoft.Json.Linq.JTokenType.Null AndAlso listofselectedTestCases.Contains(t("packageEntryPointName").ToString.Replace("TestCases\", ""))) OrElse (t("name") IsNot Nothing AndAlso t("name").Type &lt;&gt; Newtonsoft.Json.Linq.JTokenType.Null AndAlso listofselectedTestCases.Contains(t("name").ToString)))).Select(Function(t) t("id").ToString).ToList()]</InArgument>
       </Assign.Value>
     </Assign>
     <ui:LogMessage DisplayName="Log matched IDs" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Matched &quot; &amp; selectedIds.Count.ToString &amp; &quot; test case(s): &quot; &amp; String.Join(&quot;, &quot;, selectedIds)]" />
