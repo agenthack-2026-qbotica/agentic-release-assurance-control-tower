@@ -1,16 +1,14 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.listofselectedTestCases="[new System.String() {  }]"
+<Activity mc:Ignorable="sap2010" x:Class="Main" this:Main.listofselectedTestCases="[new System.String() {  }]"
  xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
  xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json"
  xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib"
- xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
  xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
  xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib"
  xmlns:this="clr-namespace:"
  xmlns:ui="http://schemas.uipath.com/workflow/activities"
- xmlns:upa="clr-namespace:UiPath.Pipelines.Activities;assembly=UiPath.Pipelines.Activities"
- xmlns:upam="clr-namespace:UiPath.Pipelines.Activities.Models;assembly=UiPath.Pipelines.Activities"
  xmlns:uwah="clr-namespace:UiPath.Web.Activities.Http;assembly=UiPath.Web.Activities"
+ xmlns:uwahm="clr-namespace:UiPath.Web.Activities.Http.Models;assembly=UiPath.Web.Activities"
  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="TestSetReport_json" Type="OutArgument(njl:JObject)" />
@@ -18,246 +16,197 @@
     <x:Property Name="listofselectedTestCases" Type="InArgument(s:String[])" />
   </x:Members>
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="47">
+    <scg:List x:TypeArguments="x:String" Capacity="16">
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
       <x:String>System.Activities</x:String>
       <x:String>System.Collections.Generic</x:String>
       <x:String>System.Collections</x:String>
-      <x:String>System</x:String>
-      <x:String>System.Runtime.Serialization</x:String>
-      <x:String>UiPath.Activities.System.Jobs</x:String>
-      <x:String>UiPath.Core.Activities</x:String>
-      <x:String>System.Collections.ObjectModel</x:String>
-      <x:String>System.Activities.Statements</x:String>
-      <x:String>Microsoft.Rest</x:String>
-      <x:String>UiPath.Orchestrator.Client.Models</x:String>
-      <x:String>System.Reflection</x:String>
-      <x:String>UiPath.Core.Activities.Orchestrator</x:String>
-      <x:String>UiPath.Web.Activities.JSON.Models</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net</x:String>
       <x:String>Newtonsoft.Json.Linq</x:String>
       <x:String>Newtonsoft.Json</x:String>
-      <x:String>System.Dynamic</x:String>
-      <x:String>System.ComponentModel</x:String>
-      <x:String>System.Collections.Specialized</x:String>
       <x:String>UiPath.Web.Activities</x:String>
-      <x:String>UiPath.Web.Activities.Http.Models</x:String>
-      <x:String>System.Security</x:String>
-      <x:String>System.Net</x:String>
-      <x:String>UiPath.Platform.ResourceHandling</x:String>
       <x:String>UiPath.Web.Activities.Http</x:String>
-      <x:String>UiPath.Sdk.Activities</x:String>
-      <x:String>UiPath.Sdk.Activities.DependencyInjection.Contracts</x:String>
-      <x:String>UiPath.Sdk.Activities.DependencyInjection</x:String>
-      <x:String>UiPath.Pipelines.Activities.CustomTypes</x:String>
-      <x:String>UiPath.Pipelines.Activities.Models</x:String>
-      <x:String>UiPath.Orchestrator.Client.Api.Models</x:String>
-      <x:String>UiPath.Pipelines.Activities</x:String>
-      <x:String>UiPath.Pipelines.Activities.Persistence</x:String>
-      <x:String>UiPath.Shared.Activities</x:String>
-      <x:String>System.Activities.Expressions</x:String>
-      <x:String>System.Activities.Validation</x:String>
-      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>UiPath.Web.Activities.Http.Models</x:String>
+      <x:String>System.Activities.Statements</x:String>
       <x:String>Microsoft.VisualBasic</x:String>
       <x:String>Microsoft.VisualBasic.Activities</x:String>
-      <x:String>System.Data</x:String>
-      <x:String>System.Diagnostics</x:String>
-      <x:String>System.IO</x:String>
-      <x:String>System.Linq</x:String>
-      <x:String>System.Windows.Markup</x:String>
-      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
-      <x:String>UiPath.System.Activities.ViewModels.SWEntities.GetExecutableTestCaseDetails_Input.Bundle</x:String>
-      <x:String>UiPath.System.Activities.ViewModels.SWEntities.GetExecutableTestCaseDetails_Output.Bundle</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="31">
-      <AssemblyReference>GetExecutableTestCas.KEtCGZ7zJQ1iQsj13NI9x4</AssemblyReference>
-      <AssemblyReference>GetExecutableTestCas.72WhM2EDDZN1QUx6g13SP9T</AssemblyReference>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="20">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>System</AssemblyReference>
       <AssemblyReference>System.Linq</AssemblyReference>
       <AssemblyReference>System.Xaml</AssemblyReference>
       <AssemblyReference>System.Net.Primitives</AssemblyReference>
-      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Net.Http</AssemblyReference>
       <AssemblyReference>Newtonsoft.Json</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
       <AssemblyReference>System.Private.CoreLib</AssemblyReference>
       <AssemblyReference>System.Runtime</AssemblyReference>
       <AssemblyReference>netstandard</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
-      <AssemblyReference>UiPath.Pipelines.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Orchestrator.Client</AssemblyReference>
       <AssemblyReference>System.Collections</AssemblyReference>
       <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
-      <AssemblyReference>System.Private.Uri</AssemblyReference>
       <AssemblyReference>UiPath.Platform</AssemblyReference>
-      <AssemblyReference>System.Reflection.Primitives</AssemblyReference>
-      <AssemblyReference>System.ComponentModel</AssemblyReference>
-      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
       <AssemblyReference>System.ObjectModel</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
-      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
-      <AssemblyReference>Microsoft.Rest.ClientRuntime</AssemblyReference>
-      <AssemblyReference>System.Net.Http</AssemblyReference>
-      <AssemblyReference>UiPath.OrchestratorClient</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="356,732" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Execute Selected Test Set" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="ui:CurrentJobInfo" Name="jobData">
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:String x:Key="SourceIdRef">ManualTrigger_1</x:String>
-            <x:String x:Key="SourcePropertyName">Result</x:String>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </Variable>
-      <Variable x:TypeArguments="upam:UiPathTestReport" Name="testSetReport">
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:String x:Key="SourceIdRef">RunExistingTestSet_2</x:String>
-            <x:String x:Key="SourcePropertyName">TestSetReport</x:String>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </Variable>
-      <Variable x:TypeArguments="scg:List(x:String)" Default="[new System.Collections.Generic.List(Of System.String) From {  }]" Name="List_FailedJobs" />
-      <Variable x:TypeArguments="x:Int32" Name="statusCode">
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:String x:Key="SourceIdRef">OrchestratorHttpRequest_1</x:String>
-            <x:String x:Key="SourcePropertyName">StatusCode</x:String>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </Variable>
-      <Variable x:TypeArguments="x:String" Name="jsonResponse">
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:String x:Key="SourceIdRef">OrchestratorHttpRequest_1</x:String>
-            <x:String x:Key="SourcePropertyName">Result</x:String>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </Variable>
-      <Variable x:TypeArguments="njl:JObject" Default="[new Newtonsoft.Json.Linq.JObject From {  }]" Name="jsonObject">
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:String x:Key="SourceIdRef">DeserializeJson`1_1</x:String>
-            <x:String x:Key="SourcePropertyName">JsonObject</x:String>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </Variable>
+      <Variable x:TypeArguments="x:String" Default="https://staging.uipath.com/identity_/connect/token" Name="tokenUrl" />
+      <Variable x:TypeArguments="x:String" Default="https://staging.uipath.com/hackathon26_795/DefaultTenant/testmanager_" Name="tmBase" />
+      <Variable x:TypeArguments="x:String" Default="d7f80251-45d0-0000-ec03-0b49c94aba8e" Name="projectId" />
+      <Variable x:TypeArguments="x:String" Default="74c89bad-2400-4364-ac6d-ffaed43323e8" Name="folderKey" />
+      <Variable x:TypeArguments="x:String" Default="a92067ac-7f91-489a-ac62-9fc5b28af257" Name="clientId" />
+      <Variable x:TypeArguments="x:String" Default="!QC8kw7qYQJ@2#Q%s1sfC2gU0BSSzRcr8?#GGXjxJZj5?Ank@eD$57UCyxoD5(6$" Name="clientSecret" />
+      <Variable x:TypeArguments="x:String" Default="Agenthack.ServiceNow.Incidents" Name="packageName" />
+      <Variable x:TypeArguments="x:String" Default="1.0.*" Name="packageVersion" />
+      <Variable x:TypeArguments="uwahm:HttpResponseSummary" Name="tokenSum" />
+      <Variable x:TypeArguments="njl:JObject" Name="tokenObj" />
+      <Variable x:TypeArguments="x:String" Name="accessToken" />
+      <Variable x:TypeArguments="uwahm:HttpResponseSummary" Name="tcSum" />
+      <Variable x:TypeArguments="njl:JObject" Name="tcObj" />
+      <Variable x:TypeArguments="scg:List(x:String)" Default="[New System.Collections.Generic.List(Of System.String)]" Name="selectedIds" />
+      <Variable x:TypeArguments="njl:JObject" Name="reqBody" />
+      <Variable x:TypeArguments="uwahm:HttpResponseSummary" Name="execSum" />
+      <Variable x:TypeArguments="njl:JObject" Name="execObj" />
+      <Variable x:TypeArguments="x:String" Name="executionId" />
+      <Variable x:TypeArguments="x:String" Name="testSetId" />
+      <Variable x:TypeArguments="uwahm:HttpResponseSummary" Name="statsSum" />
+      <Variable x:TypeArguments="njl:JObject" Name="statsObj" />
+      <Variable x:TypeArguments="x:String" Default="Pending" Name="execStatus" />
+      <Variable x:TypeArguments="x:Int32" Default="0" Name="pollCount" />
+      <Variable x:TypeArguments="uwahm:HttpResponseSummary" Name="logsSum" />
+      <Variable x:TypeArguments="njl:JObject" Name="logsObj" />
     </Sequence.Variables>
-    <sap:WorkflowViewStateService.ViewState>
-      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-      </scg:Dictionary>
-    </sap:WorkflowViewStateService.ViewState>
-    <ui:ManualTrigger DisplayName="Manual Trigger" sap2010:WorkflowViewState.IdRef="ManualTrigger_1" Result="[jobData]" />
-    <ui:CommentOut DisplayName="Disabled activities" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-      <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap2010:WorkflowViewState.IdRef="Sequence_3">
-          <uwah:NetHttpRequest BasicAuthPassword="{x:Null}" BasicAuthSecurePassword="{x:Null}" BasicAuthUsername="{x:Null}" BinaryPayload="{x:Null}" ClientCertPassword="{x:Null}" ClientCertPath="{x:Null}" ClientCertSecurePassword="{x:Null}" CustomNegotiatedAuthCredentials="{x:Null}" FilePath="{x:Null}" OutputFileName="{x:Null}" OutputFileTargetFolder="{x:Null}" PathResource="{x:Null}" ProxyConfiguration="{x:Null}" ResourceFiles="{x:Null}" AuthenticationType="OAuthToken" ContinueOnError="True" Cookies="[New System.Collections.Generic.Dictionary(Of String, String) From {}]" DisableSslVerification="False" DisplayName="HTTP Request 1" EnableCookies="True" FileOverwrite="AutoRename" FollowRedirects="True" FormData="[New System.Collections.Generic.Dictionary(Of String, String) From {}]" FormDataParts="[New List (Of FormDataPart) From _&#xA;{&#xA; New FileFormDataPart(),&#xA; New BinaryFormDataPart(),&#xA; New TextFormDataPart()&#xA;}]" Headers="[New System.Collections.Generic.Dictionary(Of String, String) From {{&quot;accept&quot;, &quot;application/json&quot;}, {&quot;X-UIPATH-OrganizationUnitId&quot;, &quot;3090438&quot;}, {&quot;Content-Type&quot;, &quot;application/json&quot;}}]" sap2010:WorkflowViewState.IdRef="NetHttpRequest_2" InitialDelay="500" LocalFiles="[New List (Of String) From { }]" MaxRedirects="3" MaxRetryAfterDelay="30000" Method="POST" Multiplier="2" OAuthToken="rt_1406A62BE80B2AFB38DA417C55B444F4B286F9417A25903E2C2C4909D4A7BD31-1" Parameters="[New System.Collections.Generic.Dictionary(Of String, String) From {}]" PreferRetryAfterValue="True" ProxySetting="SystemDefault" RequestBodyType="Text" RequestUrl="[&quot;https://staging.uipath.com/hackathon26_795/DefaultTenant/orchestrator_/odata/TestSets&quot;]" RetryCount="3" RetryPolicyType="Basic" RetryStatusCodes="[New List (Of System.Net.HttpStatusCode) From _&#xA;{&#xA; System.Net.HttpStatusCode.RequestTimeout,&#xA; System.Net.HttpStatusCode.TooManyRequests,&#xA; System.Net.HttpStatusCode.InternalServerError,&#xA; System.Net.HttpStatusCode.BadGateway,&#xA; System.Net.HttpStatusCode.ServiceUnavailable,&#xA; System.Net.HttpStatusCode.GatewayTimeout&#xA;}]" SaveRawRequestResponse="False" SaveResponseAsFile="False" TextPayload="[&quot;{'Name':'TestSet_&quot;+DateAndTime.Now.ToString(&quot;hhmmss&quot;)+&quot;','Description':'','Packages':[{'PackageIdentifier':'Agenthack.ServiceNow.Incidents','VersionMask':'1.0.*','IncludePrerelease':false}],'TestCases':[&quot;+outputArguments.out_str_JsonPayload.ToString()+&quot;],'InputArguments':[],'RobotId':672344,'EnableCoverage':false}&quot;]" TextPayloadContentType="[&quot;application/json&quot;]" TextPayloadEncoding="[&quot;UTF-8&quot;]" TlsProtocol="Automatic" UseJitter="True" UseOsNegotiatedAuthCredentials="True">
-            <uwah:NetHttpRequest.TimeoutInMiliseconds>
-              <InArgument x:TypeArguments="s:Nullable(x:Int32)">
-                <Literal x:TypeArguments="s:Nullable(x:Int32)" Value="10000" />
-              </InArgument>
-            </uwah:NetHttpRequest.TimeoutInMiliseconds>
-          </uwah:NetHttpRequest>
-        </Sequence>
-      </ui:CommentOut.Body>
-    </ui:CommentOut>
-    <uwah:NetHttpRequest BasicAuthPassword="{x:Null}" BasicAuthSecurePassword="{x:Null}" BasicAuthUsername="{x:Null}" BinaryPayload="{x:Null}" ClientCertPassword="{x:Null}" ClientCertPath="{x:Null}" ClientCertSecurePassword="{x:Null}" CustomNegotiatedAuthCredentials="{x:Null}" FilePath="{x:Null}" OutputFileName="{x:Null}" OutputFileTargetFolder="{x:Null}" PathResource="{x:Null}" ProxyConfiguration="{x:Null}" ResourceFiles="{x:Null}" AuthenticationType="OAuthToken" ContinueOnError="True" Cookies="[New System.Collections.Generic.Dictionary(Of String, String) From {}]" DisableSslVerification="False" DisplayName="HTTP Request" EnableCookies="True" FileOverwrite="AutoRename" FollowRedirects="True" FormData="[New System.Collections.Generic.Dictionary(Of String, String) From {}]" FormDataParts="[New List (Of FormDataPart) From _&#xA;{&#xA; New FileFormDataPart(),&#xA; New BinaryFormDataPart(),&#xA; New TextFormDataPart()&#xA;}]" Headers="[New System.Collections.Generic.Dictionary(Of String, String) From {{&quot;accept&quot;, &quot;application/json&quot;}, {&quot;X-UIPATH-OrganizationUnitId&quot;, &quot;3090438&quot;}, {&quot;Content-Type&quot;, &quot;application/json&quot;}}]" sap2010:WorkflowViewState.IdRef="NetHttpRequest_1" InitialDelay="500" LocalFiles="[New List (Of String) From { }]" MaxRedirects="3" MaxRetryAfterDelay="30000" Method="POST" Multiplier="2" OAuthToken="rt_1406A62BE80B2AFB38DA417C55B444F4B286F9417A25903E2C2C4909D4A7BD31-1" Parameters="[New System.Collections.Generic.Dictionary(Of String, String) From {}]" PreferRetryAfterValue="True" ProxySetting="SystemDefault" RequestBodyType="Text" RequestUrl="[&quot;https://staging.uipath.com/hackathon26_795/DefaultTenant/orchestrator_/odata/TestSets&quot;]" RetryCount="3" RetryPolicyType="Basic" RetryStatusCodes="[New List (Of System.Net.HttpStatusCode) From _&#xA;{&#xA; System.Net.HttpStatusCode.RequestTimeout,&#xA; System.Net.HttpStatusCode.TooManyRequests,&#xA; System.Net.HttpStatusCode.InternalServerError,&#xA; System.Net.HttpStatusCode.BadGateway,&#xA; System.Net.HttpStatusCode.ServiceUnavailable,&#xA; System.Net.HttpStatusCode.GatewayTimeout&#xA;}]" SaveRawRequestResponse="False" SaveResponseAsFile="False" TextPayload="{}{&quot;Name&quot;:&quot;test4&quot;,&quot;Description&quot;:null,&quot;Packages&quot;:[{&quot;PackageIdentifier&quot;:&quot;Agenthack.ServiceNow.Incidents&quot;,&quot;VersionMask&quot;:&quot;1.0.*&quot;,&quot;IncludePrerelease&quot;:false}],&quot;TestCases&quot;:[{&quot;DefinitionId&quot;:145710,&quot;ReleaseId&quot;:2254288,&quot;VersionNumber&quot;:&quot;1.0.236341895&quot;},{&quot;DefinitionId&quot;:145711,&quot;ReleaseId&quot;:2254288,&quot;VersionNumber&quot;:&quot;1.0.236341895&quot;},{&quot;DefinitionId&quot;:145712,&quot;ReleaseId&quot;:2254288,&quot;VersionNumber&quot;:&quot;1.0.236341895&quot;}]}" TextPayloadContentType="[&quot;application/json&quot;]" TextPayloadEncoding="[&quot;UTF-8&quot;]" TlsProtocol="Automatic" UseJitter="True" UseOsNegotiatedAuthCredentials="True">
+    <ui:ManualTrigger Result="{x:Null}" DisplayName="Manual Trigger" sap2010:WorkflowViewState.IdRef="ManualTrigger_1" />
+    <uwah:NetHttpRequest BasicAuthPassword="{x:Null}" BasicAuthSecurePassword="{x:Null}" BasicAuthUsername="{x:Null}" BinaryPayload="{x:Null}" ClientCertPassword="{x:Null}" ClientCertPath="{x:Null}" ClientCertSecurePassword="{x:Null}" Cookies="{x:Null}" CustomNegotiatedAuthCredentials="{x:Null}" FilePath="{x:Null}" FormData="{x:Null}" LocalFiles="{x:Null}" OAuthToken="{x:Null}" OutputFileName="{x:Null}" OutputFileTargetFolder="{x:Null}" Parameters="{x:Null}" PathResource="{x:Null}" ProxyConfiguration="{x:Null}" ResourceFiles="{x:Null}" AuthenticationType="None" ContinueOnError="False" DisableSslVerification="False" DisplayName="Get Access Token" EnableCookies="True" FileOverwrite="AutoRename" FollowRedirects="True" FormDataParts="[New List (Of FormDataPart) From _&#xA;{&#xA; New FileFormDataPart(),&#xA; New BinaryFormDataPart(),&#xA; New TextFormDataPart()&#xA;}]" Headers="[New System.Collections.Generic.Dictionary(Of String, String) From {{&quot;accept&quot;, &quot;application/json&quot;}}]" sap2010:WorkflowViewState.IdRef="NetHttpRequest_1" InitialDelay="500" MaxRedirects="3" MaxRetryAfterDelay="30000" Method="POST" Multiplier="2" PreferRetryAfterValue="True" RequestBodyType="Text" RequestUrl="[tokenUrl]" Result="[tokenSum]" RetryCount="0" RetryPolicyType="None" RetryStatusCodes="[New List (Of System.Net.HttpStatusCode) From _&#xA;{&#xA; System.Net.HttpStatusCode.RequestTimeout,&#xA; System.Net.HttpStatusCode.TooManyRequests,&#xA; System.Net.HttpStatusCode.InternalServerError,&#xA; System.Net.HttpStatusCode.BadGateway,&#xA; System.Net.HttpStatusCode.ServiceUnavailable,&#xA; System.Net.HttpStatusCode.GatewayTimeout&#xA;}]" SaveRawRequestResponse="False" SaveResponseAsFile="False" TextPayload="[&quot;grant_type=client_credentials&amp;client_id=&quot; &amp; Uri.EscapeDataString(clientId) &amp; &quot;&amp;client_secret=&quot; &amp; Uri.EscapeDataString(clientSecret)]" TextPayloadContentType="application/x-www-form-urlencoded" TextPayloadEncoding="UTF-8" TlsProtocol="Automatic" UseJitter="True" UseOsNegotiatedAuthCredentials="True">
       <uwah:NetHttpRequest.TimeoutInMiliseconds>
         <InArgument x:TypeArguments="s:Nullable(x:Int32)">
-          <Literal x:TypeArguments="s:Nullable(x:Int32)" Value="10000" />
+          <Literal x:TypeArguments="s:Nullable(x:Int32)" Value="60000" />
         </InArgument>
       </uwah:NetHttpRequest.TimeoutInMiliseconds>
     </uwah:NetHttpRequest>
-    <upa:RunExistingTestSet ResultFilePath="{x:Null}" AttachRobotLogs="False" ContinueOnError="True" DisplayName="Run Existing Test Set" Folder="[&quot;Shared&quot;]" sap2010:WorkflowViewState.IdRef="RunExistingTestSet_2" RetryCount="0" Tenant="[&quot;DefaultTenant&quot;]" TestSetName="test4" TestSetReport="[testSetReport]" />
-    <Assign DisplayName="Create and assign a JSON object for a test set report" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <ui:DeserializeJson x:TypeArguments="njl:JObject" JsonSample="{x:Null}" Settings="{x:Null}" DisplayName="Parse Token" sap2010:WorkflowViewState.IdRef="DeserializeJson_1" JsonObject="[tokenObj]" JsonString="[tokenSum.TextContent]" />
+    <Assign DisplayName="Assign accessToken" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
-        <OutArgument x:TypeArguments="njl:JObject">[TestSetReport_json]</OutArgument>
+        <OutArgument x:TypeArguments="x:String">[accessToken]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="njl:JObject" xml:space="preserve">[New Newtonsoft.Json.Linq.JObject(
-    New Newtonsoft.Json.Linq.JProperty("testSetId", testSetReport.TestSetExecutions(0).TestSetId),
-    New Newtonsoft.Json.Linq.JProperty("testSetName", testSetReport.TestSetExecutions(0).Name),
-    New Newtonsoft.Json.Linq.JProperty("status", testSetReport.TestSetExecutions(0).Status),
-    New Newtonsoft.Json.Linq.JProperty("totalTests", testSetReport.TestSetExecutions(0).TestCasesCount),
-    New Newtonsoft.Json.Linq.JProperty("passed", testSetReport.TestSetExecutions(0).TestCasesCount - testSetReport.TestSetExecutions(0).FailuresCount),
-    New Newtonsoft.Json.Linq.JProperty("failed", testSetReport.TestSetExecutions(0).FailuresCount),
-    New Newtonsoft.Json.Linq.JProperty(
-        "testCases",
-        New Newtonsoft.Json.Linq.JArray(
-            testSetReport.TestSetExecutions(0).TestCaseExecutions.Select(Function(tc) _
-                New Newtonsoft.Json.Linq.JObject(
-                    New Newtonsoft.Json.Linq.JProperty("testCaseId", tc.TestCaseId),
-                    New Newtonsoft.Json.Linq.JProperty("name", tc.Name),
-                    New Newtonsoft.Json.Linq.JProperty("status", tc.Status),
-                    New Newtonsoft.Json.Linq.JProperty("failureReason",
-                        If(tc.Status = "Failed" AndAlso tc.Assertions.Any(),
-                           tc.Assertions.First().Message,
-                           Nothing)
-                    ),
-                    New Newtonsoft.Json.Linq.JProperty("errorMessage", Nothing)
-                )
-            )
-        )
-    )
-)]</InArgument>
+        <InArgument x:TypeArguments="x:String">[tokenObj("access_token").ToString]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:LogMessage DisplayName="Log the content of TestSetReport_json" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[TestSetReport_json.ToString]" />
-    <Assign DisplayName="Assign a list of failed job IDs from test report" sap2010:WorkflowViewState.IdRef="Assign_2">
+    <uwah:NetHttpRequest BasicAuthPassword="{x:Null}" BasicAuthSecurePassword="{x:Null}" BasicAuthUsername="{x:Null}" BinaryPayload="{x:Null}" ClientCertPassword="{x:Null}" ClientCertPath="{x:Null}" ClientCertSecurePassword="{x:Null}" Cookies="{x:Null}" CustomNegotiatedAuthCredentials="{x:Null}" FilePath="{x:Null}" FormData="{x:Null}" LocalFiles="{x:Null}" OAuthToken="{x:Null}" OutputFileName="{x:Null}" OutputFileTargetFolder="{x:Null}" Parameters="{x:Null}" PathResource="{x:Null}" ProxyConfiguration="{x:Null}" ResourceFiles="{x:Null}" TextPayload="{x:Null}" AuthenticationType="None" ContinueOnError="False" DisableSslVerification="False" DisplayName="Get Test Cases" EnableCookies="True" FileOverwrite="AutoRename" FollowRedirects="True" FormDataParts="[New List (Of FormDataPart) From _&#xA;{&#xA; New FileFormDataPart(),&#xA; New BinaryFormDataPart(),&#xA; New TextFormDataPart()&#xA;}]" Headers="[New System.Collections.Generic.Dictionary(Of String, String) From {{&quot;Authorization&quot;, &quot;Bearer &quot; &amp; accessToken}, {&quot;accept&quot;, &quot;application/json&quot;}}]" sap2010:WorkflowViewState.IdRef="NetHttpRequest_2" InitialDelay="500" MaxRedirects="3" MaxRetryAfterDelay="30000" Method="GET" Multiplier="2" PreferRetryAfterValue="True" RequestBodyType="None" RequestUrl="[tmBase &amp; &quot;/api/v2/&quot; &amp; projectId &amp; &quot;/testcases?top=200&quot;]" Result="[tcSum]" RetryCount="0" RetryPolicyType="None" RetryStatusCodes="[New List (Of System.Net.HttpStatusCode) From _&#xA;{&#xA; System.Net.HttpStatusCode.RequestTimeout,&#xA; System.Net.HttpStatusCode.TooManyRequests,&#xA; System.Net.HttpStatusCode.InternalServerError,&#xA; System.Net.HttpStatusCode.BadGateway,&#xA; System.Net.HttpStatusCode.ServiceUnavailable,&#xA; System.Net.HttpStatusCode.GatewayTimeout&#xA;}]" SaveRawRequestResponse="False" SaveResponseAsFile="False" TextPayloadContentType="application/json" TextPayloadEncoding="UTF-8" TlsProtocol="Automatic" UseJitter="True" UseOsNegotiatedAuthCredentials="True">
+      <uwah:NetHttpRequest.TimeoutInMiliseconds>
+        <InArgument x:TypeArguments="s:Nullable(x:Int32)">
+          <Literal x:TypeArguments="s:Nullable(x:Int32)" Value="60000" />
+        </InArgument>
+      </uwah:NetHttpRequest.TimeoutInMiliseconds>
+    </uwah:NetHttpRequest>
+    <ui:DeserializeJson x:TypeArguments="njl:JObject" JsonSample="{x:Null}" Settings="{x:Null}" DisplayName="Parse Test Cases" sap2010:WorkflowViewState.IdRef="DeserializeJson_2" JsonObject="[tcObj]" JsonString="[tcSum.TextContent]" />
+    <Assign DisplayName="Match selected test cases to IDs" sap2010:WorkflowViewState.IdRef="Assign_2">
       <Assign.To>
-        <OutArgument x:TypeArguments="scg:List(x:String)">[List_FailedJobs]</OutArgument>
+        <OutArgument x:TypeArguments="scg:List(x:String)">[selectedIds]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="scg:List(x:String)" xml:space="preserve">[testSetReport.TestSetExecutions(0).TestCaseExecutions.
-    Where(Function(tc) tc.Status = "Failed").
-    Select(Function(tc) tc.JobId).
-    ToList()]</InArgument>
+        <InArgument x:TypeArguments="scg:List(x:String)">[CType(tcObj("data"), Newtonsoft.Json.Linq.JArray).Children(Of Newtonsoft.Json.Linq.JObject)().Where(Function(t) t("packageEntryPointName") IsNot Nothing AndAlso t("packageEntryPointName").Type &lt;&gt; Newtonsoft.Json.Linq.JTokenType.Null AndAlso t("automationId") IsNot Nothing AndAlso t("automationId").Type &lt;&gt; Newtonsoft.Json.Linq.JTokenType.Null AndAlso listofselectedTestCases.Contains(t("packageEntryPointName").ToString.Replace("TestCases\", ""))).Select(Function(t) t("id").ToString).ToList()]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:LogMessage DisplayName="Log the list of failed jobs" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[String.Join(&quot;,&quot;, List_FailedJobs)]" />
-    <Assign DisplayName="Assign 1" sap2010:WorkflowViewState.IdRef="Assign_4">
+    <ui:LogMessage DisplayName="Log matched IDs" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Matched &quot; &amp; selectedIds.Count.ToString &amp; &quot; test case(s): &quot; &amp; String.Join(&quot;, &quot;, selectedIds)]" />
+    <Assign DisplayName="Build start-execution request body" sap2010:WorkflowViewState.IdRef="Assign_3">
+      <Assign.To>
+        <OutArgument x:TypeArguments="njl:JObject">[reqBody]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="njl:JObject">[New Newtonsoft.Json.Linq.JObject(New Newtonsoft.Json.Linq.JProperty("Name", "AgentRun_" &amp; DateTime.Now.ToString("yyyyMMddHHmmss")), New Newtonsoft.Json.Linq.JProperty("TestCaseIds", New Newtonsoft.Json.Linq.JArray(selectedIds.ToArray())), New Newtonsoft.Json.Linq.JProperty("folderKey", folderKey), New Newtonsoft.Json.Linq.JProperty("testSetPackages", New Newtonsoft.Json.Linq.JArray(New Newtonsoft.Json.Linq.JObject(New Newtonsoft.Json.Linq.JProperty("packageName", packageName), New Newtonsoft.Json.Linq.JProperty("version", packageVersion)))))]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <uwah:NetHttpRequest BasicAuthPassword="{x:Null}" BasicAuthSecurePassword="{x:Null}" BasicAuthUsername="{x:Null}" BinaryPayload="{x:Null}" ClientCertPassword="{x:Null}" ClientCertPath="{x:Null}" ClientCertSecurePassword="{x:Null}" Cookies="{x:Null}" CustomNegotiatedAuthCredentials="{x:Null}" FilePath="{x:Null}" FormData="{x:Null}" LocalFiles="{x:Null}" OAuthToken="{x:Null}" OutputFileName="{x:Null}" OutputFileTargetFolder="{x:Null}" Parameters="{x:Null}" PathResource="{x:Null}" ProxyConfiguration="{x:Null}" ResourceFiles="{x:Null}" AuthenticationType="None" ContinueOnError="False" DisableSslVerification="False" DisplayName="Create Test Set and Start Execution" EnableCookies="True" FileOverwrite="AutoRename" FollowRedirects="True" FormDataParts="[New List (Of FormDataPart) From _&#xA;{&#xA; New FileFormDataPart(),&#xA; New BinaryFormDataPart(),&#xA; New TextFormDataPart()&#xA;}]" Headers="[New System.Collections.Generic.Dictionary(Of String, String) From {{&quot;Authorization&quot;, &quot;Bearer &quot; &amp; accessToken}, {&quot;accept&quot;, &quot;application/json&quot;}}]" sap2010:WorkflowViewState.IdRef="NetHttpRequest_3" InitialDelay="500" MaxRedirects="3" MaxRetryAfterDelay="30000" Method="POST" Multiplier="2" PreferRetryAfterValue="True" RequestBodyType="Text" RequestUrl="[tmBase &amp; &quot;/api/v2/&quot; &amp; projectId &amp; &quot;/testcases/startexecute&quot;]" Result="[execSum]" RetryCount="0" RetryPolicyType="None" RetryStatusCodes="[New List (Of System.Net.HttpStatusCode) From _&#xA;{&#xA; System.Net.HttpStatusCode.RequestTimeout,&#xA; System.Net.HttpStatusCode.TooManyRequests,&#xA; System.Net.HttpStatusCode.InternalServerError,&#xA; System.Net.HttpStatusCode.BadGateway,&#xA; System.Net.HttpStatusCode.ServiceUnavailable,&#xA; System.Net.HttpStatusCode.GatewayTimeout&#xA;}]" SaveRawRequestResponse="False" SaveResponseAsFile="False" TextPayload="[reqBody.ToString]" TextPayloadContentType="application/json" TextPayloadEncoding="UTF-8" TlsProtocol="Automatic" UseJitter="True" UseOsNegotiatedAuthCredentials="True">
+      <uwah:NetHttpRequest.TimeoutInMiliseconds>
+        <InArgument x:TypeArguments="s:Nullable(x:Int32)">
+          <Literal x:TypeArguments="s:Nullable(x:Int32)" Value="60000" />
+        </InArgument>
+      </uwah:NetHttpRequest.TimeoutInMiliseconds>
+    </uwah:NetHttpRequest>
+    <ui:DeserializeJson x:TypeArguments="njl:JObject" JsonSample="{x:Null}" Settings="{x:Null}" DisplayName="Parse Execution" sap2010:WorkflowViewState.IdRef="DeserializeJson_3" JsonObject="[execObj]" JsonString="[execSum.TextContent]" />
+    <Assign DisplayName="Assign executionId" sap2010:WorkflowViewState.IdRef="Assign_4">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[executionId]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[execObj("id").ToString]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign DisplayName="Assign testSetId" sap2010:WorkflowViewState.IdRef="Assign_5">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[testSetId]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[execObj("testSetId").ToString]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <While DisplayName="Poll until execution finished" sap2010:WorkflowViewState.IdRef="While_1" Condition="[Not (New String() {&quot;Passed&quot;, &quot;Failed&quot;, &quot;Completed&quot;, &quot;Cancelled&quot;, &quot;Error&quot;, &quot;Done&quot;, &quot;DidNotExecute&quot;}).Contains(execStatus) AndAlso pollCount &lt; 60]">
+      <Sequence DisplayName="Poll iteration" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Delay DisplayName="Wait 5s" Duration="[New System.TimeSpan(0, 0, 5)]" sap2010:WorkflowViewState.IdRef="Delay_1" />
+        <uwah:NetHttpRequest BasicAuthPassword="{x:Null}" BasicAuthSecurePassword="{x:Null}" BasicAuthUsername="{x:Null}" BinaryPayload="{x:Null}" ClientCertPassword="{x:Null}" ClientCertPath="{x:Null}" ClientCertSecurePassword="{x:Null}" Cookies="{x:Null}" CustomNegotiatedAuthCredentials="{x:Null}" FilePath="{x:Null}" FormData="{x:Null}" LocalFiles="{x:Null}" OAuthToken="{x:Null}" OutputFileName="{x:Null}" OutputFileTargetFolder="{x:Null}" Parameters="{x:Null}" PathResource="{x:Null}" ProxyConfiguration="{x:Null}" ResourceFiles="{x:Null}" TextPayload="{x:Null}" AuthenticationType="None" ContinueOnError="True" DisableSslVerification="False" DisplayName="Get Execution Stats" EnableCookies="True" FileOverwrite="AutoRename" FollowRedirects="True" FormDataParts="[New List (Of FormDataPart) From _&#xA;{&#xA; New FileFormDataPart(),&#xA; New BinaryFormDataPart(),&#xA; New TextFormDataPart()&#xA;}]" Headers="[New System.Collections.Generic.Dictionary(Of String, String) From {{&quot;Authorization&quot;, &quot;Bearer &quot; &amp; accessToken}, {&quot;accept&quot;, &quot;application/json&quot;}}]" sap2010:WorkflowViewState.IdRef="NetHttpRequest_4" InitialDelay="500" MaxRedirects="3" MaxRetryAfterDelay="30000" Method="GET" Multiplier="2" PreferRetryAfterValue="True" RequestBodyType="None" RequestUrl="[tmBase &amp; &quot;/api/v2/&quot; &amp; projectId &amp; &quot;/testexecutions/&quot; &amp; executionId &amp; &quot;/withstats&quot;]" Result="[statsSum]" RetryCount="0" RetryPolicyType="None" RetryStatusCodes="[New List (Of System.Net.HttpStatusCode) From _&#xA;{&#xA; System.Net.HttpStatusCode.RequestTimeout,&#xA; System.Net.HttpStatusCode.TooManyRequests,&#xA; System.Net.HttpStatusCode.InternalServerError,&#xA; System.Net.HttpStatusCode.BadGateway,&#xA; System.Net.HttpStatusCode.ServiceUnavailable,&#xA; System.Net.HttpStatusCode.GatewayTimeout&#xA;}]" SaveRawRequestResponse="False" SaveResponseAsFile="False" TextPayloadContentType="application/json" TextPayloadEncoding="UTF-8" TlsProtocol="Automatic" UseJitter="True" UseOsNegotiatedAuthCredentials="True">
+          <uwah:NetHttpRequest.TimeoutInMiliseconds>
+            <InArgument x:TypeArguments="s:Nullable(x:Int32)">
+              <Literal x:TypeArguments="s:Nullable(x:Int32)" Value="60000" />
+            </InArgument>
+          </uwah:NetHttpRequest.TimeoutInMiliseconds>
+        </uwah:NetHttpRequest>
+        <ui:DeserializeJson x:TypeArguments="njl:JObject" JsonSample="{x:Null}" Settings="{x:Null}" DisplayName="Parse Stats" sap2010:WorkflowViewState.IdRef="DeserializeJson_4" JsonObject="[statsObj]" JsonString="[statsSum.TextContent]" />
+        <Assign DisplayName="Assign execStatus" sap2010:WorkflowViewState.IdRef="Assign_6">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:String">[execStatus]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:String">[If(statsObj IsNot Nothing AndAlso statsObj("status") IsNot Nothing, statsObj("status").ToString, "Pending")]</InArgument>
+          </Assign.Value>
+        </Assign>
+        <Assign DisplayName="Increment pollCount" sap2010:WorkflowViewState.IdRef="Assign_7">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:Int32">[pollCount]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:Int32">[pollCount + 1]</InArgument>
+          </Assign.Value>
+        </Assign>
+        <ui:LogMessage DisplayName="Log poll status" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Poll &quot; &amp; pollCount.ToString &amp; &quot;: status=&quot; &amp; execStatus]" />
+      </Sequence>
+    </While>
+    <uwah:NetHttpRequest BasicAuthPassword="{x:Null}" BasicAuthSecurePassword="{x:Null}" BasicAuthUsername="{x:Null}" BinaryPayload="{x:Null}" ClientCertPassword="{x:Null}" ClientCertPath="{x:Null}" ClientCertSecurePassword="{x:Null}" Cookies="{x:Null}" CustomNegotiatedAuthCredentials="{x:Null}" FilePath="{x:Null}" FormData="{x:Null}" LocalFiles="{x:Null}" OAuthToken="{x:Null}" OutputFileName="{x:Null}" OutputFileTargetFolder="{x:Null}" Parameters="{x:Null}" PathResource="{x:Null}" ProxyConfiguration="{x:Null}" ResourceFiles="{x:Null}" TextPayload="{x:Null}" AuthenticationType="None" ContinueOnError="True" DisableSslVerification="False" DisplayName="Get Test Case Logs" EnableCookies="True" FileOverwrite="AutoRename" FollowRedirects="True" FormDataParts="[New List (Of FormDataPart) From _&#xA;{&#xA; New FileFormDataPart(),&#xA; New BinaryFormDataPart(),&#xA; New TextFormDataPart()&#xA;}]" Headers="[New System.Collections.Generic.Dictionary(Of String, String) From {{&quot;Authorization&quot;, &quot;Bearer &quot; &amp; accessToken}, {&quot;accept&quot;, &quot;application/json&quot;}}]" sap2010:WorkflowViewState.IdRef="NetHttpRequest_5" InitialDelay="500" MaxRedirects="3" MaxRetryAfterDelay="30000" Method="GET" Multiplier="2" PreferRetryAfterValue="True" RequestBodyType="None" RequestUrl="[tmBase &amp; &quot;/api/v2/&quot; &amp; projectId &amp; &quot;/testcaselogs/testexecution/&quot; &amp; executionId &amp; &quot;/paged?pageSize=200&quot;]" Result="[logsSum]" RetryCount="0" RetryPolicyType="None" RetryStatusCodes="[New List (Of System.Net.HttpStatusCode) From _&#xA;{&#xA; System.Net.HttpStatusCode.RequestTimeout,&#xA; System.Net.HttpStatusCode.TooManyRequests,&#xA; System.Net.HttpStatusCode.InternalServerError,&#xA; System.Net.HttpStatusCode.BadGateway,&#xA; System.Net.HttpStatusCode.ServiceUnavailable,&#xA; System.Net.HttpStatusCode.GatewayTimeout&#xA;}]" SaveRawRequestResponse="False" SaveResponseAsFile="False" TextPayloadContentType="application/json" TextPayloadEncoding="UTF-8" TlsProtocol="Automatic" UseJitter="True" UseOsNegotiatedAuthCredentials="True">
+      <uwah:NetHttpRequest.TimeoutInMiliseconds>
+        <InArgument x:TypeArguments="s:Nullable(x:Int32)">
+          <Literal x:TypeArguments="s:Nullable(x:Int32)" Value="60000" />
+        </InArgument>
+      </uwah:NetHttpRequest.TimeoutInMiliseconds>
+    </uwah:NetHttpRequest>
+    <ui:DeserializeJson x:TypeArguments="njl:JObject" JsonSample="{x:Null}" Settings="{x:Null}" DisplayName="Parse Logs" sap2010:WorkflowViewState.IdRef="DeserializeJson_5" JsonObject="[logsObj]" JsonString="[logsSum.TextContent]" />
+    <Assign DisplayName="Build jobErrors from failed cases" sap2010:WorkflowViewState.IdRef="Assign_8">
       <Assign.To>
         <OutArgument x:TypeArguments="njl:JArray">[jobErrors]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="njl:JArray">[New Newtonsoft.Json.Linq.JArray()]</InArgument>
+        <InArgument x:TypeArguments="njl:JArray">[New Newtonsoft.Json.Linq.JArray(If(logsObj IsNot Nothing AndAlso logsObj("data") IsNot Nothing, CType(logsObj("data"), Newtonsoft.Json.Linq.JArray).Children(Of Newtonsoft.Json.Linq.JObject)().Where(Function(l) l("status") IsNot Nothing AndAlso String.Equals(l("status").ToString, "Failed", StringComparison.OrdinalIgnoreCase)).Select(Function(l) CType(New Newtonsoft.Json.Linq.JObject(New Newtonsoft.Json.Linq.JProperty("name", If(l("name") IsNot Nothing, l("name").ToString, "")), New Newtonsoft.Json.Linq.JProperty("error", If(l("errorMessage") IsNot Nothing, l("errorMessage").ToString, "Test case failed"))), Newtonsoft.Json.Linq.JToken)).ToArray(), New Newtonsoft.Json.Linq.JToken() {}))]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" sap:WorkflowViewStateService.ViewState="{x:Null}" DisplayName="For Each currentText" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[List_FailedJobs]">
-      <ui:ForEach.Body>
-        <ActivityAction x:TypeArguments="x:String">
-          <ActivityAction.Argument>
-            <DelegateInArgument x:TypeArguments="x:String" Name="currentText" />
-          </ActivityAction.Argument>
-          <Sequence DisplayName="" sap2010:WorkflowViewState.IdRef="Sequence_2">
-            <ui:OrchestratorHttpRequest JSONPayload="{x:Null}" ResponseHeaders="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Orchestrator HTTP Request" FolderPath="Shared" sap2010:WorkflowViewState.IdRef="OrchestratorHttpRequest_1" Method="GET" RelativeEndpoint="[&quot;/odata/Jobs(&quot;+currentText+ &quot;)&quot;]" Result="[jsonResponse]" StatusCode="[statusCode]" />
-            <ui:DeserializeJson x:TypeArguments="njl:JObject" JsonSample="{x:Null}" Settings="{x:Null}" DisplayName="Deserialize JSON" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1" JsonObject="[jsonObject]" JsonString="[string.Format(&quot;{0}&quot;, jsonResponse)]" />
-            <Assign DisplayName="Assign" sap2010:WorkflowViewState.IdRef="Assign_3">
-              <Assign.To>
-                <OutArgument x:TypeArguments="njl:JArray">[jobErrors]</OutArgument>
-              </Assign.To>
-              <Assign.Value>
-                <InArgument x:TypeArguments="njl:JArray" xml:space="preserve">[New Newtonsoft.Json.Linq.JArray(
-    jobErrors.Children().Concat(
-        {
-            New Newtonsoft.Json.Linq.JObject(
-                New Newtonsoft.Json.Linq.JProperty("name", jsonObject("EntryPointPath").ToString),
-                New Newtonsoft.Json.Linq.JProperty("error", jsonObject("JobError")("Title").ToString)
-            )
-        }
-    )
-)]</InArgument>
-              </Assign.Value>
-            </Assign>
-          </Sequence>
-        </ActivityAction>
-      </ui:ForEach.Body>
-    </ui:ForEach>
-    <ui:LogMessage DisplayName="Log Message END" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;end&quot;]" />
+    <Assign DisplayName="Build TestSetReport_json" sap2010:WorkflowViewState.IdRef="Assign_9">
+      <Assign.To>
+        <OutArgument x:TypeArguments="njl:JObject">[TestSetReport_json]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="njl:JObject">[New Newtonsoft.Json.Linq.JObject(New Newtonsoft.Json.Linq.JProperty("testSetId", testSetId), New Newtonsoft.Json.Linq.JProperty("testSetName", If(execObj IsNot Nothing AndAlso execObj("name") IsNot Nothing, execObj("name").ToString, "")), New Newtonsoft.Json.Linq.JProperty("status", execStatus), New Newtonsoft.Json.Linq.JProperty("totalTests", selectedIds.Count), New Newtonsoft.Json.Linq.JProperty("passed", If(statsObj IsNot Nothing AndAlso statsObj("passed") IsNot Nothing, CInt(statsObj("passed")), 0)), New Newtonsoft.Json.Linq.JProperty("failed", If(statsObj IsNot Nothing AndAlso statsObj("failed") IsNot Nothing, CInt(statsObj("failed")), 0)), New Newtonsoft.Json.Linq.JProperty("none", If(statsObj IsNot Nothing AndAlso statsObj("none") IsNot Nothing, CInt(statsObj("none")), 0)))]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:LogMessage DisplayName="Log final report" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[TestSetReport_json.ToString]" />
   </Sequence>
 </Activity>
