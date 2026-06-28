@@ -30,9 +30,9 @@
       "name": "Human Review Approval App",
       "description": null,
       "package": {
-        "key": "e19ad6d7-6214-4d68-ab82-148f2432fc2b"
+        "key": "f603f8ab-9645-41af-8fef-c59a437c0e5b"
       },
-      "packageName": "agentic-testops-control-tower.webApp.Human.Review.Approval.App",
+      "packageName": "Agentic.Release.Assurance.Control.Tower.webApp.Human.Review.Approval.App",
       "packageVersion": null,
       "entryPointName": null,
       "inputArguments": null,
@@ -58,6 +58,6 @@
       "tags": []
     },
     "locks": [],
-    "key": "a02f5c77-8e19-493d-a2ca-10a5b903a503"
+    "key": "a2c1e2db-d92f-4d61-95e2-69b7a9ca8097"
   }
 }

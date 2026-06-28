@@ -45,6 +45,11 @@
       "Id": "bb169e71-0ba9-471a-b6ea-1b590c4753be",
       "Type": "Agent",
       "ProjectRelativePath": "HITL PR Review Agent/project.uiproj"
+    },
+    {
+      "Id": "2434f5e0-36dc-49fd-ba6a-a0e6690af2e3",
+      "Type": "Process",
+      "ProjectRelativePath": "RPA Workflow/project.uiproj"
     }
   ],
   "DocVersion": "1.0.0",

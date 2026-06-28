@@ -11,7 +11,7 @@
           "isExpression": false
         },
         "EntryPointUniqueId": {
-          "defaultValue": "6bc1afcd-188b-46f0-87ca-c0a588116175",
+          "defaultValue": "58974a5c-2dfc-4afd-bfa4-4c997bb889da",
           "isExpression": false
         }
       },
@@ -170,7 +170,7 @@
         }
       },
       "metadata": {
-        "ActivityName": "PR has to be reviewed by Human",
+        "ActivityName": "Review Automation Fix Pull Request",
         "BindingsVersion": "2.2",
         "DisplayLabel": "name",
         "SolutionsSupport": "true",

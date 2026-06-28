@@ -1,10 +1,10 @@
 {
   "docVersion": "1.0.0",
   "resource": {
-    "name": "Human Review Approval App",
+    "name": "RPA Workflow",
     "kind": "package",
     "apiVersion": "orchestrator.uipath.com/v1",
-    "projectKey": "17515903-3445-47a5-ae37-cbe009076b66",
+    "projectKey": "2434f5e0-36dc-49fd-ba6a-a0e6690af2e3",
     "isOverridable": true,
     "dependencies": [],
     "runtimeDependencies": [],
@@ -17,10 +17,10 @@
     "spec": {
       "fileName": null,
       "fileReference": null,
-      "name": "Human Review Approval App",
+      "name": "RPA Workflow",
       "description": null
     },
     "locks": [],
-    "key": "f603f8ab-9645-41af-8fef-c59a437c0e5b"
+    "key": "c376e2ea-58c9-433a-90ec-da552448f52e"
   }
 }

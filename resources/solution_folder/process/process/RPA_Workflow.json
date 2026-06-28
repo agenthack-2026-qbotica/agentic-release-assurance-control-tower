@@ -1,15 +1,15 @@
 {
   "docVersion": "1.0.0",
   "resource": {
-    "name": "HITL PR Review Agent",
+    "name": "RPA Workflow",
     "kind": "process",
-    "type": "agent",
+    "type": "process",
     "apiVersion": "orchestrator.uipath.com/v1",
-    "projectKey": "bb169e71-0ba9-471a-b6ea-1b590c4753be",
+    "projectKey": "2434f5e0-36dc-49fd-ba6a-a0e6690af2e3",
     "isOverridable": true,
     "dependencies": [
       {
-        "name": "HITL PR Review Agent",
+        "name": "RPA Workflow",
         "kind": "package"
       }
     ],
@@ -21,29 +21,31 @@
       }
     ],
     "spec": {
-      "targetRuntime": null,
-      "referencedAssets": null,
       "entryPointUniqueId": null,
       "inputArgumentsSchema": null,
       "outputArgumentsSchema": null,
       "inputArgumentsSchemaV2": null,
       "outputArgumentsSchemaV2": null,
-      "type": "Agent",
-      "name": "HITL PR Review Agent",
+      "type": "Process",
+      "name": "RPA Workflow",
       "description": null,
       "package": {
-        "key": "c81b75a2-e9ab-416e-a011-e45b526b7ca7"
+        "key": "c376e2ea-58c9-433a-90ec-da552448f52e"
       },
-      "packageName": "Agentic.Release.Assurance.Control.Tower.agent.HITL.PR.Review.Agent",
+      "packageName": "Agentic.Release.Assurance.Control.Tower.process.RPA.Workflow",
       "packageVersion": null,
       "entryPointName": null,
       "inputArguments": null,
+      "jobPriority": "Medium",
       "hiddenForAttendedUser": false,
       "alwaysRunning": false,
       "autoStartProcess": false,
+      "jobRecording": "Disabled",
       "targetFrameworkValue": "Portable",
-      "agentMemory": false,
-      "environmentVariables": null,
+      "duration": 40,
+      "frequency": 500,
+      "quality": 100,
+      "remoteControlAccess": "None",
       "retentionAction": "Delete",
       "retentionPeriod": 30,
       "retentionBucketRef": null,
@@ -55,6 +57,6 @@
       "tags": []
     },
     "locks": [],
-    "key": "52d07273-9f42-4472-8607-5eacfb9e10da"
+    "key": "34c1da6a-a075-4a65-bd6f-3dfccb3f624b"
   }
 }
