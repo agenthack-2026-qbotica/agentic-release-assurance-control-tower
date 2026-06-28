@@ -1,15 +1,7 @@
 {
   "ProjectAppMetadata": {
-    "ActionSchemaPagePage_Approve_click.xaml": {
-      "AppFormId": "id7e38181e59054feea359036193c32205",
-      "IsAppQueryBuilder": false
-    },
     "PullRequestReviewPagePage_Reject_click.xaml": {
       "AppFormId": "id6d68b180c24e4fd48cb1ffec0715e4ca",
-      "IsAppQueryBuilder": false
-    },
-    "ActionSchemaPagePage_Reject_click.xaml": {
-      "AppFormId": "id7e38181e59054feea359036193c32205",
       "IsAppQueryBuilder": false
     },
     "PullRequestReviewPagePage_Approve_click.xaml": {
@@ -18,19 +10,7 @@
     }
   },
   "ProjectAppExpressionsMetadata": {
-    "ActionSchemaPagePage_Approve_click.xaml": [
-      {
-        "Expression": "Controls.ActionSchemaPagePage.ReviewerComment.Value",
-        "Tokens": []
-      }
-    ],
     "PullRequestReviewPagePage_Reject_click.xaml": [],
-    "ActionSchemaPagePage_Reject_click.xaml": [
-      {
-        "Expression": "Controls.ActionSchemaPagePage.ReviewerComment.Value",
-        "Tokens": []
-      }
-    ],
     "PullRequestReviewPagePage_Approve_click.xaml": []
   }
 }

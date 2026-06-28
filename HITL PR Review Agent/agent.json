@@ -38,8 +38,7 @@
         "type": "string",
         "description": "Pull request URL"
       }
-    },
-    "title": "Inputs"
+    }
   },
   "outputSchema": {
     "type": "object",
@@ -114,11 +113,10 @@
   "metadata": {
     "storageVersion": "50.0.0",
     "isConversational": false,
-    "targetRuntime": "pythonAgent",
-    "showProjectCreationExperience": false
+    "showProjectCreationExperience": false,
+    "targetRuntime": "pythonAgent"
   },
   "type": "lowCode",
-  "projectId": "965d4fea-07cf-41bc-9f2c-4c72f16bf599",
   "messages": [
     {
       "role": "system",
@@ -236,5 +234,6 @@
         }
       ]
     }
-  ]
+  ],
+  "projectId": "965d4fea-07cf-41bc-9f2c-4c72f16bf599"
 }

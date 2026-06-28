@@ -40,7 +40,7 @@
       "evalSetId": "1cf6b5eb-67b3-406b-8b58-a01e129262ac",
       "createdAt": "2026-06-27T15:35:08.923Z",
       "updatedAt": "2026-06-27T15:35:08.923Z",
-      "source": "firstSuccessfulRun"
+      "source": "debugRun"
     }
   ],
   "modelSettings": [],
