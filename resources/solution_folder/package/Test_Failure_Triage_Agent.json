@@ -8,6 +8,7 @@
     "isOverridable": true,
     "dependencies": [],
     "runtimeDependencies": [],
+    "files": [],
     "folders": [
       {
         "fullyQualifiedName": "solution_folder"
@@ -17,7 +18,6 @@
       "name": "Test Failure Triage Agent"
     },
     "locks": [],
-    "key": "0308b988-6430-4aac-b913-ba4e93587bd0",
-    "files": []
+    "key": "0308b988-6430-4aac-b913-ba4e93587bd0"
   }
 }

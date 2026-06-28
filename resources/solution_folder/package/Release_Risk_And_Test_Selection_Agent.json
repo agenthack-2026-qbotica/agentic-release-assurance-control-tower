@@ -8,6 +8,7 @@
     "isOverridable": true,
     "dependencies": [],
     "runtimeDependencies": [],
+    "files": [],
     "folders": [
       {
         "fullyQualifiedName": "solution_folder"
@@ -17,7 +18,6 @@
       "name": "Release Risk And Test Selection Agent"
     },
     "locks": [],
-    "key": "55797895-4731-41a8-aeb1-65693e7d0402",
-    "files": []
+    "key": "55797895-4731-41a8-aeb1-65693e7d0402"
   }
 }

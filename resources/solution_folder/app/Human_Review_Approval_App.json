@@ -1,10 +1,9 @@
 {
   "docVersion": "1.0.0",
   "resource": {
-    "name": "HITL PR Review Agent",
-    "kind": "package",
-    "apiVersion": "orchestrator.uipath.com/v1",
-    "projectKey": "bb169e71-0ba9-471a-b6ea-1b590c4753be",
+    "name": "Human Review Approval App",
+    "kind": "app",
+    "apiVersion": "apps.uipath.com/v1",
     "isOverridable": true,
     "dependencies": [],
     "runtimeDependencies": [],
@@ -15,9 +14,11 @@
       }
     ],
     "spec": {
-      "name": "HITL PR Review Agent"
+      "name": "Human Review Approval App",
+      "version": "",
+      "appVersionRef": ""
     },
     "locks": [],
-    "key": "c81b75a2-e9ab-416e-a011-e45b526b7ca7"
+    "key": "d68a4304-9720-4abe-b12e-c2b072a53e25"
   }
 }

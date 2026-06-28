@@ -13,27 +13,8 @@
         "kind": "package"
       }
     ],
-    "runtimeDependencies": [
-      {
-        "bindingType": "app",
-        "bindingKey": "Human Review Approval App",
-        "bindingValues": {
-          "name": {
-            "defaultValue": "Human Review Approval App",
-            "isExpression": false
-          },
-          "folderPath": {
-            "defaultValue": "solution_folder",
-            "isExpression": false
-          }
-        },
-        "bindingMetadata": {
-          "bindingsVersion": "2.2",
-          "solutionsSupport": "true"
-        },
-        "resourceKind": "App"
-      }
-    ],
+    "runtimeDependencies": [],
+    "files": [],
     "folders": [
       {
         "fullyQualifiedName": "solution_folder"
@@ -58,7 +39,6 @@
       "tags": []
     },
     "locks": [],
-    "key": "52d07273-9f42-4472-8607-5eacfb9e10da",
-    "files": []
+    "key": "52d07273-9f42-4472-8607-5eacfb9e10da"
   }
 }

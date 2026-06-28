@@ -30,10 +30,7 @@
         "bindingMetadata": {
           "activityName": "Release Change Received",
           "bindingsVersion": "2.2",
-          "connector": "uipath-microsoft-github",
-          "operation": "ISSUE_CREATED_IN_REPO",
-          "objectName": "issues_in_repo",
-          "filterExpression": "((contains(`[\"open\"]`, state)))"
+          "isSolutionResource": true
         },
         "resourceKind": "Connection",
         "resourceType": "uipath-microsoft-github"
@@ -50,10 +47,7 @@
         "bindingMetadata": {
           "activityName": "Release Change Received",
           "bindingsVersion": "2.2",
-          "parentResourceKey": "EventTrigger.7a7864a8-92bd-4eeb-8dc2-8df3049b7bd4_Event_start",
-          "objectName": "issues_in_repo",
-          "triggerCreateParameters": "repo",
-          "overwritable": true
+          "isSolutionResource": true
         },
         "resourceKind": "Property"
       },
@@ -69,7 +63,8 @@
         "bindingMetadata": {
           "activityName": "Release Risk and Test Selection Agent",
           "bindingsVersion": "2.2",
-          "solutionsSupport": "true"
+          "solutionsSupport": "true",
+          "isSolutionResource": true
         },
         "resourceKind": "Process"
       },
@@ -85,8 +80,7 @@
         "bindingMetadata": {
           "activityName": "Release Change Received",
           "bindingsVersion": "2.2",
-          "connector": "uipath-microsoft-github",
-          "useConnectionService": "true"
+          "isSolutionResource": true
         },
         "resourceKind": "Connection",
         "resourceType": "uipath-microsoft-github",
@@ -106,7 +100,8 @@
         "bindingMetadata": {
           "activityName": "Execute Selected Test Set",
           "bindingsVersion": "2.2",
-          "solutionsSupport": "true"
+          "solutionsSupport": "true",
+          "isSolutionResource": true
         },
         "resourceKind": "Process"
       },
@@ -122,7 +117,8 @@
         "bindingMetadata": {
           "activityName": "Test Failure Triage Agent",
           "bindingsVersion": "2.2",
-          "solutionsSupport": "true"
+          "solutionsSupport": "true",
+          "isSolutionResource": true
         },
         "resourceKind": "Process"
       },
@@ -138,7 +134,8 @@
         "bindingMetadata": {
           "activityName": "Generate Governed Release Decision Agent",
           "bindingsVersion": "2.2",
-          "solutionsSupport": "true"
+          "solutionsSupport": "true",
+          "isSolutionResource": true
         },
         "resourceKind": "Process"
       },
@@ -154,7 +151,8 @@
         "bindingMetadata": {
           "activityName": "Requirement Readiness Agent",
           "bindingsVersion": "2.2",
-          "solutionsSupport": "true"
+          "solutionsSupport": "true",
+          "isSolutionResource": true
         },
         "resourceKind": "Process"
       },
@@ -170,11 +168,13 @@
         "bindingMetadata": {
           "activityName": "Review Automation Fix Pull Request",
           "bindingsVersion": "2.2",
-          "solutionsSupport": "true"
+          "solutionsSupport": "true",
+          "isSolutionResource": true
         },
         "resourceKind": "Process"
       }
     ],
+    "files": [],
     "folders": [
       {
         "fullyQualifiedName": "solution_folder"
@@ -198,7 +198,6 @@
       "tags": []
     },
     "locks": [],
-    "key": "4a610f19-114e-44f9-b55f-dbc2044341e9",
-    "files": []
+    "key": "4a610f19-114e-44f9-b55f-dbc2044341e9"
   }
 }
