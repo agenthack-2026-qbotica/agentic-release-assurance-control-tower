@@ -1,6 +1,0 @@
-{
-  "Name": "Test Set Execution API Workflow",
-  "MainFile": "Workflow.json",
-  "ProjectType": "Api",
-  "Description": null
-}
