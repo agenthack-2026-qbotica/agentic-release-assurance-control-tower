@@ -1,0 +1,38 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "Orchestrator_PAT",
+    "kind": "asset",
+    "type": "secretAsset",
+    "apiVersion": "orchestrator.uipath.com/v1",
+    "isOverridable": true,
+    "dependencies": [],
+    "runtimeDependencies": [],
+    "files": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "type": "Secret",
+      "credentialStore": {
+        "key": "ab63d5e5-2aae-40ce-8c2f-1bc8fe056f0a",
+        "name": "Orchestrator Database",
+        "folderKey": null,
+        "kind": null,
+        "lookupStrategy": null,
+        "info": null
+      },
+      "secretValue": null,
+      "externalName": null,
+      "name": "Orchestrator_PAT",
+      "description": null,
+      "scope": "Global",
+      "accountMachineValues": null,
+      "tags": []
+    },
+    "locks": [],
+    "key": "c9be6a27-3ccb-4a6e-9d1e-205f3af8cde2"
+  }
+}

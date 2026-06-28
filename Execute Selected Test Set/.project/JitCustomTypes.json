@@ -1,8 +1,37 @@
 {
   "version": "3.0.0.0",
-  "bundleHash": null,
+  "bundleHash": "wqvURrCGqzhG7zMVV4f1Ouf4RiAqy1UKkiIAQkKKIo",
   "addedAssemblyNames": [],
-  "discardedAssemblyNames": [],
-  "discardedAssemblyReplacements": {},
-  "assembliesJitInfo": {}
+  "discardedAssemblyNames": [
+    "GetExecutableTestCas.lcORG25QueF1RelZh3NHd3B2"
+  ],
+  "discardedAssemblyReplacements": {
+    "GetExecutableTestCas.lcORG25QueF1RelZh3NHd3B2": "GetExecutableTestCas.1RrcX2CPCjR1zy2Ik3VYKqS"
+  },
+  "assembliesJitInfo": {
+    "GetExecutableTestCas.CuLgp1iDtHH1INOSy3Fjfe72": {
+      "createdAt": "2026-06-28T18:32:59.8805041+00:00",
+      "providerName": "CustomEntities",
+      "rootNamespace": "UiPath.System.Activities.ViewModels.SWEntities.GetExecutableTestCaseDetails_Input.Bundle",
+      "typeNames": [
+        "GetExecutableTestCaseDetails_Input"
+      ]
+    },
+    "GetExecutableTestCas.lcORG25QueF1RelZh3NHd3B2": {
+      "createdAt": "2026-06-28T18:33:00.4480424+00:00",
+      "providerName": "CustomEntities",
+      "rootNamespace": "UiPath.System.Activities.ViewModels.SWEntities.GetExecutableTestCaseDetails_Output.Bundle",
+      "typeNames": [
+        "GetExecutableTestCaseDetails_Output"
+      ]
+    },
+    "GetExecutableTestCas.1RrcX2CPCjR1zy2Ik3VYKqS": {
+      "createdAt": "2026-06-28T19:47:28.4301932+00:00",
+      "providerName": "CustomEntities",
+      "rootNamespace": "UiPath.System.Activities.ViewModels.SWEntities.GetExecutableTestCaseDetails_Output.Bundle",
+      "typeNames": [
+        "GetExecutableTestCaseDetails_Output"
+      ]
+    }
+  }
 }

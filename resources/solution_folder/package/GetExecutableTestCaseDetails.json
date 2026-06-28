@@ -9,11 +9,11 @@
     "runtimeDependencies": [],
     "files": [
       {
-        "name": "GetExecutableTestCaseDetails.1.0.2.nupkg",
+        "name": "GetExecutableTestCaseDetails.1.0.4.nupkg",
         "kind": "Package",
-        "version": "1.0.2",
-        "url": "https://staging.uipath.com/03a90acb-56d8-4803-ab03-3aedbebe8614/ea13a239-2701-4079-9518-d8e4156ad7ad/orchestrator_/odata/Processes/UiPath.Server.Configuration.OData.DownloadPackage(key=\u0027GetExecutableTestCaseDetails:1.0.2\u0027)?feedId=4b3f508f-ca5d-4b70-b1e9-8a8d52e5d978",
-        "key": "GetExecutableTestCaseDetails_1.0.2"
+        "version": "1.0.4",
+        "url": "https://staging.uipath.com/03a90acb-56d8-4803-ab03-3aedbebe8614/ea13a239-2701-4079-9518-d8e4156ad7ad/orchestrator_/odata/Processes/UiPath.Server.Configuration.OData.DownloadPackage(key=\u0027GetExecutableTestCaseDetails:1.0.4\u0027)?feedId=4b3f508f-ca5d-4b70-b1e9-8a8d52e5d978",
+        "key": "GetExecutableTestCaseDetails_1.0.4"
       }
     ],
     "folders": [
@@ -22,12 +22,12 @@
       }
     ],
     "spec": {
-      "fileName": "GetExecutableTestCaseDetails.1.0.2.nupkg",
-      "fileReference": "GetExecutableTestCaseDetails_1.0.2",
+      "fileName": "GetExecutableTestCaseDetails.1.0.4.nupkg",
+      "fileReference": "GetExecutableTestCaseDetails_1.0.4",
       "name": "GetExecutableTestCaseDetails",
       "description": null
     },
     "locks": [],
-    "key": "GetExecutableTestCaseDetails:1.0.2"
+    "key": "GetExecutableTestCaseDetails:1.0.4"
   }
 }
