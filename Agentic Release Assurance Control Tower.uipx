@@ -35,6 +35,11 @@
       "Id": "2b897727-b2ef-41c7-9e2c-16fbb50937e8",
       "Type": "Agent",
       "ProjectRelativePath": "Test Failure Triage Agent/project.uiproj"
+    },
+    {
+      "Type": "Api",
+      "ProjectRelativePath": "Execute Selected Test Set API/project.uiproj",
+      "Id": "62fd33d4-5736-45b7-b092-bf0465100601"
     }
   ],
   "DocVersion": "1.0.0",

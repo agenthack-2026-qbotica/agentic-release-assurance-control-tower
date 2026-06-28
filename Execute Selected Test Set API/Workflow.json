@@ -1,0 +1,332 @@
+{
+  "document": {
+    "dsl": "1.0.0",
+    "name": "Execute Selected Test Set API",
+    "version": "0.0.1",
+    "namespace": "default",
+    "metadata": {
+      "variables": {
+        "schema": {
+          "format": "json",
+          "document": {
+            "type": "object",
+            "title": "Variables",
+            "properties": {
+              "tokenUrl": { "type": "string", "default": "https://staging.uipath.com/identity_/connect/token" },
+              "tmBase": { "type": "string", "default": "https://staging.uipath.com/hackathon26_795/DefaultTenant/testmanager_" },
+              "projectId": { "type": "string", "default": "d7f80251-45d0-0000-ec03-0b49c94aba8e" },
+              "folderKey": { "type": "string", "default": "a9235f06-419c-4007-8d9d-706225d646b0" },
+              "clientId": { "type": "string", "default": "a92067ac-7f91-489a-ac62-9fc5b28af257" },
+              "clientSecret": { "type": "string", "default": "!QC8kw7qYQJ@2#Q%s1sfC2gU0BSSzRcr8?#GGXjxJZj5?Ank@eD$57UCyxoD5(6$" },
+              "packageName": { "type": "string", "default": "Agenthack.ServiceNow.Incidents" },
+              "packageVersion": { "type": "string", "default": "1.0.*" },
+              "robotUserKey": { "type": "string", "default": "e2fe5bba-2b51-4eec-a60f-cde18044f715" },
+              "machineKey": { "type": "string", "default": "6f355051-d355-4e37-85d4-116b15ea976c" },
+              "runtimeType": { "type": "string", "default": "automationCloudTestAutomation" },
+              "tokenBody": { "type": "string", "default": "" },
+              "accessToken": { "type": "string", "default": "" },
+              "executionId": { "type": "string", "default": "" },
+              "testSetId": { "type": "string", "default": "" },
+              "execStatus": { "type": "string", "default": "Pending" },
+              "pollCount": { "type": "number", "default": 0 }
+            }
+          }
+        }
+      }
+    }
+  },
+  "input": {
+    "schema": {
+      "format": "json",
+      "document": {
+        "type": "object",
+        "title": "Inputs",
+        "properties": {
+          "listofselectedTestCases": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    }
+  },
+  "output": {
+    "schema": {
+      "format": "json",
+      "document": {
+        "type": "object",
+        "title": "Outputs",
+        "properties": {
+          "TestSetReport_json": { "type": "object" },
+          "jobErrors": { "type": "array" }
+        }
+      }
+    }
+  },
+  "do": [
+    {
+      "Sequence_1": {
+        "do": [
+          {
+            "WorkflowStart": {
+              "set": "${Object.entries($workflow.definition?.document?.metadata?.variables?.schema?.document?.properties || {}).reduce((acc, [name, def]) => ({ ...acc, [name]: def?.default }), {}) }",
+              "output": { "as": "${$input}" },
+              "export": { "as": "{ ...$context, variables: { ...$context.variables, ...$output } }" },
+              "metadata": { "activityType": "Assign", "displayName": "Workflow start", "fullName": "Assign", "isTransparent": true }
+            }
+          },
+          {
+            "Assign_TokenBody": {
+              "set": { "tokenBody": "${'grant_type=client_credentials&client_id=' + encodeURIComponent($context.variables.clientId) + '&client_secret=' + encodeURIComponent($context.variables.clientSecret)}" },
+              "export": { "as": "{ ...$context, variables: { ...$context.variables, ...$output } }" },
+              "metadata": { "activityType": "Assign", "displayName": "Build token body", "fullName": "Assign", "isTransparent": false }
+            }
+          },
+          {
+            "HttpRequest_1": {
+              "call": "UiPath.Http",
+              "with": {
+                "connector": "uipath-uipath-http",
+                "connectionId": "ImplicitConnection",
+                "connectionResourceId": "ImplicitConnection",
+                "method": "POST",
+                "endpoint": "/http-request",
+                "bodyParameters": {
+                  "authentication": "manual",
+                  "method": "POST",
+                  "url": "${$context.variables.tokenUrl}",
+                  "headers": { "Content-Type": "application/x-www-form-urlencoded", "accept": "application/json" },
+                  "body": "${$context.variables.tokenBody}"
+                }
+              },
+              "export": { "as": "{ ...$context, outputs: { ...$context?.outputs, \"http_request_1\": $output } }" },
+              "metadata": {
+                "fullName": "Connector",
+                "activityType": "Connector",
+                "displayName": "Get Access Token",
+                "uiPathActivityTypeId": "5c4cc855-b42a-37e6-b910-de8588998fce",
+                "assemblyQualifiedName": "Connector",
+                "configuration": "{\"essentialConfiguration\":{\"connectorVersion\":\"\",\"executionType\":null,\"customFieldsRequestDetails\":null,\"instanceParameters\":{\"version\":\"1.0.0\",\"connectorKey\":\"uipath-uipath-http\",\"activityType\":\"Curated\",\"objectName\":\"http-request\",\"httpMethod\":\"POST\",\"operation\":null,\"eventOperation\":null,\"eventMode\":null,\"connectorObjects\":null,\"previewEndpoint\":null},\"objectName\":\"http-request\",\"operation\":null,\"packageVersion\":\"1.0.0\",\"httpMethod\":\"POST\",\"path\":\"/http-request\",\"unifiedTypesCompatible\":true,\"savedJitInputFieldId\":\"in_http-request\"}}"
+              }
+            }
+          },
+          {
+            "Assign_AccessToken": {
+              "set": { "accessToken": "${$context.outputs.http_request_1.content.access_token}" },
+              "export": { "as": "{ ...$context, variables: { ...$context.variables, ...$output } }" },
+              "metadata": { "activityType": "Assign", "displayName": "Assign accessToken", "fullName": "Assign", "isTransparent": false }
+            }
+          },
+          {
+            "HttpRequest_2": {
+              "call": "UiPath.Http",
+              "with": {
+                "connector": "uipath-uipath-http",
+                "connectionId": "ImplicitConnection",
+                "connectionResourceId": "ImplicitConnection",
+                "method": "POST",
+                "endpoint": "/http-request",
+                "bodyParameters": {
+                  "authentication": "manual",
+                  "method": "GET",
+                  "url": "${$context.variables.tmBase + '/api/v2/' + $context.variables.projectId + '/testcases?top=100'}",
+                  "headers": { "Authorization": "${'Bearer ' + $context.variables.accessToken}", "accept": "application/json" }
+                }
+              },
+              "export": { "as": "{ ...$context, outputs: { ...$context?.outputs, \"http_request_2\": $output } }" },
+              "metadata": {
+                "fullName": "Connector",
+                "activityType": "Connector",
+                "displayName": "Get Test Cases",
+                "uiPathActivityTypeId": "5c4cc855-b42a-37e6-b910-de8588998fce",
+                "assemblyQualifiedName": "Connector",
+                "configuration": "{\"essentialConfiguration\":{\"connectorVersion\":\"\",\"executionType\":null,\"customFieldsRequestDetails\":null,\"instanceParameters\":{\"version\":\"1.0.0\",\"connectorKey\":\"uipath-uipath-http\",\"activityType\":\"Curated\",\"objectName\":\"http-request\",\"httpMethod\":\"POST\",\"operation\":null,\"eventOperation\":null,\"eventMode\":null,\"connectorObjects\":null,\"previewEndpoint\":null},\"objectName\":\"http-request\",\"operation\":null,\"packageVersion\":\"1.0.0\",\"httpMethod\":\"POST\",\"path\":\"/http-request\",\"unifiedTypesCompatible\":true,\"savedJitInputFieldId\":\"in_http-request\"}}"
+              }
+            }
+          },
+          {
+            "MatchTestCases": {
+              "run": {
+                "script": {
+                  "code": "const sel = $workflow.input.listofselectedTestCases || []; const tc = $context.outputs.http_request_2; const data = (tc && tc.content && tc.content.data) || []; const bs = String.fromCharCode(92); const ids = data.filter(function(t){ if(!t.automationId) return false; const pen = t.packageEntryPointName ? String(t.packageEntryPointName).split(bs).pop() : null; const nm = t.name ? String(t.name) : null; return (pen && sel.indexOf(pen) >= 0) || (nm && sel.indexOf(nm) >= 0); }).map(function(t){ return t.id; }); return ids;",
+                  "language": "javascript",
+                  "arguments": "${{ \"$context\": $context, \"$workflow\": $workflow, \"$input\": $input }}"
+                }
+              },
+              "export": { "as": "{ ...$context, outputs: { ...$context?.outputs, \"MatchTestCases\": $output } }" },
+              "metadata": { "activityType": "JsInvoke", "displayName": "Match selected test cases to IDs", "fullName": "JsInvoke" }
+            }
+          },
+          {
+            "BuildReqBody": {
+              "run": {
+                "script": {
+                  "code": "const ids = $context.outputs.MatchTestCases || []; const v = $context.variables; return { Name: 'AgentRun_' + Date.now(), TestCaseIds: ids, folderKey: v.folderKey, robotUserKey: v.robotUserKey, machineKey: v.machineKey, runtimeType: v.runtimeType, testSetPackages: [{ packageName: v.packageName, version: v.packageVersion }] };",
+                  "language": "javascript",
+                  "arguments": "${{ \"$context\": $context, \"$workflow\": $workflow, \"$input\": $input }}"
+                }
+              },
+              "export": { "as": "{ ...$context, outputs: { ...$context?.outputs, \"BuildReqBody\": $output } }" },
+              "metadata": { "activityType": "JsInvoke", "displayName": "Build start-execution body", "fullName": "JsInvoke" }
+            }
+          },
+          {
+            "HttpRequest_3": {
+              "call": "UiPath.Http",
+              "with": {
+                "connector": "uipath-uipath-http",
+                "connectionId": "ImplicitConnection",
+                "connectionResourceId": "ImplicitConnection",
+                "method": "POST",
+                "endpoint": "/http-request",
+                "bodyParameters": {
+                  "authentication": "manual",
+                  "method": "POST",
+                  "url": "${$context.variables.tmBase + '/api/v2/' + $context.variables.projectId + '/testcases/startexecute'}",
+                  "headers": { "Authorization": "${'Bearer ' + $context.variables.accessToken}", "accept": "application/json", "Content-Type": "application/json" },
+                  "body": "${$context.outputs.BuildReqBody}"
+                }
+              },
+              "export": { "as": "{ ...$context, outputs: { ...$context?.outputs, \"http_request_3\": $output } }" },
+              "metadata": {
+                "fullName": "Connector",
+                "activityType": "Connector",
+                "displayName": "Create Test Set and Start Execution",
+                "uiPathActivityTypeId": "5c4cc855-b42a-37e6-b910-de8588998fce",
+                "assemblyQualifiedName": "Connector",
+                "configuration": "{\"essentialConfiguration\":{\"connectorVersion\":\"\",\"executionType\":null,\"customFieldsRequestDetails\":null,\"instanceParameters\":{\"version\":\"1.0.0\",\"connectorKey\":\"uipath-uipath-http\",\"activityType\":\"Curated\",\"objectName\":\"http-request\",\"httpMethod\":\"POST\",\"operation\":null,\"eventOperation\":null,\"eventMode\":null,\"connectorObjects\":null,\"previewEndpoint\":null},\"objectName\":\"http-request\",\"operation\":null,\"packageVersion\":\"1.0.0\",\"httpMethod\":\"POST\",\"path\":\"/http-request\",\"unifiedTypesCompatible\":true,\"savedJitInputFieldId\":\"in_http-request\"}}"
+              }
+            }
+          },
+          {
+            "Assign_ExecutionId": {
+              "set": { "executionId": "${$context.outputs.http_request_3.content.id}" },
+              "export": { "as": "{ ...$context, variables: { ...$context.variables, ...$output } }" },
+              "metadata": { "activityType": "Assign", "displayName": "Assign executionId", "fullName": "Assign", "isTransparent": false }
+            }
+          },
+          {
+            "Assign_TestSetId": {
+              "set": { "testSetId": "${$context.outputs.http_request_3.content.testSetId}" },
+              "export": { "as": "{ ...$context, variables: { ...$context.variables, ...$output } }" },
+              "metadata": { "activityType": "Assign", "displayName": "Assign testSetId", "fullName": "Assign", "isTransparent": false }
+            }
+          },
+          {
+            "Do_While_1": {
+              "for": { "in": "${ [1] }" },
+              "doWhile": "${ !['Passed','Failed','Completed','Cancelled','Error','Done','DidNotExecute'].includes($context.variables.execStatus) && $context.variables.pollCount < 60 }",
+              "do": [
+                {
+                  "Do_While_1#Body": {
+                    "do": [
+                      {
+                        "Wait_1": {
+                          "wait": { "minutes": 0, "seconds": 5, "milliseconds": 0 },
+                          "export": { "as": "{ ...$context, outputs: { ...$context?.outputs, \"Wait_1\": $output } }" },
+                          "metadata": { "activityType": "Wait", "displayName": "Wait 5s", "fullName": "Wait" }
+                        }
+                      },
+                      {
+                        "HttpRequest_4": {
+                          "call": "UiPath.Http",
+                          "with": {
+                            "connector": "uipath-uipath-http",
+                            "connectionId": "ImplicitConnection",
+                            "connectionResourceId": "ImplicitConnection",
+                            "method": "POST",
+                            "endpoint": "/http-request",
+                            "bodyParameters": {
+                              "authentication": "manual",
+                              "method": "GET",
+                              "url": "${$context.variables.tmBase + '/api/v2/' + $context.variables.projectId + '/testexecutions/' + $context.variables.executionId + '/withstats'}",
+                              "headers": { "Authorization": "${'Bearer ' + $context.variables.accessToken}", "accept": "application/json" }
+                            }
+                          },
+                          "export": { "as": "{ ...$context, outputs: { ...$context?.outputs, \"http_request_4\": $output } }" },
+                          "metadata": {
+                            "fullName": "Connector",
+                            "activityType": "Connector",
+                            "displayName": "Get Execution Stats",
+                            "uiPathActivityTypeId": "5c4cc855-b42a-37e6-b910-de8588998fce",
+                            "assemblyQualifiedName": "Connector",
+                            "configuration": "{\"essentialConfiguration\":{\"connectorVersion\":\"\",\"executionType\":null,\"customFieldsRequestDetails\":null,\"instanceParameters\":{\"version\":\"1.0.0\",\"connectorKey\":\"uipath-uipath-http\",\"activityType\":\"Curated\",\"objectName\":\"http-request\",\"httpMethod\":\"POST\",\"operation\":null,\"eventOperation\":null,\"eventMode\":null,\"connectorObjects\":null,\"previewEndpoint\":null},\"objectName\":\"http-request\",\"operation\":null,\"packageVersion\":\"1.0.0\",\"httpMethod\":\"POST\",\"path\":\"/http-request\",\"unifiedTypesCompatible\":true,\"savedJitInputFieldId\":\"in_http-request\"}}"
+                          }
+                        }
+                      },
+                      {
+                        "Assign_ExecStatus": {
+                          "set": { "execStatus": "${ ($context.outputs.http_request_4 && $context.outputs.http_request_4.content && $context.outputs.http_request_4.content.status) ? $context.outputs.http_request_4.content.status : 'Pending' }" },
+                          "export": { "as": "{ ...$context, variables: { ...$context.variables, ...$output } }" },
+                          "metadata": { "activityType": "Assign", "displayName": "Assign execStatus", "fullName": "Assign", "isTransparent": false }
+                        }
+                      },
+                      {
+                        "Assign_PollCount": {
+                          "set": { "pollCount": "${$context.variables.pollCount + 1}" },
+                          "export": { "as": "{ ...$context, variables: { ...$context.variables, ...$output } }" },
+                          "metadata": { "activityType": "Assign", "displayName": "Increment pollCount", "fullName": "Assign", "isTransparent": false }
+                        }
+                      }
+                    ],
+                    "export": { "as": "{ ...$context, outputs: { ...$context?.outputs, \"Do_While_1\": { ...$context?.outputs?.Do_While_1, results: [ ...($context?.outputs?.Do_While_1?.results ?? []), ...([$output] ?? []) ] } } }" }
+                  }
+                }
+              ],
+              "output": { "as": "${$context.outputs.Do_While_1}" },
+              "metadata": { "activityType": "DoWhile", "displayName": "Poll until execution finished", "fullName": "DoWhile" }
+            }
+          },
+          {
+            "HttpRequest_5": {
+              "call": "UiPath.Http",
+              "with": {
+                "connector": "uipath-uipath-http",
+                "connectionId": "ImplicitConnection",
+                "connectionResourceId": "ImplicitConnection",
+                "method": "POST",
+                "endpoint": "/http-request",
+                "bodyParameters": {
+                  "authentication": "manual",
+                  "method": "GET",
+                  "url": "${$context.variables.tmBase + '/api/v2/' + $context.variables.projectId + '/testcaselogs/testexecution/' + $context.variables.executionId + '/paged?pageSize=100'}",
+                  "headers": { "Authorization": "${'Bearer ' + $context.variables.accessToken}", "accept": "application/json" }
+                }
+              },
+              "export": { "as": "{ ...$context, outputs: { ...$context?.outputs, \"http_request_5\": $output } }" },
+              "metadata": {
+                "fullName": "Connector",
+                "activityType": "Connector",
+                "displayName": "Get Test Case Logs",
+                "uiPathActivityTypeId": "5c4cc855-b42a-37e6-b910-de8588998fce",
+                "assemblyQualifiedName": "Connector",
+                "configuration": "{\"essentialConfiguration\":{\"connectorVersion\":\"\",\"executionType\":null,\"customFieldsRequestDetails\":null,\"instanceParameters\":{\"version\":\"1.0.0\",\"connectorKey\":\"uipath-uipath-http\",\"activityType\":\"Curated\",\"objectName\":\"http-request\",\"httpMethod\":\"POST\",\"operation\":null,\"eventOperation\":null,\"eventMode\":null,\"connectorObjects\":null,\"previewEndpoint\":null},\"objectName\":\"http-request\",\"operation\":null,\"packageVersion\":\"1.0.0\",\"httpMethod\":\"POST\",\"path\":\"/http-request\",\"unifiedTypesCompatible\":true,\"savedJitInputFieldId\":\"in_http-request\"}}"
+              }
+            }
+          },
+          {
+            "BuildReport": {
+              "run": {
+                "script": {
+                  "code": "const ws = $context.outputs.http_request_4; const stats = (ws && ws.content) || {}; const lg = $context.outputs.http_request_5; const logs = (lg && lg.content && lg.content.data) || []; const ex = $context.outputs.http_request_3; const exec = (ex && ex.content) || {}; const ids = $context.outputs.MatchTestCases || []; const jobErrors = logs.filter(function(l){ return l.status && String(l.status).toLowerCase() === 'failed'; }).map(function(l){ return { name: l.name || '', error: l.errorMessage || 'Test case failed' }; }); const report = { testSetId: $context.variables.testSetId, testSetName: exec.name || '', status: $context.variables.execStatus, totalTests: ids.length, passed: stats.passed || 0, failed: stats.failed || 0, none: stats.none || 0 }; return { TestSetReport_json: report, jobErrors: jobErrors };",
+                  "language": "javascript",
+                  "arguments": "${{ \"$context\": $context, \"$workflow\": $workflow, \"$input\": $input }}"
+                }
+              },
+              "export": { "as": "{ ...$context, outputs: { ...$context?.outputs, \"BuildReport\": $output } }" },
+              "metadata": { "activityType": "JsInvoke", "displayName": "Build TestSetReport and jobErrors", "fullName": "JsInvoke" }
+            }
+          },
+          {
+            "Response_1": {
+              "response": "${{ TestSetReport_json: $context.outputs.BuildReport.TestSetReport_json, jobErrors: $context.outputs.BuildReport.jobErrors }}",
+              "markJobAsFailed": false,
+              "then": "end",
+              "export": { "as": "{ ...$context, outputs: { ...$context?.outputs, \"Response_1\": $output } }" },
+              "metadata": { "activityType": "Response", "displayName": "Response", "fullName": "Response" }
+            }
+          }
+        ],
+        "metadata": { "activityType": "Sequence", "displayName": "Execute Selected Test Set API", "fullName": "Sequence" }
+      }
+    }
+  ],
+  "evaluate": { "mode": "strict", "language": "javascript" }
+}
