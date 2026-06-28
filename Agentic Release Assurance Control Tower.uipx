@@ -46,7 +46,7 @@
     {
       "Type": "Api",
       "ProjectRelativePath": "Test Set Execution API Workflow/project.uiproj",
-      "Id": "0e3089fc-12c0-401c-a0c4-25945f1022af"
+      "Id": "0e3089fc-12c0-401c-a0c4-25945f1022af",
       "ProjectRelativePath": "HITL PR Review Agent/project.uiproj"
     }
   ]
