@@ -5,7 +5,7 @@
   "dateLastOpened": "2026-06-28T11:37:43.713Z",
   "type": "form",
   "iconUrl": "assets/svg/form.svg",
-  "idCounter": 1792,
+  "idCounter": 1794,
   "ownerFqn": "logesh.v@qbotica.com",
   "ownerId": "9932b17c-cf35-47da-b170-aad463f7b63f",
   "createdByFqn": "logesh.v@qbotica.com",
@@ -974,6 +974,7 @@
           "value": "stretch"
         },
         "coordinates": {
+          "id": "ID1795",
           "name": "coordinates",
           "valueType": "string",
           "value": {
@@ -3419,14 +3420,17 @@
           }
         },
         "url": {
+          "id": "ID1796",
           "name": "url",
           "valueType": "vb-expression",
           "value": {
-            "defaultExpression": "",
+            "id": "ID1797",
             "expressionId": "id2c9fd868cb2f40f6ae2a820248b4a32a",
-            "controlId": "id22fdecd3288149488f4212d0545224e0"
-          },
-          "controlId": "id22fdecd3288149488f4212d0545224e0"
+            "expressionBuilderInstance": "query",
+            "workflow": {
+              "id": "ID1798"
+            }
+          }
         },
         "tooltip": {
           "id": "ID1618",
@@ -3867,6 +3871,7 @@
           "value": "center"
         },
         "coordinates": {
+          "id": "ID1799",
           "name": "coordinates",
           "valueType": "string",
           "value": {
@@ -4073,6 +4078,19 @@
           "addedVia": "EE",
           "validationConfig": {
             "id": "ID1724"
+          }
+        },
+        "id2c9fd868cb2f40f6ae2a820248b4a32a": {
+          "id": "ID1793",
+          "expression": "",
+          "isLiteral": true,
+          "sourceType": "expression-config-panel",
+          "contextSourceId": "$.controls.id22fdecd3288149488f4212d0545224e0.properties.url.value",
+          "skipCompilation": false,
+          "tokens": [],
+          "addedVia": "EE",
+          "validationConfig": {
+            "id": "ID1794"
           }
         }
       }
@@ -4318,7 +4336,7 @@
         },
         "id42b08d35a5504960b8291b2c7024c16e": {
           "id": "ID1763",
-          "expression": "\"Pull Request Review\"",
+          "expression": "\"Agentic Release Assurance Control Tower - Pull Request Review\"",
           "isLiteral": true,
           "sourceType": "expression-config-panel",
           "contextSourceId": "$.controls.idea3eb6fa1e814077aca405f0adf12206.properties.text.value",
@@ -4375,8 +4393,8 @@
         },
         "id9d402d6e2d944282ba1f3a79602234b2": {
           "id": "ID1772",
-          "expression": "\"Review and make a decision on a GitHub Pull Request.\"",
-          "isLiteral": true,
+          "expression": "\"Repository: \" & ActionProperties.repositoryName.ToString & vbCrLf & \"Owner: \" & ActionProperties.owner.ToString & vbCrLf & \"Pull Request #: \" & ActionProperties.pullRequestNumber.ToString & vbCrLf & \"Title: \" & ActionProperties.title.ToString & vbCrLf & \"URL: \" & ActionProperties.url.ToString & vbCrLf & vbCrLf & \"Escalation Reason: \" & ActionProperties.escalationReason.ToString",
+          "isLiteral": false,
           "sourceType": "expression-config-panel",
           "contextSourceId": "$.controls.id9d4a797c4db84b048fe089140e48ab44.properties.text.value",
           "skipCompilation": false,

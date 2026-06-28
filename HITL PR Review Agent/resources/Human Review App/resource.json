@@ -86,84 +86,9 @@
         "appName": "Human Review Approval App",
         "appVersion": 1,
         "folderName": null,
-        "resourceKey": "6b53a7b4-1c46-44fe-b2ca-d635049306d5",
-        "isActionableMessageEnabled": true,
-        "actionableMessageMetaData": {
-          "fieldSet": {
-            "type": "fieldSet",
-            "id": "9acd5611-ced0-4fad-8a8f-e6cb2407461d",
-            "fields": [
-              {
-                "id": "repositoryName",
-                "name": "repositoryName",
-                "type": "Fact",
-                "placeHolderText": ""
-              },
-              {
-                "id": "owner",
-                "name": "owner",
-                "type": "Fact",
-                "placeHolderText": ""
-              },
-              {
-                "id": "pullRequestNumber",
-                "name": "pullRequestNumber",
-                "type": "Fact",
-                "placeHolderText": ""
-              },
-              {
-                "id": "title",
-                "name": "title",
-                "type": "Fact",
-                "placeHolderText": ""
-              },
-              {
-                "id": "url",
-                "name": "url",
-                "type": "Fact",
-                "placeHolderText": ""
-              },
-              {
-                "id": "escalationReason",
-                "name": "escalationReason",
-                "type": "Fact",
-                "placeHolderText": ""
-              },
-              {
-                "id": "decision",
-                "name": "decision",
-                "type": "Input.Text",
-                "placeHolderText": ""
-              },
-              {
-                "id": "comment",
-                "name": "comment",
-                "type": "Input.Text",
-                "placeHolderText": ""
-              }
-            ]
-          },
-          "actionSet": {
-            "type": "actionSet",
-            "id": "d56b4bc1-dec7-4531-b6ac-e66169b2f93b",
-            "actions": [
-              {
-                "id": "Approve",
-                "name": "Approve",
-                "title": "Approve",
-                "type": "Action.Http",
-                "isPrimary": true
-              },
-              {
-                "id": "Reject",
-                "name": "Reject",
-                "title": "Reject",
-                "type": "Action.Http",
-                "isPrimary": true
-              }
-            ]
-          }
-        }
+        "resourceKey": "a1fdf6b2-91c6-4c22-bef6-ea5908418bc9",
+        "isActionableMessageEnabled": false,
+        "actionableMessageMetaData": null
       },
       "argumentProperties": {}
     }

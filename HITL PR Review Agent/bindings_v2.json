@@ -9,6 +9,26 @@
           "defaultValue": "Human Review Approval App",
           "isExpression": false,
           "displayName": "App name"
+        },
+        "folderPath": {
+          "defaultValue": "Shared",
+          "isExpression": false,
+          "displayName": "Folder path"
+        }
+      },
+      "metadata": {
+        "bindingsVersion": "2.2",
+        "solutionsSupport": "true"
+      }
+    },
+    {
+      "resource": "app",
+      "key": "Human Review Approval App",
+      "value": {
+        "name": {
+          "defaultValue": "Human Review Approval App",
+          "isExpression": false,
+          "displayName": "App name"
         }
       },
       "metadata": {

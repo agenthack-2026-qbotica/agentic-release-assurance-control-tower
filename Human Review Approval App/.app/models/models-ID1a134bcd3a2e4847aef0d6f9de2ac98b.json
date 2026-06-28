@@ -1,234 +1,204 @@
-﻿{
-    "id":  "ID0dc9a9853c4145feb4a6ff512bf74094",
-    "order":  1,
-    "dateCreated":  "2026-06-27T15:07:21.761Z",
-    "dateLastOpened":  "2026-06-27T15:07:21.761Z",
-    "type":  "action",
-    "iconUrl":  "assets/svg/action/action.svg",
-    "idCounter":  3000,
-    "ownerFqn":  "logesh.v@qbotica.com",
-    "ownerId":  "9932b17c-cf35-47da-b170-aad463f7b63f",
-    "createdByFqn":  "logesh.v@qbotica.com",
-    "createdById":  "9932b17c-cf35-47da-b170-aad463f7b63f",
-    "systemName":  "ID1a134bcd3a2e4847aef0d6f9de2ac98b",
-    "categorySystemName":  "j-category-integration-organization",
-    "appSystemName":  "IDa4435e2e95ce46c7aa4e7de68a5068ec",
-    "tenantId":  "03a90acb-56d8-4803-ab03-3aedbebe8614",
-    "buildVersion":  "2026.6.23-11.9.17-s196.9c9b2e1f5",
-    "modelVersion":  1,
-    "currentModelVersion":  1,
-    "dllVersion":  0,
-    "modelTypesVersion":  0,
-    "ownerDisplayName":  "Logesh Velu",
-    "rootReferences":  {
-
-                       },
-    "title":  "DefaultTenant",
-    "description":  "",
-    "allModelErrors":  {
-
-                       },
-    "valueBindingMetadata":  {
-
-                             },
-    "url":  null,
-    "tenant":  "ea13a239-2701-4079-9518-d8e4156ad7ad",
-    "properties":  [
-
-                   ],
-    "instances":  [
-                      {
-                          "id":  "IDf3fb089817534b73b85e22512f0f5fa9",
-                          "uniqueIdentifier":  "ActionSchema",
-                          "name":  "ActionSchema",
-                          "description":  "Action Schema",
-                          "key":  "id275ac7b76b764482a0c0991a1aa6d66d",
-                          "schemaId":  "IDf3fb089817534b73b85e22512f0f5fa9",
-                          "schemaType":  "apps-schema",
-                          "dirtySaveMetadata":  null,
-                          "actionSchemaKey":  "380d6751-1c07-40e5-9518-ae5eeda32d91",
-                          "version":  0,
-                          "inputs":  [
-                                         {
-                                             "id":  "idbc1c9ee929e34ebf869051d36b944245",
-                                             "uniqueIdentifier":  "repositoryName",
-                                             "guid":  "id0166d241cbea4d28bb8ae87f4d104a19",
-                                             "key":  "c1cc4fad-b692-4688-a04e-32a280af818b",
-                                             "name":  "repositoryName",
-                                             "type":  "System.String",
-                                             "customType":  null,
-                                             "typeNamespace":  "system",
-                                             "isList":  false,
-                                             "fields":  [
-
-                                                        ],
-                                             "collectionDataType":  null,
-                                             "required":  true,
-                                             "description":  "The name of the GitHub repository."
-                                         },
-                                         {
-                                             "id":  "id318ee3db56ff4d64b041261e676cd3ee",
-                                             "uniqueIdentifier":  "pullRequestNumber",
-                                             "guid":  "idb25b2a678e1d46f7aa1f35d063f0e806",
-                                             "key":  "05257f40-2d9c-4ada-91e6-888235131249",
-                                             "name":  "pullRequestNumber",
-                                             "type":  "System.Int32",
-                                             "customType":  null,
-                                             "typeNamespace":  "system",
-                                             "isList":  false,
-                                             "fields":  [
-
-                                                        ],
-                                             "collectionDataType":  null,
-                                             "required":  true,
-                                             "description":  "The unique identifier for the Pull Request."
-                                         },
-                                         {
-                                             "id":  "id203d9deec54743a681a627b049d2c035",
-                                             "uniqueIdentifier":  "url",
-                                             "guid":  "id37c8e9e77dfe4ccb8e10f9af56e555c5",
-                                             "key":  "13ee62dd-4ecf-4867-b809-3391a67b4269",
-                                             "name":  "url",
-                                             "type":  "System.String",
-                                             "customType":  null,
-                                             "typeNamespace":  "system",
-                                             "isList":  false,
-                                             "fields":  [
-
-                                                        ],
-                                             "collectionDataType":  null,
-                                             "required":  true,
-                                             "description":  "The URL to view the Pull Request on GitHub."
-                                         },
-                                         {
-                                             "id":  "id5cca0cfa5dc744bb89aab44084062e31",
-                                             "uniqueIdentifier":  "owner",
-                                             "guid":  "id80031c571e174b28a5b9836cc8d9fdea",
-                                             "key":  "owner-key-001",
-                                             "name":  "owner",
-                                             "type":  "System.String",
-                                             "customType":  null,
-                                             "typeNamespace":  "system",
-                                             "isList":  false,
-                                             "fields":  [
-
-                                                        ],
-                                             "collectionDataType":  null,
-                                             "required":  true,
-                                             "description":  "The owner of the GitHub repository."
-                                         },
-                                         {
-                                             "id":  "id9ced1cd23b8c4e98b9892c9ab1c7047d",
-                                             "uniqueIdentifier":  "title",
-                                             "guid":  "idd36360df5b44471c8a5c2a4e4171b7f2",
-                                             "key":  "title-key-001",
-                                             "name":  "title",
-                                             "type":  "System.String",
-                                             "customType":  null,
-                                             "typeNamespace":  "system",
-                                             "isList":  false,
-                                             "fields":  [
-
-                                                        ],
-                                             "collectionDataType":  null,
-                                             "required":  true,
-                                             "description":  "The title of the Pull Request."
-                                         },
-                                         {
-                                             "id":  "id3799744f6e264f528d8a6c542e20fcae",
-                                             "uniqueIdentifier":  "escalationReason",
-                                             "guid":  "ida00b80fadc7042b69fab411a97f59012",
-                                             "key":  "escalationReason-key-001",
-                                             "name":  "escalationReason",
-                                             "type":  "System.String",
-                                             "customType":  null,
-                                             "typeNamespace":  "system",
-                                             "isList":  false,
-                                             "fields":  [
-
-                                                        ],
-                                             "collectionDataType":  null,
-                                             "required":  true,
-                                             "description":  "Reason for escalating to human review."
-                                         }
-                                     ],
-                          "outputs":  [
-                                          {
-                                              "id":  "idc01138a5684c4c16b26389a6150da998",
-                                              "uniqueIdentifier":  "decision",
-                                              "guid":  "ide3d957bf05a44cabbb611e65c78db1bf",
-                                              "key":  "out-decision-001",
-                                              "name":  "decision",
-                                              "type":  "System.String",
-                                              "customType":  null,
-                                              "typeNamespace":  "system",
-                                              "isList":  false,
-                                              "fields":  [
-
-                                                         ],
-                                              "collectionDataType":  null,
-                                              "required":  false,
-                                              "description":  "Human reviewer decision (approved or rejected)."
-                                          },
-                                          {
-                                              "id":  "ida6c941d25d134ac6825fa930e9738cc2",
-                                              "uniqueIdentifier":  "comment",
-                                              "guid":  "id83f213b8727f4f6ea0faccfff5f53b7e",
-                                              "key":  "out-comment-001",
-                                              "name":  "comment",
-                                              "type":  "System.String",
-                                              "customType":  null,
-                                              "typeNamespace":  "system",
-                                              "isList":  false,
-                                              "fields":  [
-
-                                                         ],
-                                              "collectionDataType":  null,
-                                              "required":  false,
-                                              "description":  "Reviewer comment."
-                                          }
-                                      ],
-                          "inOuts":  [
-
-                                     ],
-                          "outcomes":  [
-                                           {
-                                               "id":  "id3a2deeec726f4b7ab461d3c9fe502d90",
-                                               "uniqueIdentifier":  "Approve",
-                                               "guid":  "id9973933f493244358e5ad67b64b4e4ec",
-                                               "key":  "b14f7eff-5872-4895-8fbb-decc713597c3",
-                                               "name":  "Approve",
-                                               "type":  "string",
-                                               "jsType":  "string",
-                                               "customType":  "",
-                                               "typeNamespace":  "system",
-                                               "isList":  false,
-                                               "fields":  [
-
-                                                          ],
-                                               "collectionDataType":  null,
-                                               "required":  true,
-                                               "description":  "Approve the Pull Request."
-                                           },
-                                           {
-                                               "id":  "id87a461b3c55848338b956253ced0d438",
-                                               "uniqueIdentifier":  "Reject",
-                                               "guid":  "id0ed89df3b95f4e8395695033a9262222",
-                                               "key":  "d0582ec9-8daa-4306-a9ae-42af306fc3ed",
-                                               "name":  "Reject",
-                                               "type":  "string",
-                                               "jsType":  "string",
-                                               "customType":  "",
-                                               "typeNamespace":  "system",
-                                               "isList":  false,
-                                               "fields":  [
-
-                                                          ],
-                                               "collectionDataType":  null,
-                                               "required":  true,
-                                               "description":  "Reject the Pull Request."
-                                           }
-                                       ]
-                      }
-                  ]
+{
+  "id": "ID0dc9a9853c4145feb4a6ff512bf74094",
+  "order": 1,
+  "dateCreated": "2026-06-27T15:07:21.761Z",
+  "dateLastOpened": "2026-06-27T15:07:21.761Z",
+  "type": "action",
+  "iconUrl": "assets/svg/action/action.svg",
+  "idCounter": 3000,
+  "ownerFqn": "logesh.v@qbotica.com",
+  "ownerId": "9932b17c-cf35-47da-b170-aad463f7b63f",
+  "createdByFqn": "logesh.v@qbotica.com",
+  "createdById": "9932b17c-cf35-47da-b170-aad463f7b63f",
+  "systemName": "ID1a134bcd3a2e4847aef0d6f9de2ac98b",
+  "categorySystemName": "j-category-integration-organization",
+  "appSystemName": "IDa4435e2e95ce46c7aa4e7de68a5068ec",
+  "tenantId": "03a90acb-56d8-4803-ab03-3aedbebe8614",
+  "buildVersion": "2026.6.23-11.9.17-s196.9c9b2e1f5",
+  "modelVersion": 1,
+  "currentModelVersion": 1,
+  "dllVersion": 0,
+  "modelTypesVersion": 0,
+  "ownerDisplayName": "Logesh Velu",
+  "rootReferences": {},
+  "title": "DefaultTenant",
+  "description": "",
+  "allModelErrors": {},
+  "valueBindingMetadata": {},
+  "url": null,
+  "tenant": "ea13a239-2701-4079-9518-d8e4156ad7ad",
+  "properties": [],
+  "instances": [
+    {
+      "id": "IDf3fb089817534b73b85e22512f0f5fa9",
+      "uniqueIdentifier": "ActionSchema",
+      "name": "ActionSchema",
+      "description": "Action Schema",
+      "key": "id275ac7b76b764482a0c0991a1aa6d66d",
+      "schemaId": "IDf3fb089817534b73b85e22512f0f5fa9",
+      "schemaType": "apps-schema",
+      "dirtySaveMetadata": null,
+      "actionSchemaKey": "380d6751-1c07-40e5-9518-ae5eeda32d91",
+      "version": 0,
+      "inputs": [
+        {
+          "id": "idbc1c9ee929e34ebf869051d36b944245",
+          "uniqueIdentifier": "repositoryName",
+          "guid": "id0166d241cbea4d28bb8ae87f4d104a19",
+          "key": "c1cc4fad-b692-4688-a04e-32a280af818b",
+          "name": "repositoryName",
+          "type": "System.String",
+          "customType": null,
+          "typeNamespace": "system",
+          "isList": false,
+          "fields": [],
+          "collectionDataType": null,
+          "required": true,
+          "description": "The name of the GitHub repository."
+        },
+        {
+          "id": "id318ee3db56ff4d64b041261e676cd3ee",
+          "uniqueIdentifier": "pullRequestNumber",
+          "guid": "idb25b2a678e1d46f7aa1f35d063f0e806",
+          "key": "05257f40-2d9c-4ada-91e6-888235131249",
+          "name": "pullRequestNumber",
+          "type": "System.Int32",
+          "customType": null,
+          "typeNamespace": "system",
+          "isList": false,
+          "fields": [],
+          "collectionDataType": null,
+          "required": true,
+          "description": "The unique identifier for the Pull Request."
+        },
+        {
+          "id": "id203d9deec54743a681a627b049d2c035",
+          "uniqueIdentifier": "url",
+          "guid": "id37c8e9e77dfe4ccb8e10f9af56e555c5",
+          "key": "13ee62dd-4ecf-4867-b809-3391a67b4269",
+          "name": "url",
+          "type": "System.String",
+          "customType": null,
+          "typeNamespace": "system",
+          "isList": false,
+          "fields": [],
+          "collectionDataType": null,
+          "required": true,
+          "description": "The URL to view the Pull Request on GitHub."
+        },
+        {
+          "id": "id5cca0cfa5dc744bb89aab44084062e31",
+          "uniqueIdentifier": "owner",
+          "guid": "id80031c571e174b28a5b9836cc8d9fdea",
+          "key": "owner-key-001",
+          "name": "owner",
+          "type": "System.String",
+          "customType": null,
+          "typeNamespace": "system",
+          "isList": false,
+          "fields": [],
+          "collectionDataType": null,
+          "required": true,
+          "description": "The owner of the GitHub repository."
+        },
+        {
+          "id": "id9ced1cd23b8c4e98b9892c9ab1c7047d",
+          "uniqueIdentifier": "title",
+          "guid": "idd36360df5b44471c8a5c2a4e4171b7f2",
+          "key": "title-key-001",
+          "name": "title",
+          "type": "System.String",
+          "customType": null,
+          "typeNamespace": "system",
+          "isList": false,
+          "fields": [],
+          "collectionDataType": null,
+          "required": true,
+          "description": "The title of the Pull Request."
+        },
+        {
+          "id": "id3799744f6e264f528d8a6c542e20fcae",
+          "uniqueIdentifier": "escalationReason",
+          "guid": "ida00b80fadc7042b69fab411a97f59012",
+          "key": "escalationReason-key-001",
+          "name": "escalationReason",
+          "type": "System.String",
+          "customType": null,
+          "typeNamespace": "system",
+          "isList": false,
+          "fields": [],
+          "collectionDataType": null,
+          "required": true,
+          "description": "Reason for escalating to human review."
+        }
+      ],
+      "outputs": [
+        {
+          "id": "idc01138a5684c4c16b26389a6150da998",
+          "uniqueIdentifier": "decision",
+          "guid": "ide3d957bf05a44cabbb611e65c78db1bf",
+          "key": "out-decision-001",
+          "name": "decision",
+          "type": "System.String",
+          "customType": null,
+          "typeNamespace": "system",
+          "isList": false,
+          "fields": [],
+          "collectionDataType": null,
+          "required": false,
+          "description": "Human reviewer decision (approved or rejected)."
+        },
+        {
+          "id": "ida6c941d25d134ac6825fa930e9738cc2",
+          "uniqueIdentifier": "comment",
+          "guid": "id83f213b8727f4f6ea0faccfff5f53b7e",
+          "key": "out-comment-001",
+          "name": "comment",
+          "type": "System.String",
+          "customType": null,
+          "typeNamespace": "system",
+          "isList": false,
+          "fields": [],
+          "collectionDataType": null,
+          "required": false,
+          "description": "Reviewer comment."
+        }
+      ],
+      "inOuts": [],
+      "outcomes": [
+        {
+          "id": "id3a2deeec726f4b7ab461d3c9fe502d90",
+          "uniqueIdentifier": "Approve",
+          "guid": "id9973933f493244358e5ad67b64b4e4ec",
+          "key": "b14f7eff-5872-4895-8fbb-decc713597c3",
+          "name": "Approve",
+          "type": "string",
+          "jsType": "string",
+          "customType": "",
+          "typeNamespace": "system",
+          "isList": false,
+          "fields": [],
+          "collectionDataType": null,
+          "required": true,
+          "description": "Approve the Pull Request."
+        },
+        {
+          "id": "id87a461b3c55848338b956253ced0d438",
+          "uniqueIdentifier": "Reject",
+          "guid": "id0ed89df3b95f4e8395695033a9262222",
+          "key": "d0582ec9-8daa-4306-a9ae-42af306fc3ed",
+          "name": "Reject",
+          "type": "string",
+          "jsType": "string",
+          "customType": "",
+          "typeNamespace": "system",
+          "isList": false,
+          "fields": [],
+          "collectionDataType": null,
+          "required": true,
+          "description": "Reject the Pull Request."
+        }
+      ]
+    }
+  ]
 }

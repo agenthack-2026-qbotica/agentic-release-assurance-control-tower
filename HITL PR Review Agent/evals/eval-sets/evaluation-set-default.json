@@ -15,43 +15,21 @@
         "owner": "acme-automation",
         "pullRequestNumber": 184,
         "title": "Add approval step for high-value refunds and update finance notification flow",
-        "url": "https://github.com/acme-automation/uipath-order-fulfillment/pull/184",
-        "summary": "This PR introduces a new human approval step for refund requests above $5,000 before the payout activity is executed. It also updates the finance notification workflow to send approval status to the shared mailbox and logs the approver identity for audit purposes. The change includes updates to the main refund process, notification templates, and environment configuration for the finance mailbox address.",
-        "comments": [
-          "Please confirm whether the $5,000 threshold should be configurable per environment instead of hardcoded.",
-          "I tested the happy path, but we still need validation for rejected approvals and timeout handling.",
-          "This touches the production refund workflow and finance integration, so I recommend a business review before merge."
-        ],
-        "changedFiles": [
-          "workflows/refunds/ProcessHighValueRefund.xaml",
-          "workflows/refunds/RequestManagerApproval.xaml",
-          "workflows/notifications/SendFinanceApprovalStatus.xaml",
-          "config/prod/settings.json",
-          "config/dev/settings.json",
-          "assets/email/finance-approval-template.html",
-          "tests/refunds/HighValueRefundTests.xlsx"
-        ]
+        "url": "https://github.com/acme-automation/uipath-order-fulfillment/pull/184"
       },
       "expectedOutput": {
         "decision": "escalated",
-        "reason": "The pull request fields contain unresolved template placeholders rather than concrete PR data, so the change cannot be safely assessed. Per policy, insufficient context requires human review rather than automatic approval or rejection.",
-        "confidence": "low",
-        "comment": "Escalating because the provided PR details are not populated with actual values (for example, repository, PR number, title, summary, comments, and changed files are still templates). Please provide the fully resolved pull request context for review.",
+        "reason": "Human review approval task was created for the pull request.",
+        "confidence": "high",
+        "comment": "Escalated to the Human Review Approval App for approve/reject review.",
         "escalationRequired": true,
         "escalationPayload": {
-          "repositoryName": "{{input.repositoryName}}",
-          "owner": "{{input.owner}}",
-          "pullRequestNumber": null,
-          "title": "{{input.title}}",
-          "url": "{{input.url}}",
-          "summary": "{{input.summary}}",
-          "comments": [
-            "{{input.comments}}"
-          ],
-          "changedFiles": [
-            "{{input.changedFiles}}"
-          ],
-          "escalationReason": "Missing concrete pull request metadata; fields are unresolved placeholders, so automated risk assessment is not possible."
+          "repositoryName": "uipath-order-fulfillment",
+          "owner": "acme-automation",
+          "pullRequestNumber": 184,
+          "title": "Add approval step for high-value refunds and update finance notification flow",
+          "url": "https://github.com/acme-automation/uipath-order-fulfillment/pull/184",
+          "escalationReason": "Human approval is required for pull request #184 (Add approval step for high-value refunds and update finance notification flow) before the release assurance decision can continue."
         }
       },
       "simulationInstructions": "",
