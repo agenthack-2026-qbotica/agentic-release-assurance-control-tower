@@ -85,24 +85,6 @@
     },
     {
       "resource": "process",
-      "key": "Execute Selected Test Set",
-      "id": "processExecute Selected Test Set",
-      "value": {
-        "name": {
-          "defaultValue": "Execute Selected Test Set API",
-          "isExpression": false,
-          "displayName": "Process name"
-        }
-      },
-      "metadata": {
-        "ActivityName": "Execute Selected Test Set API",
-        "BindingsVersion": "2.2",
-        "DisplayLabel": "name",
-        "SolutionsSupport": "true"
-      }
-    },
-    {
-      "resource": "process",
       "key": "Failure Triage Release Go - No-Go Decision Agent",
       "id": "processFailure Triage Release Go - No-Go Decision Agent",
       "value": {
@@ -175,6 +157,25 @@
         "DisplayLabel": "name",
         "SolutionsSupport": "true",
         "subType": "Agent"
+      }
+    },
+    {
+      "resource": "process",
+      "key": "Execute Selected Test Set API",
+      "id": "processExecute Selected Test Set API",
+      "value": {
+        "name": {
+          "defaultValue": "Execute Selected Test Set API",
+          "isExpression": false,
+          "displayName": "Process name"
+        }
+      },
+      "metadata": {
+        "ActivityName": "Execute Selected Test Set",
+        "BindingsVersion": "2.2",
+        "DisplayLabel": "name",
+        "SolutionsSupport": "true",
+        "subType": "Api"
       }
     }
   ]

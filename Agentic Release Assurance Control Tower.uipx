@@ -2,11 +2,6 @@
   "SolutionId": "6d70a6b8-9f63-4bed-64c1-08ded39497a3",
   "Projects": [
     {
-      "Id": "fc4b1a8e-5761-4f70-bf79-cdf5f53ba691",
-      "Type": "Process",
-      "ProjectRelativePath": "Execute Selected Test Set/project.uiproj"
-    },
-    {
       "Id": "bb169e71-0ba9-471a-b6ea-1b590c4753be",
       "Type": "Agent",
       "ProjectRelativePath": "HITL PR Review Agent/project.uiproj"
@@ -37,9 +32,9 @@
       "ProjectRelativePath": "Test Failure Triage Agent/project.uiproj"
     },
     {
+      "Id": "62fd33d4-5736-45b7-b092-bf0465100601",
       "Type": "Api",
-      "ProjectRelativePath": "Execute Selected Test Set API/project.uiproj",
-      "Id": "62fd33d4-5736-45b7-b092-bf0465100601"
+      "ProjectRelativePath": "Execute Selected Test Set API/project.uiproj"
     }
   ],
   "DocVersion": "1.0.0",
