@@ -89,13 +89,13 @@
       "id": "processExecute Selected Test Set",
       "value": {
         "name": {
-          "defaultValue": "Execute Selected Test Set",
+          "defaultValue": "Execute Selected Test Set API",
           "isExpression": false,
           "displayName": "Process name"
         }
       },
       "metadata": {
-        "ActivityName": "Execute Selected Test Set",
+        "ActivityName": "Execute Selected Test Set API",
         "BindingsVersion": "2.2",
         "DisplayLabel": "name",
         "SolutionsSupport": "true"
