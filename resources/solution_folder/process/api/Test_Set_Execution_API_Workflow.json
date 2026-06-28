@@ -27,13 +27,13 @@
           "activityName": "HTTP Request - Get All Test Cases",
           "bindingsVersion": "2.2",
           "solutionsSupport": "true",
-          "connector": "uipath-uipath-http",
-          "useConnectionService": "true"
+          "isSolutionResource": true
         },
         "resourceKind": "Connection",
         "resourceType": "uipath-uipath-http"
       }
     ],
+    "files": [],
     "folders": [
       {
         "fullyQualifiedName": "solution_folder"
@@ -57,7 +57,6 @@
       "tags": []
     },
     "locks": [],
-    "key": "f28b336e-2706-4f2c-af31-57bbdd715a70",
-    "files": []
+    "key": "f28b336e-2706-4f2c-af31-57bbdd715a70"
   }
 }
