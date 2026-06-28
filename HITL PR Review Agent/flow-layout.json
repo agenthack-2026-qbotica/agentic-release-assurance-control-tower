@@ -10,7 +10,14 @@
         "x": 256,
         "y": -288
       }
+    },
+    {
+      "id": "agent=>Human Review App:6f6b15f8-cb45-4f89-b245-300e301e79bb",
+      "position": {
+        "x": 256,
+        "y": -288
+      }
     }
   ],
-  "zoom": 0.78
+  "zoom": 3
 }

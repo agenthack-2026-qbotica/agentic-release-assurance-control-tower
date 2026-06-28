@@ -4,10 +4,17 @@
   "entryPoints": [
     {
       "filePath": "/content/agent.json",
+      "uniqueId": "56132de5-9047-4f58-8af1-8eee24547703",
       "type": "agent",
-      "uniqueId": "eef42ead-528e-431b-98c3-ba9492f670f3",
       "input": {
         "type": "object",
+        "required": [
+          "repositoryName",
+          "owner",
+          "pullRequestNumber",
+          "title",
+          "url"
+        ],
         "properties": {
           "repositoryName": {
             "type": "string",
@@ -28,72 +35,53 @@
           "url": {
             "type": "string",
             "description": "Pull request URL"
-          },
-          "summary": {
-            "type": "string",
-            "description": "Pull request summary or description"
-          },
-          "comments": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": "Comments on the pull request"
-          },
-          "changedFiles": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": "List of changed files in the pull request"
           }
         },
-        "required": [
-          "repositoryName",
-          "owner",
-          "pullRequestNumber",
-          "title",
-          "url",
-          "summary",
-          "comments",
-          "changedFiles"
-        ]
+        "title": "Inputs"
       },
       "output": {
         "type": "object",
+        "required": [
+          "decision",
+          "reason",
+          "confidence",
+          "comment",
+          "escalationRequired",
+          "escalationPayload"
+        ],
         "properties": {
           "decision": {
             "type": "string",
+            "description": "Decision status after creating the human review task",
             "enum": [
-              "approved",
-              "rejected",
-              "escalated"
-            ],
-            "description": "Decision on the pull request"
+              "escalated",
+              "error"
+            ]
           },
           "reason": {
             "type": "string",
-            "description": "Explanation for the decision"
+            "description": "Explanation of the escalation or missing input error"
           },
           "confidence": {
             "type": "string",
+            "description": "Confidence level",
             "enum": [
               "low",
               "medium",
               "high"
-            ],
-            "description": "Confidence level in the decision"
+            ]
           },
           "comment": {
             "type": "string",
-            "description": "Suggested comment for the reviewer or downstream system"
+            "description": "Reviewer-facing comment"
           },
           "escalationRequired": {
             "type": "boolean",
-            "description": "Whether escalation to human review is required"
+            "description": "Whether human review is required"
           },
           "escalationPayload": {
             "type": "object",
+            "description": "Payload sent to the Human Review App",
             "properties": {
               "repositoryName": {
                 "type": "string"
@@ -110,46 +98,16 @@
               "url": {
                 "type": "string"
               },
-              "summary": {
-                "type": "string"
-              },
-              "comments": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "changedFiles": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
               "escalationReason": {
                 "type": "string"
               }
-            },
-            "description": "Structured PR context to send to the escalation app"
+            }
           },
-          "finalDecision": {
-            "type": "string",
-            "description": "Final decision to surface after HITL review"
-          },
-          "finalComment": {
-            "type": "string",
-            "description": "Final comment to surface after HITL review"
+          "humanReviewOutcome": {
+            "type": "object",
+            "description": "Response returned by the Human Review App escalation tool"
           }
-        },
-        "required": [
-          "decision",
-          "reason",
-          "confidence",
-          "comment",
-          "escalationRequired",
-          "escalationPayload",
-          "finalDecision",
-          "finalComment"
-        ]
+        }
       }
     }
   ]

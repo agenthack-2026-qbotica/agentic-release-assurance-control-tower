@@ -1,130 +1,108 @@
-{
-  "projectId": "19157976-989a-44f2-9b46-4d91daffbb1f",
-  "name": "Human Review Approval App",
-  "main": "Main.xaml",
-  "dependencies": {
-    "UiPath.DataService.Activities": "25.9.9",
-    "UiPath.IntegrationService.Activities": "1.27.0-beta.20260616.2",
-    "UiPath.System.Activities": "26.6.1",
-    "UiPath.WebAPI.Activities": "2.4.0",
-    "UiPath.WorkflowEvents.Activities": "3.39.0"
-  },
-  "expressionLanguage": "VisualBasic",
-  "schemaVersion": "4.0",
-  "studioVersion": "26.0.194.0",
-  "projectVersion": "1.0.0",
-  "isTemplate": false,
-  "targetFramework": "Portable",
-  "entryPoints": [
-    {
-      "filePath": "Main.xaml",
-      "uniqueId": "9c268dd9-7624-4406-bd75-10d858f15947",
-      "input": [
-        {
-          "name": "repositoryName",
-          "type": "System.String"
-        },
-        {
-          "name": "owner",
-          "type": "System.String"
-        },
-        {
-          "name": "pullRequestNumber",
-          "type": "System.Int32"
-        },
-        {
-          "name": "title",
-          "type": "System.String"
-        },
-        {
-          "name": "url",
-          "type": "System.String"
-        },
-        {
-          "name": "summary",
-          "type": "System.String"
-        },
-        {
-          "name": "comments",
-          "type": "System.String[]"
-        },
-        {
-          "name": "changedFiles",
-          "type": "System.String[]"
-        },
-        {
-          "name": "escalationReason",
-          "type": "System.String"
-        }
-      ],
-      "output": [
-        {
-          "name": "pullRequestNumber",
-          "type": "System.Int32"
-        },
-        {
-          "name": "decision",
-          "type": "System.String"
-        },
-        {
-          "name": "comment",
-          "type": "System.String"
-        },
-        {
-          "name": "reviewer",
-          "type": "System.String"
-        },
-        {
-          "name": "updatedAt",
-          "type": "System.String"
-        },
-        {
-          "name": "targetConnector",
-          "type": "System.String"
-        },
-        {
-          "name": "finalDecision",
-          "type": "System.String"
-        },
-        {
-          "name": "finalComment",
-          "type": "System.String"
-        }
-      ]
-    }
-  ],
-  "designOptions": {
-    "fileInfoCollection": [],
-    "projectProfile": "Developement",
-    "outputType": "Process",
-    "libraryOptions": {
-      "privateWorkflows": []
-    },
-    "processOptions": {
-      "ignoredFiles": []
-    },
-    "saveToCloud": false
-  },
-  "runtimeOptions": {
-    "requiresUserInteraction": false,
-    "autoDispose": false,
-    "netFrameworkLazyLoading": false,
-    "isPausable": true,
-    "isAttended": false,
-    "supportsPersistence": false,
-    "workflowSerialization": "NewtonsoftJson",
-    "excludedLoggedData": [
-      "Private:*",
-      "*password*"
-    ],
-    "executionType": "Workflow",
-    "readyForPiP": false,
-    "startsInPiP": false,
-    "mustRestoreAllDependencies": true,
-    "pipType": "ChildSession"
-  },
-  "webServices": [],
-  "entitiesStores": [],
-  "templateProjectData": {},
-  "publishData": {}
+﻿{
+    "projectId":  "19157976-989a-44f2-9b46-4d91daffbb1f",
+    "name":  "Human Review Approval App",
+    "main":  "Main.xaml",
+    "dependencies":  {
+                         "UiPath.DataService.Activities":  "25.9.9",
+                         "UiPath.IntegrationService.Activities":  "1.27.0-beta.20260616.2",
+                         "UiPath.System.Activities":  "26.6.1",
+                         "UiPath.WebAPI.Activities":  "2.4.0",
+                         "UiPath.WorkflowEvents.Activities":  "3.39.0"
+                     },
+    "expressionLanguage":  "VisualBasic",
+    "schemaVersion":  "4.0",
+    "studioVersion":  "26.0.194.0",
+    "projectVersion":  "1.0.0",
+    "isTemplate":  false,
+    "targetFramework":  "Portable",
+    "entryPoints":  [
+                        {
+                            "filePath":  "Main.xaml",
+                            "uniqueId":  "9c268dd9-7624-4406-bd75-10d858f15947",
+                            "input":  [
+                                          {
+                                              "name":  "repositoryName",
+                                              "type":  "System.String"
+                                          },
+                                          {
+                                              "name":  "owner",
+                                              "type":  "System.String"
+                                          },
+                                          {
+                                              "name":  "pullRequestNumber",
+                                              "type":  "System.Int32"
+                                          },
+                                          {
+                                              "name":  "title",
+                                              "type":  "System.String"
+                                          },
+                                          {
+                                              "name":  "url",
+                                              "type":  "System.String"
+                                          },
+                                          {
+                                              "name":  "escalationReason",
+                                              "type":  "System.String"
+                                          }
+                                      ],
+                            "output":  [
+                                           {
+                                               "name":  "decision",
+                                               "type":  "System.String"
+                                           },
+                                           {
+                                               "name":  "comment",
+                                               "type":  "System.String"
+                                           }
+                                       ]
+                        }
+                    ],
+    "designOptions":  {
+                          "fileInfoCollection":  [
+
+                                                 ],
+                          "projectProfile":  "Developement",
+                          "outputType":  "Process",
+                          "libraryOptions":  {
+                                                 "privateWorkflows":  [
+
+                                                                      ]
+                                             },
+                          "processOptions":  {
+                                                 "ignoredFiles":  [
+
+                                                                  ]
+                                             },
+                          "saveToCloud":  false
+                      },
+    "runtimeOptions":  {
+                           "requiresUserInteraction":  false,
+                           "autoDispose":  false,
+                           "netFrameworkLazyLoading":  false,
+                           "isPausable":  true,
+                           "isAttended":  false,
+                           "supportsPersistence":  false,
+                           "workflowSerialization":  "NewtonsoftJson",
+                           "excludedLoggedData":  [
+                                                      "Private:*",
+                                                      "*password*"
+                                                  ],
+                           "executionType":  "Workflow",
+                           "readyForPiP":  false,
+                           "startsInPiP":  false,
+                           "mustRestoreAllDependencies":  true,
+                           "pipType":  "ChildSession"
+                       },
+    "webServices":  [
+
+                    ],
+    "entitiesStores":  [
+
+                       ],
+    "templateProjectData":  {
+
+                            },
+    "publishData":  {
+
+                    }
 }
