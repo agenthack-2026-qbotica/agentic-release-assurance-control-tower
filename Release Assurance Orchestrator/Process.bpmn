@@ -359,9 +359,14 @@
       <bpmn:incoming>edge_Fimg9M</bpmn:incoming>
       <bpmn:outgoing>edge_pfHG91</bpmn:outgoing>
     </bpmn:task>
+    <bpmn:task id="Activity_HITL_Approval" name="HITL Final Release Approval">
+      <bpmn:incoming>edge_GWqM6U_to_HITLApproval</bpmn:incoming>
+      <bpmn:outgoing>edge_HITLApproval_to_End</bpmn:outgoing>
+    </bpmn:task>
     <bpmn:endEvent id="Event_5nsSE4" name="Release Decision Recorded">
       <bpmn:incoming>edge_Activity_f21uUA-Event_5nsSE4MsAkVS</bpmn:incoming>
       <bpmn:incoming>edge_iioeFo</bpmn:incoming>
+      <bpmn:incoming>edge_HITLApproval_to_End</bpmn:incoming>
     </bpmn:endEvent>
     <bpmn:sendTask id="Activity_Wmfo8w" name="Update Requirement with Missing Information">
       <bpmn:extensionElements>
@@ -421,6 +426,8 @@
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=js:vars.jobErrors.length &gt; 0</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="edge_Activity_GWqM6U-Activity_f21uUA6HfvWQ" sourceRef="Activity_GWqM6U" targetRef="Activity_f21uUA" />
+    <bpmn:sequenceFlow id="edge_GWqM6U_to_HITLApproval" sourceRef="Activity_GWqM6U" targetRef="Activity_HITL_Approval" />
+    <bpmn:sequenceFlow id="edge_HITLApproval_to_End" sourceRef="Activity_HITL_Approval" targetRef="Event_5nsSE4" />
     <bpmn:sequenceFlow id="edge_Activity_f21uUA-Event_5nsSE4MsAkVS" sourceRef="Activity_f21uUA" targetRef="Event_5nsSE4" />
     <bpmn:sequenceFlow id="edge_WlxhlO" sourceRef="Activity_6M1PFA" targetRef="Gateway_G3QP5E" />
     <bpmn:sequenceFlow id="edge_Gateway_G3QP5E-Activity_SUrPUZRbdbLp" name="Automation Failure" sourceRef="Gateway_G3QP5E" targetRef="Activity_SUrPUZ" />
