@@ -1,0 +1,176 @@
+{
+  "ExportedBy": "StudioWeb",
+  "BundleHash": "wqvURrCGqzhG7zMVV4f1Ouf4RiAqy1UKkiIAQkKKIo",
+  "Version": "1.0.0.0",
+  "JitAssemblyCompilerCommands": [
+    {
+      "ProviderName": "CustomEntities",
+      "BundleOptions": {
+        "EntitiesBundle": {
+          "Types": {
+            "GetExecutableTestCaseDetails_Input": {
+              "Name": "GetExecutableTestCaseDetails_Input",
+              "Properties": [
+                {
+                  "Name": "in_arr_TestCaseNames",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "Newtonsoft.Json.JsonPropertyAttribute, Newtonsoft.Json"
+                        },
+                        "ConstructorArguments": [
+                          {
+                            "Value": "\"in_arr_TestCaseNames\"",
+                            "Type": {
+                              "ClrType": "System.String, System.Private.CoreLib"
+                            }
+                          }
+                        ],
+                        "NamedArguments": []
+                      },
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DisplayNameAttribute, System.ComponentModel.Primitives"
+                        },
+                        "ConstructorArguments": [
+                          {
+                            "Value": "\"in_arr_TestCaseNames\"",
+                            "Type": {
+                              "ClrType": "System.String, System.Private.CoreLib"
+                            }
+                          }
+                        ],
+                        "NamedArguments": []
+                      }
+                    ]
+                  },
+                  "IsCollection": true
+                }
+              ],
+              "Values": [],
+              "BaseType": null
+            }
+          },
+          "Metadata": {
+            "UniqueAssemblyIdentityId": "261b7fed-649e-457e-9ab6-c7af57f3184f"
+          },
+          "Version": 1
+        },
+        "Hash": "b0nvmSakJzXqMNEHC0ItWoZ8sVQY5V4KlyPq88RweRQ=",
+        "BundleName": "GetExecutableTestCaseDetails_Input"
+      },
+      "EntityAssemblyKey": {
+        "Name": "UiPath.System.Activities.ViewModels.SWEntities.GetExecutableTestCaseDetails_Input",
+        "Hash": "YjBudm1TYWtKelhxTU5FSEMwSXRXb1o4c1ZRWTVWNEtseVBxODhSd2VSUT0",
+        "AssemblyName": "GetExecutableTestCas.CuLgp1iDtHH1INOSy3Fjfe72"
+      }
+    },
+    {
+      "ProviderName": "CustomEntities",
+      "BundleOptions": {
+        "EntitiesBundle": {
+          "Types": {
+            "GetExecutableTestCaseDetails_Output": {
+              "Name": "GetExecutableTestCaseDetails_Output",
+              "Properties": [
+                {
+                  "Name": "out_arr_JsonPayload",
+                  "Type": {
+                    "ClrType": "System.Object, System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "Newtonsoft.Json.JsonPropertyAttribute, Newtonsoft.Json"
+                        },
+                        "ConstructorArguments": [
+                          {
+                            "Value": "\"out_arr_JsonPayload\"",
+                            "Type": {
+                              "ClrType": "System.String, System.Private.CoreLib"
+                            }
+                          }
+                        ],
+                        "NamedArguments": []
+                      },
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DisplayNameAttribute, System.ComponentModel.Primitives"
+                        },
+                        "ConstructorArguments": [
+                          {
+                            "Value": "\"out_arr_JsonPayload\"",
+                            "Type": {
+                              "ClrType": "System.String, System.Private.CoreLib"
+                            }
+                          }
+                        ],
+                        "NamedArguments": []
+                      }
+                    ]
+                  }
+                },
+                {
+                  "Name": "out_dict_Results",
+                  "Type": {
+                    "ClrType": "System.Object, System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "Newtonsoft.Json.JsonPropertyAttribute, Newtonsoft.Json"
+                        },
+                        "ConstructorArguments": [
+                          {
+                            "Value": "\"out_dict_Results\"",
+                            "Type": {
+                              "ClrType": "System.String, System.Private.CoreLib"
+                            }
+                          }
+                        ],
+                        "NamedArguments": []
+                      },
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DisplayNameAttribute, System.ComponentModel.Primitives"
+                        },
+                        "ConstructorArguments": [
+                          {
+                            "Value": "\"out_dict_Results\"",
+                            "Type": {
+                              "ClrType": "System.String, System.Private.CoreLib"
+                            }
+                          }
+                        ],
+                        "NamedArguments": []
+                      }
+                    ]
+                  }
+                }
+              ],
+              "Values": [],
+              "BaseType": null
+            }
+          },
+          "Metadata": {
+            "UniqueAssemblyIdentityId": "5420c6a9-fa40-4bb1-81c9-01ea7fdbaede"
+          },
+          "Version": 1
+        },
+        "Hash": "unJKahe+xoz50dHi/+m2nuOBw44zqvzQkzZ806vfzAw=",
+        "BundleName": "GetExecutableTestCaseDetails_Output"
+      },
+      "EntityAssemblyKey": {
+        "Name": "UiPath.System.Activities.ViewModels.SWEntities.GetExecutableTestCaseDetails_Output",
+        "Hash": "dW5KS2FoZSt4b3o1MGRIaS8rbTJudU9CdzQ0enF2elFrelo4MDZ2ZnpBdz0",
+        "AssemblyName": "GetExecutableTestCas.1RrcX2CPCjR1zy2Ik3VYKqS"
+      }
+    }
+  ]
+}

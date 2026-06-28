@@ -183,7 +183,15 @@
             <uipath:input name="_label" type="string" value="Select and Execute Testset" />
             <uipath:inputSchema type="jsonSchema"><![CDATA[{"$schema":"http://json-schema.org/draft-07/schema#","type":"object","properties":{"listofselectedTestCases":{"type":"array"}},"required":[]}]]></uipath:inputSchema>
           </uipath:context>
+<<<<<<< Updated upstream
           <uipath:input name="JobArguments" type="json" target="bodyField"><![CDATA[{"listofselectedTestCases":"=js:vars.selectedTestCases"}]]></uipath:input>
+=======
+<<<<<<< HEAD
+          <uipath:input name="JobArguments" type="json" target="bodyField"><![CDATA[{"listofselectedTestCases":"=vars.selectedTestCases"}]]></uipath:input>
+=======
+          <uipath:input name="JobArguments" type="json" target="bodyField"><![CDATA[{"listofselectedTestCases":"=js:vars.selectedTestCases"}]]></uipath:input>
+>>>>>>> 12f0164b7d9339ed85bf5731cc26b9e4444dfc94
+>>>>>>> Stashed changes
           <uipath:output name="Error" type="jsonSchema" source="=Error" var="error5" />
           <uipath:output name="TestSetReport_json" type="jsonSchema" source="=TestSetReport_json" var="testSetReportJson" />
           <uipath:output name="jobErrors" type="jsonSchema" source="=jobErrors" var="jobErrors" />
