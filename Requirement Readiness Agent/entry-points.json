@@ -1,0 +1,49 @@
+{
+  "$schema": "https://cloud.uipath.com/draft/2024-12/entry-point",
+  "$id": "entry-points.json",
+  "entryPoints": [
+    {
+      "filePath": "/content/agent.json",
+      "type": "agent",
+      "uniqueId": "9b841828-5fd5-4ff6-a679-ebd2c5767aa0",
+      "input": {
+        "type": "object",
+        "required": [
+          "RequirementInformation"
+        ],
+        "properties": {
+          "RequirementInformation": {
+            "type": "string",
+            "description": "A string containing the full requirement information to be assessed for test readiness. Should describe the functionality, expected behavior, acceptance criteria, and any relevant context needed to evaluate whether testing can proceed. If empty or missing, return CanProceedWithTesting as false."
+          }
+        }
+      },
+      "output": {
+        "type": "object",
+        "required": [
+          "CanProceedWithTesting",
+          "Reason",
+          "MissingInformation"
+        ],
+        "properties": {
+          "CanProceedWithTesting": {
+            "type": "boolean",
+            "description": "True if the requirement contains sufficient information for a tester to confidently design and execute test cases. False if critical information is missing, ambiguous, incomplete, or insufficient."
+          },
+          "Reason": {
+            "type": "string",
+            "description": "A brief explanation of the decision. Summarize why the requirement is sufficient or why it falls short. Must be concise and specific to the provided content."
+          },
+          "MissingInformation": {
+            "type": "array",
+            "description": "A list of missing or unclear items that prevent test execution. Should be an empty array [] if CanProceedWithTesting is true. If false, list each missing element clearly (e.g., 'Expected outcome not defined', 'No acceptance criteria provided').",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "title": "Outputs"
+      }
+    }
+  ]
+}

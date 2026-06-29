@@ -1,0 +1,23 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "Requirement Readiness Agent",
+    "kind": "package",
+    "apiVersion": "orchestrator.uipath.com/v1",
+    "projectKey": "d8e9d627-f3fe-4d80-9ec9-e9d899e958c6",
+    "isOverridable": true,
+    "dependencies": [],
+    "runtimeDependencies": [],
+    "files": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "name": "Requirement Readiness Agent"
+    },
+    "locks": [],
+    "key": "edf4e7f2-7c98-4f6c-b76c-f0a0a02486de"
+  }
+}

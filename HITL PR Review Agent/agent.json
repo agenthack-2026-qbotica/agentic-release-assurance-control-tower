@@ -1,0 +1,239 @@
+{
+  "version": "1.1.0",
+  "settings": {
+    "model": "gpt-5.4",
+    "maxTokens": 128000,
+    "temperature": 0,
+    "engine": "basic-v2",
+    "maxIterations": 25,
+    "mode": "standard"
+  },
+  "inputSchema": {
+    "type": "object",
+    "required": [
+      "repositoryName",
+      "owner",
+      "pullRequestNumber",
+      "title",
+      "url"
+    ],
+    "properties": {
+      "repositoryName": {
+        "type": "string",
+        "description": "Name of the GitHub repository"
+      },
+      "owner": {
+        "type": "string",
+        "description": "Owner of the GitHub repository"
+      },
+      "pullRequestNumber": {
+        "type": "integer",
+        "description": "Pull request number"
+      },
+      "title": {
+        "type": "string",
+        "description": "Pull request title"
+      },
+      "url": {
+        "type": "string",
+        "description": "Pull request URL"
+      }
+    }
+  },
+  "outputSchema": {
+    "type": "object",
+    "required": [
+      "decision",
+      "reason",
+      "confidence",
+      "comment",
+      "escalationRequired",
+      "escalationPayload"
+    ],
+    "properties": {
+      "decision": {
+        "type": "string",
+        "description": "Decision status after creating the human review task",
+        "enum": [
+          "escalated",
+          "error"
+        ]
+      },
+      "reason": {
+        "type": "string",
+        "description": "Explanation of the escalation or missing input error"
+      },
+      "confidence": {
+        "type": "string",
+        "description": "Confidence level",
+        "enum": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "comment": {
+        "type": "string",
+        "description": "Reviewer-facing comment"
+      },
+      "escalationRequired": {
+        "type": "boolean",
+        "description": "Whether human review is required"
+      },
+      "escalationPayload": {
+        "type": "object",
+        "description": "Payload sent to the Human Review App",
+        "properties": {
+          "repositoryName": {
+            "type": "string"
+          },
+          "owner": {
+            "type": "string"
+          },
+          "pullRequestNumber": {
+            "type": "integer"
+          },
+          "title": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "escalationReason": {
+            "type": "string"
+          }
+        }
+      },
+      "humanReviewOutcome": {
+        "type": "object",
+        "description": "Response returned by the Human Review App escalation tool"
+      }
+    }
+  },
+  "metadata": {
+    "storageVersion": "50.0.0",
+    "isConversational": false,
+    "showProjectCreationExperience": false,
+    "targetRuntime": "pythonAgent"
+  },
+  "type": "lowCode",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a GitHub pull request human-review escalation agent for the Agentic Release Assurance Control Tower.\n\nYour job is not to approve or reject pull requests yourself. Your job is to always create a Human Review App escalation task for every valid pull request input, then return a structured summary showing that the PR was escalated.\n\nMandatory behavior:\n- Always invoke the \"Human Review App\" escalation tool for every run.\n- Do not auto-approve a PR.\n- Do not auto-reject a PR.\n- Do not end the execution before calling the escalation tool.\n- Do not satisfy escalation by returning JSON only.\n- Never call the escalation tool with empty, null, or placeholder values for required fields.\n- Use only the fields that are actually available in the PR input and supported by the Human Review Approval App.\n\nThe Human Review App accepts exactly these input fields:\n- repositoryName\n- owner\n- pullRequestNumber\n- title\n- url\n- escalationReason\n\nThe source PR object does not include summary, comments, or changedFiles. Do not reference, require, invent, or pass summary, comments, or changedFiles.\n\nEscalation reason:\nCreate a concise escalationReason that explains that the PR requires human approval before the release assurance decision continues. Mention the PR title and number when useful.\n\nAfter the Human Review App escalation tool returns, produce final JSON with:\n- decision: \"escalated\"\n- reason: short explanation that human approval was requested\n- confidence: \"high\"\n- comment: short reviewer-facing note\n- escalationRequired: true\n- escalationPayload: the exact payload sent to the Human Review App\n- humanReviewOutcome: the escalation tool response, if available\n\nIf a required input is missing, do not fabricate it. Return decision \"error\", escalationRequired true, and explain which required input is missing. For valid inputs, always create the escalation task.",
+      "contentTokens": [
+        {
+          "type": "simpleText",
+          "rawString": "You are a GitHub pull request human-review escalation agent for the Agentic Release Assurance Control Tower.\n\nYour job is not to approve or reject pull requests yourself. Your job is to always create a Human Review App escalation task for every valid pull request input, then return a structured summary showing that the PR was escalated.\n\nMandatory behavior:\n- Always invoke the \"Human Review App\" escalation tool for every run.\n- Do not auto-approve a PR.\n- Do not auto-reject a PR.\n- Do not end the execution before calling the escalation tool.\n- Do not satisfy escalation by returning JSON only.\n- Never call the escalation tool with empty, null, or placeholder values for required fields.\n- Use only the fields that are actually available in the PR input and supported by the Human Review Approval App.\n\nThe Human Review App accepts exactly these input fields:\n- repositoryName\n- owner\n- pullRequestNumber\n- title\n- url\n- escalationReason\n\nThe source PR object does not include summary, comments, or changedFiles. Do not reference, require, invent, or pass summary, comments, or changedFiles.\n\nEscalation reason:\nCreate a concise escalationReason that explains that the PR requires human approval before the release assurance decision continues. Mention the PR title and number when useful.\n\nAfter the Human Review App escalation tool returns, produce final JSON with:\n- decision: \"escalated\"\n- reason: short explanation that human approval was requested\n- confidence: \"high\"\n- comment: short reviewer-facing note\n- escalationRequired: true\n- escalationPayload: the exact payload sent to the Human Review App\n- humanReviewOutcome: the escalation tool response, if available\n\nIf a required input is missing, do not fabricate it. Return decision \"error\", escalationRequired true, and explain which required input is missing. For valid inputs, always create the escalation task."
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "content": "Create a Human Review App escalation task for this GitHub pull request.\n\nPull request details:\n- Repository: {{input.repositoryName}}\n- Owner: {{input.owner}}\n- Pull request number: {{input.pullRequestNumber}}\n- Title: {{input.title}}\n- URL: {{input.url}}\n\nYou MUST invoke the \"Human Review App\" escalation tool before returning the final response.\n\nPass exactly these arguments to the Human Review App escalation tool:\n- repositoryName = {{input.repositoryName}}\n- owner = {{input.owner}}\n- pullRequestNumber = {{input.pullRequestNumber}}\n- title = {{input.title}}\n- url = {{input.url}}\n- escalationReason = Human approval is required for pull request #{{input.pullRequestNumber}} ({{input.title}}) before the release assurance decision can continue.\n\nDo not pass summary, comments, changedFiles, finalDecision, or finalComment.\nDo not return a final JSON response until after the escalation tool call has been made.",
+      "contentTokens": [
+        {
+          "type": "simpleText",
+          "rawString": "Create a Human Review App escalation task for this GitHub pull request.\n\nPull request details:\n- Repository: "
+        },
+        {
+          "type": "variable",
+          "rawString": "input.repositoryName"
+        },
+        {
+          "type": "simpleText",
+          "rawString": "\n- Owner: "
+        },
+        {
+          "type": "variable",
+          "rawString": "input.owner"
+        },
+        {
+          "type": "simpleText",
+          "rawString": "\n- Pull request number: "
+        },
+        {
+          "type": "variable",
+          "rawString": "input.pullRequestNumber"
+        },
+        {
+          "type": "simpleText",
+          "rawString": "\n- Title: "
+        },
+        {
+          "type": "variable",
+          "rawString": "input.title"
+        },
+        {
+          "type": "simpleText",
+          "rawString": "\n- URL: "
+        },
+        {
+          "type": "variable",
+          "rawString": "input.url"
+        },
+        {
+          "type": "simpleText",
+          "rawString": "\n\nYou MUST invoke the \"Human Review App\" escalation tool before returning the final response.\n\nPass exactly these arguments to the Human Review App escalation tool:\n- repositoryName = "
+        },
+        {
+          "type": "variable",
+          "rawString": "input.repositoryName"
+        },
+        {
+          "type": "simpleText",
+          "rawString": "\n- owner = "
+        },
+        {
+          "type": "variable",
+          "rawString": "input.owner"
+        },
+        {
+          "type": "simpleText",
+          "rawString": "\n- pullRequestNumber = "
+        },
+        {
+          "type": "variable",
+          "rawString": "input.pullRequestNumber"
+        },
+        {
+          "type": "simpleText",
+          "rawString": "\n- title = "
+        },
+        {
+          "type": "variable",
+          "rawString": "input.title"
+        },
+        {
+          "type": "simpleText",
+          "rawString": "\n- url = "
+        },
+        {
+          "type": "variable",
+          "rawString": "input.url"
+        },
+        {
+          "type": "simpleText",
+          "rawString": "\n- escalationReason = Human approval is required for pull request #"
+        },
+        {
+          "type": "variable",
+          "rawString": "input.pullRequestNumber"
+        },
+        {
+          "type": "simpleText",
+          "rawString": " ("
+        },
+        {
+          "type": "variable",
+          "rawString": "input.title"
+        },
+        {
+          "type": "simpleText",
+          "rawString": ") before the release assurance decision can continue.\n\nDo not pass summary, comments, changedFiles, finalDecision, or finalComment.\nDo not return a final JSON response until after the escalation tool call has been made."
+        }
+      ]
+    }
+  ],
+  "projectId": "965d4fea-07cf-41bc-9f2c-4c72f16bf599"
+}

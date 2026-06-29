@@ -1,0 +1,38 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "Execute Selected Test Set API",
+    "kind": "process",
+    "type": "api",
+    "apiVersion": "orchestrator.uipath.com/v1",
+    "projectKey": "62fd33d4-5736-45b7-b092-bf0465100601",
+    "isOverridable": true,
+    "dependencies": [
+      {
+        "name": "Execute Selected Test Set API",
+        "kind": "package"
+      }
+    ],
+    "runtimeDependencies": [],
+    "files": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "type": "Api",
+      "name": "Execute Selected Test Set API",
+      "package": {
+        "key": "fd9fbd53-650a-490c-896e-7b7fac45e114"
+      },
+      "targetFrameworkValue": "Portable",
+      "retentionAction": "Delete",
+      "retentionPeriod": 30,
+      "staleRetentionAction": "Delete",
+      "staleRetentionPeriod": 180
+    },
+    "locks": [],
+    "key": "6ecd0de2-ec65-4884-a2f0-1f89e17d29ab"
+  }
+}

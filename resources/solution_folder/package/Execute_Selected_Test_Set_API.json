@@ -1,0 +1,23 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "Execute Selected Test Set API",
+    "kind": "package",
+    "apiVersion": "orchestrator.uipath.com/v1",
+    "projectKey": "62fd33d4-5736-45b7-b092-bf0465100601",
+    "isOverridable": true,
+    "dependencies": [],
+    "runtimeDependencies": [],
+    "files": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "name": "Execute Selected Test Set API"
+    },
+    "locks": [],
+    "key": "fd9fbd53-650a-490c-896e-7b7fac45e114"
+  }
+}

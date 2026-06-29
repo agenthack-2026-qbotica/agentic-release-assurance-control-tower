@@ -1,0 +1,23 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "Release Risk And Test Selection Agent",
+    "kind": "package",
+    "apiVersion": "orchestrator.uipath.com/v1",
+    "projectKey": "492555a2-1226-477a-a05b-efc14712d33c",
+    "isOverridable": true,
+    "dependencies": [],
+    "runtimeDependencies": [],
+    "files": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "name": "Release Risk And Test Selection Agent"
+    },
+    "locks": [],
+    "key": "55797895-4731-41a8-aeb1-65693e7d0402"
+  }
+}

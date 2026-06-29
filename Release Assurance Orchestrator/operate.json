@@ -1,0 +1,11 @@
+{
+  "$schema": "https://cloud.uipath.com/draft/2024-12/operate",
+  "contentType": "ProcessOrchestration",
+  "projectId": "374cfd15-d5c4-42e4-bfcd-bcf61e475956",
+  "main": "/content/Process.bpmn#Event_start",
+  "targetFramework": "Portable",
+  "runtimeOptions": {
+    "isAttended": false,
+    "requiresUserInteraction": false
+  }
+}

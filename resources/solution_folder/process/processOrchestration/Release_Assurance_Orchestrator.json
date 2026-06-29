@@ -1,0 +1,203 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "Release Assurance Orchestrator",
+    "kind": "process",
+    "type": "processOrchestration",
+    "apiVersion": "orchestrator.uipath.com/v1",
+    "projectKey": "fccd27b2-72f9-440d-a315-472e49d60b01",
+    "isOverridable": true,
+    "dependencies": [
+      {
+        "name": "Release Assurance Orchestrator",
+        "kind": "package"
+      }
+    ],
+    "runtimeDependencies": [
+      {
+        "bindingType": "EventTrigger",
+        "bindingKey": "7a7864a8-92bd-4eeb-8dc2-8df3049b7bd4_Event_start",
+        "bindingValues": {
+          "connectionId": {
+            "defaultValue": "7a7864a8-92bd-4eeb-8dc2-8df3049b7bd4",
+            "isExpression": false
+          },
+          "entryPointUniqueId": {
+            "defaultValue": "58974a5c-2dfc-4afd-bfa4-4c997bb889da",
+            "isExpression": false
+          }
+        },
+        "bindingMetadata": {
+          "activityName": "Release Change Received",
+          "bindingsVersion": "2.2",
+          "isSolutionResource": true
+        },
+        "resourceKind": "Connection",
+        "resourceType": "uipath-microsoft-github"
+      },
+      {
+        "bindingType": "Property",
+        "bindingKey": "ISSUE_CREATED_IN_REPO_EventTrigger.7a7864a8-92bd-4eeb-8dc2-8df3049b7bd4_Event_start",
+        "bindingValues": {
+          "repo": {
+            "defaultValue": "servicenow-test-automation-demo",
+            "isExpression": false
+          }
+        },
+        "bindingMetadata": {
+          "activityName": "Release Change Received",
+          "bindingsVersion": "2.2",
+          "isSolutionResource": true
+        },
+        "resourceKind": "Property"
+      },
+      {
+        "bindingType": "process",
+        "bindingKey": "Risk Analysis ServiceNow Requirement Analysis Release Go - No-Go Decision Agent",
+        "bindingValues": {
+          "name": {
+            "defaultValue": "Release Risk And Test Selection Agent",
+            "isExpression": false
+          }
+        },
+        "bindingMetadata": {
+          "activityName": "Release Risk and Test Selection Agent",
+          "bindingsVersion": "2.2",
+          "solutionsSupport": "true",
+          "isSolutionResource": true
+        },
+        "resourceKind": "Process"
+      },
+      {
+        "bindingType": "Connection",
+        "bindingKey": "7a7864a8-92bd-4eeb-8dc2-8df3049b7bd4",
+        "bindingValues": {
+          "connectionId": {
+            "defaultValue": "7a7864a8-92bd-4eeb-8dc2-8df3049b7bd4",
+            "isExpression": false
+          }
+        },
+        "bindingMetadata": {
+          "activityName": "Release Change Received",
+          "bindingsVersion": "2.2",
+          "isSolutionResource": true
+        },
+        "resourceKind": "Connection",
+        "resourceType": "uipath-microsoft-github",
+        "resourceKey": "7a7864a8-92bd-4eeb-8dc2-8df3049b7bd4",
+        "resourceName": "agenthack-qbotica",
+        "folderKey": "a9235f06-419c-4007-8d9d-706225d646b0"
+      },
+      {
+        "bindingType": "process",
+        "bindingKey": "Execute Selected Test Set",
+        "bindingValues": {
+          "name": {
+            "defaultValue": "Execute Selected Test Set",
+            "isExpression": false
+          }
+        },
+        "bindingMetadata": {
+          "activityName": "Execute Selected Test Set",
+          "bindingsVersion": "2.2",
+          "solutionsSupport": "true",
+          "isSolutionResource": true
+        },
+        "resourceKind": "Process"
+      },
+      {
+        "bindingType": "process",
+        "bindingKey": "Failure Triage Release Go - No-Go Decision Agent",
+        "bindingValues": {
+          "name": {
+            "defaultValue": "Test Failure Triage Agent",
+            "isExpression": false
+          }
+        },
+        "bindingMetadata": {
+          "activityName": "Test Failure Triage Agent",
+          "bindingsVersion": "2.2",
+          "solutionsSupport": "true",
+          "isSolutionResource": true
+        },
+        "resourceKind": "Process"
+      },
+      {
+        "bindingType": "process",
+        "bindingKey": "Release Go - No-Go Decision Agent",
+        "bindingValues": {
+          "name": {
+            "defaultValue": "Release Go - No-Go Decision Agent",
+            "isExpression": false
+          }
+        },
+        "bindingMetadata": {
+          "activityName": "Generate Governed Release Decision Agent",
+          "bindingsVersion": "2.2",
+          "solutionsSupport": "true",
+          "isSolutionResource": true
+        },
+        "resourceKind": "Process"
+      },
+      {
+        "bindingType": "process",
+        "bindingKey": "Requirement Readiness Agent",
+        "bindingValues": {
+          "name": {
+            "defaultValue": "Requirement Readiness Agent",
+            "isExpression": false
+          }
+        },
+        "bindingMetadata": {
+          "activityName": "Requirement Readiness Agent",
+          "bindingsVersion": "2.2",
+          "solutionsSupport": "true",
+          "isSolutionResource": true
+        },
+        "resourceKind": "Process"
+      },
+      {
+        "bindingType": "process",
+        "bindingKey": "HITL PR Review Agent",
+        "bindingValues": {
+          "name": {
+            "defaultValue": "HITL PR Review Agent",
+            "isExpression": false
+          }
+        },
+        "bindingMetadata": {
+          "activityName": "Review Automation Fix Pull Request",
+          "bindingsVersion": "2.2",
+          "solutionsSupport": "true",
+          "isSolutionResource": true
+        },
+        "resourceKind": "Process"
+      }
+    ],
+    "files": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "type": "ProcessOrchestration",
+      "name": "Release Assurance Orchestrator",
+      "package": {
+        "key": "bf76982d-d673-4fb5-aafc-e0a43851ba24"
+      },
+      "packageName": "TestOps.Control.Tower.Solution.agentic.Maestro.TestOps.BPMN",
+      "hiddenForAttendedUser": false,
+      "alwaysRunning": false,
+      "autoStartProcess": false,
+      "targetFrameworkValue": "Portable",
+      "retentionAction": "Delete",
+      "retentionPeriod": 30,
+      "staleRetentionAction": "Delete",
+      "staleRetentionPeriod": 180,
+      "tags": []
+    },
+    "locks": [],
+    "key": "4a610f19-114e-44f9-b55f-dbc2044341e9"
+  }
+}

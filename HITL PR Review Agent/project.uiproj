@@ -1,0 +1,6 @@
+{
+    "Name":  "HITL PR Review Agent",
+    "MainFile":  null,
+    "ProjectType":  "Agent",
+    "Description":  "Always escalates GitHub pull requests to the Human Review Approval App for human approve/reject review."
+}

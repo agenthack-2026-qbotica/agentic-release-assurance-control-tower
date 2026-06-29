@@ -1,0 +1,52 @@
+{
+  "fileName": "evaluation-set-default.json",
+  "id": "1cf6b5eb-67b3-406b-8b58-a01e129262ac",
+  "name": "Default Evaluation Set",
+  "batchSize": 10,
+  "evaluatorRefs": [
+    "225f0130-58ab-44a0-89c5-b9dd0728fcf6"
+  ],
+  "evaluations": [
+    {
+      "id": "366439e0-59a9-47e5-903b-d7cddd6b8d62",
+      "name": "Debug Run 6/27/2026, 11:35:08 AM",
+      "inputs": {
+        "repositoryName": "uipath-order-fulfillment",
+        "owner": "acme-automation",
+        "pullRequestNumber": 184,
+        "title": "Add approval step for high-value refunds and update finance notification flow",
+        "url": "https://github.com/acme-automation/uipath-order-fulfillment/pull/184"
+      },
+      "expectedOutput": {
+        "decision": "escalated",
+        "reason": "Human review approval task was created for the pull request.",
+        "confidence": "high",
+        "comment": "Escalated to the Human Review Approval App for approve/reject review.",
+        "escalationRequired": true,
+        "escalationPayload": {
+          "repositoryName": "uipath-order-fulfillment",
+          "owner": "acme-automation",
+          "pullRequestNumber": 184,
+          "title": "Add approval step for high-value refunds and update finance notification flow",
+          "url": "https://github.com/acme-automation/uipath-order-fulfillment/pull/184",
+          "escalationReason": "Human approval is required for pull request #184 (Add approval step for high-value refunds and update finance notification flow) before the release assurance decision can continue."
+        }
+      },
+      "simulationInstructions": "",
+      "expectedAgentBehavior": "",
+      "simulateInput": false,
+      "inputGenerationInstructions": "",
+      "simulateTools": false,
+      "evalSetId": "1cf6b5eb-67b3-406b-8b58-a01e129262ac",
+      "createdAt": "2026-06-27T15:35:08.923Z",
+      "updatedAt": "2026-06-27T15:35:08.923Z",
+      "source": "debugRun"
+    }
+  ],
+  "modelSettings": [],
+  "createdAt": "2026-06-27T15:02:38.735Z",
+  "updatedAt": "2026-06-27T15:35:08.923Z",
+  "agentMemoryEnabled": false,
+  "agentMemorySettings": [],
+  "lineByLineEvaluation": false
+}

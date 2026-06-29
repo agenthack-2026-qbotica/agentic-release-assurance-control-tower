@@ -1,0 +1,23 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "Release Assurance Orchestrator",
+    "kind": "package",
+    "apiVersion": "orchestrator.uipath.com/v1",
+    "projectKey": "fccd27b2-72f9-440d-a315-472e49d60b01",
+    "isOverridable": true,
+    "dependencies": [],
+    "runtimeDependencies": [],
+    "files": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "name": "Release Assurance Orchestrator"
+    },
+    "locks": [],
+    "key": "bf76982d-d673-4fb5-aafc-e0a43851ba24"
+  }
+}

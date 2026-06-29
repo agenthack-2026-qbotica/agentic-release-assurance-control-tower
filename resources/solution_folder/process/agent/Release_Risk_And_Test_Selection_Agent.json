@@ -1,0 +1,44 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "Release Risk And Test Selection Agent",
+    "kind": "process",
+    "type": "agent",
+    "apiVersion": "orchestrator.uipath.com/v1",
+    "projectKey": "492555a2-1226-477a-a05b-efc14712d33c",
+    "isOverridable": true,
+    "dependencies": [
+      {
+        "name": "Release Risk And Test Selection Agent",
+        "kind": "package"
+      }
+    ],
+    "runtimeDependencies": [],
+    "files": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "type": "Agent",
+      "name": "Release Risk And Test Selection Agent",
+      "package": {
+        "key": "55797895-4731-41a8-aeb1-65693e7d0402"
+      },
+      "packageName": "TestOps.Control.Tower.Solution.agent.Risk.Analysis.Agent",
+      "hiddenForAttendedUser": false,
+      "alwaysRunning": false,
+      "autoStartProcess": false,
+      "targetFrameworkValue": "Portable",
+      "agentMemory": false,
+      "retentionAction": "Delete",
+      "retentionPeriod": 30,
+      "staleRetentionAction": "Delete",
+      "staleRetentionPeriod": 180,
+      "tags": []
+    },
+    "locks": [],
+    "key": "afdb724c-c6e3-41db-9f25-8686c9936821"
+  }
+}

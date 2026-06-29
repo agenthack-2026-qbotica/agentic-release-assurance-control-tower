@@ -1,0 +1,60 @@
+{
+  "projectId": "d4e47a85-267e-4fb7-b7c6-12b54f6b6ad0",
+  "name": "Execute Selected Test Set",
+  "main": "Main.xaml",
+  "dependencies": {
+    "UiPath.IntegrationService.Activities": "1.27.0-beta.20260616.2",
+    "UiPath.Pipelines.Activities": "3.0.5",
+    "UiPath.System.Activities": "26.6.1",
+    "UiPath.WebAPI.Activities": "2.4.0"
+  },
+  "expressionLanguage": "VisualBasic",
+  "schemaVersion": "4.0",
+  "studioVersion": "26.0.194.0",
+  "projectVersion": "1.0.0",
+  "isTemplate": false,
+  "targetFramework": "Portable",
+  "entryPoints": [
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "97b488a8-da52-406e-9a02-d5f86ecb8e37",
+      "input": [],
+      "output": []
+    }
+  ],
+  "designOptions": {
+    "fileInfoCollection": [],
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "saveToCloud": false
+  },
+  "runtimeOptions": {
+    "requiresUserInteraction": false,
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": true,
+    "isAttended": false,
+    "isNonProd": false,
+    "supportsPersistence": true,
+    "workflowSerialization": "NewtonsoftJson",
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": true,
+    "pipType": "ChildSession"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "templateProjectData": {},
+  "publishData": {}
+}

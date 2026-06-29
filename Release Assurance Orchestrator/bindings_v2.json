@@ -1,0 +1,182 @@
+{
+  "version": "2.0",
+  "resources": [
+    {
+      "resource": "EventTrigger",
+      "key": "7a7864a8-92bd-4eeb-8dc2-8df3049b7bd4_Event_start",
+      "id": "EventTrigger7a7864a8-92bd-4eeb-8dc2-8df3049b7bd4_Event_start",
+      "value": {
+        "ConnectionId": {
+          "defaultValue": "7a7864a8-92bd-4eeb-8dc2-8df3049b7bd4",
+          "isExpression": false
+        },
+        "EntryPointUniqueId": {
+          "defaultValue": "63beaf86-66b0-43ff-9919-21ee4b7e67af",
+          "isExpression": false
+        }
+      },
+      "metadata": {
+        "UseConnectionService": "true",
+        "Connector": "uipath-microsoft-github",
+        "ActivityName": "Release Change Received",
+        "BindingsVersion": "2.2",
+        "ObjectName": "issues_in_repo",
+        "Operation": "ISSUE_CREATED_IN_REPO",
+        "FilterExpression": "((contains(`[\"open\"]`, state)))"
+      }
+    },
+    {
+      "resource": "Property",
+      "key": "ISSUE_CREATED_IN_REPO_EventTrigger.7a7864a8-92bd-4eeb-8dc2-8df3049b7bd4_Event_start",
+      "value": {
+        "repo": {
+          "defaultValue": "servicenow-test-automation-demo",
+          "isExpression": false
+        }
+      },
+      "activityDisplayName": "Connector",
+      "metadata": {
+        "ActivityName": "Release Change Received",
+        "BindingsVersion": "2.2",
+        "ObjectName": "issues_in_repo",
+        "ParentResourceKey": "EventTrigger.7a7864a8-92bd-4eeb-8dc2-8df3049b7bd4_Event_start",
+        "TriggerCreateParameters": "repo",
+        "DebugQueryParameters": "repo"
+      },
+      "id": "Property_Event_start"
+    },
+    {
+      "resource": "process",
+      "key": "Risk Analysis ServiceNow Requirement Analysis Release Go - No-Go Decision Agent",
+      "id": "processRisk Analysis ServiceNow Requirement Analysis Release Go - No-Go Decision Agent",
+      "value": {
+        "name": {
+          "defaultValue": "Release Risk And Test Selection Agent",
+          "isExpression": false,
+          "displayName": "Process name"
+        }
+      },
+      "metadata": {
+        "ActivityName": "Release Risk and Test Selection Agent",
+        "BindingsVersion": "2.2",
+        "DisplayLabel": "name",
+        "SolutionsSupport": "true",
+        "subType": "Agent"
+      }
+    },
+    {
+      "resource": "Connection",
+      "key": "7a7864a8-92bd-4eeb-8dc2-8df3049b7bd4",
+      "id": "Connection7a7864a8-92bd-4eeb-8dc2-8df3049b7bd4",
+      "value": {
+        "ConnectionId": {
+          "defaultValue": "7a7864a8-92bd-4eeb-8dc2-8df3049b7bd4",
+          "isExpression": false,
+          "displayName": "uipath-microsoft-github connection"
+        }
+      },
+      "metadata": {
+        "ActivityName": "Release Change Received",
+        "BindingsVersion": "2.2",
+        "DisplayLabel": "uipath-microsoft-github connection",
+        "UseConnectionService": "true",
+        "Connector": "uipath-microsoft-github"
+      }
+    },
+    {
+      "resource": "process",
+      "key": "Failure Triage Release Go - No-Go Decision Agent",
+      "id": "processFailure Triage Release Go - No-Go Decision Agent",
+      "value": {
+        "name": {
+          "defaultValue": "Test Failure Triage Agent",
+          "isExpression": false,
+          "displayName": "Process name"
+        }
+      },
+      "metadata": {
+        "ActivityName": "Test Failure Triage Agent",
+        "BindingsVersion": "2.2",
+        "DisplayLabel": "name",
+        "SolutionsSupport": "true",
+        "subType": "Agent"
+      }
+    },
+    {
+      "resource": "process",
+      "key": "Release Go - No-Go Decision Agent",
+      "id": "processRelease Go - No-Go Decision Agent",
+      "value": {
+        "name": {
+          "defaultValue": "Release Go - No-Go Decision Agent",
+          "isExpression": false,
+          "displayName": "Process name"
+        }
+      },
+      "metadata": {
+        "ActivityName": "Generate Governed Release Decision Agent",
+        "BindingsVersion": "2.2",
+        "DisplayLabel": "name",
+        "SolutionsSupport": "true",
+        "subType": "Agent"
+      }
+    },
+    {
+      "resource": "process",
+      "key": "Requirement Readiness Agent",
+      "id": "processRequirement Readiness Agent",
+      "value": {
+        "name": {
+          "defaultValue": "Requirement Readiness Agent",
+          "isExpression": false,
+          "displayName": "Process name"
+        }
+      },
+      "metadata": {
+        "ActivityName": "Requirement Readiness Agent",
+        "BindingsVersion": "2.2",
+        "DisplayLabel": "name",
+        "SolutionsSupport": "true",
+        "subType": "Agent"
+      }
+    },
+    {
+      "resource": "process",
+      "key": "HITL PR Review Agent",
+      "id": "processHITL PR Review Agent",
+      "value": {
+        "name": {
+          "defaultValue": "HITL PR Review Agent",
+          "isExpression": false,
+          "displayName": "Process name"
+        }
+      },
+      "metadata": {
+        "ActivityName": "Review Automation Fix Pull Request",
+        "BindingsVersion": "2.2",
+        "DisplayLabel": "name",
+        "SolutionsSupport": "true",
+        "subType": "Agent"
+      }
+    },
+    {
+      "resource": "process",
+      "key": "Execute Selected Test Set API",
+      "id": "processExecute Selected Test Set API",
+      "value": {
+        "name": {
+          "defaultValue": "Execute Selected Test Set API",
+          "isExpression": false,
+          "displayName": "Process name"
+        }
+      },
+      "metadata": {
+        "ActivityName": "Execute Selected Test Set",
+        "BindingsVersion": "2.2",
+        "DisplayLabel": "name",
+        "SolutionsSupport": "true",
+        "subType": "Api"
+      }
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "HITL PR Review Agent",
+    "kind": "package",
+    "apiVersion": "orchestrator.uipath.com/v1",
+    "projectKey": "bb169e71-0ba9-471a-b6ea-1b590c4753be",
+    "isOverridable": true,
+    "dependencies": [],
+    "runtimeDependencies": [],
+    "files": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "name": "HITL PR Review Agent"
+    },
+    "locks": [],
+    "key": "c81b75a2-e9ab-416e-a011-e45b526b7ca7"
+  }
+}

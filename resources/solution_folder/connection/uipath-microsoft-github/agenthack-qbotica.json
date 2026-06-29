@@ -1,0 +1,28 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "agenthack-qbotica",
+    "kind": "connection",
+    "type": "uipath-microsoft-github",
+    "apiVersion": "integrationservice.uipath.com/v1",
+    "isOverridable": true,
+    "dependencies": [],
+    "runtimeDependencies": [],
+    "files": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "connectorName": "GitHub",
+      "name": "agenthack-qbotica",
+      "authenticationType": "AuthenticateAfterDeployment",
+      "connectorVersion": "2.6.12",
+      "connectorKey": "uipath-microsoft-github",
+      "pollingInterval": 1
+    },
+    "locks": [],
+    "key": "7a7864a8-92bd-4eeb-8dc2-8df3049b7bd4"
+  }
+}
