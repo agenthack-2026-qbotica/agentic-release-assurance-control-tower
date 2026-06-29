@@ -227,6 +227,42 @@ Enable debug mode by updating debug overwrites:
 }
 ```
 
+## Built with Coding Agents
+
+This project was authored, debugged, and shipped largely with the help of an AI coding agent (Claude Code). Coding agents were not a convenience here — they were central to delivering a multi-product UiPath solution (Maestro BPMN + API workflow + 5 agents + Test Manager integration) within a hackathon timeline.
+
+### Where coding agents made the difference
+
+- **Reverse-engineering undocumented APIs.** The Test Manager execution flow (create test set → set folder → assign test cases → configure execution target → `startexecute?executionType=Automated&asyncMode=true`) is not documented as a single recipe. The agent discovered the correct endpoints, methods, and payloads iteratively from the live API and browser-captured calls, fixing issues like `405 Method Not Allowed` (POST vs PUT), connector output-bucket naming, and the missing `executionType`/`asyncMode` query params that caused executions to silently never dispatch.
+- **Overcoming UI friction and server delays.** Studio Web designer warnings, project-conversion errors (`expressionLanguage`/`outputType` enum rejections), cloud-VM cold-start delays, and queued-but-not-dispatched executions were all diagnosed and worked around through the agent driving the `uip` CLI and the platform APIs directly — bypassing slow, manual UI round-trips.
+- **End-to-end troubleshooting.** Root-caused the `170007` "process not found" failures, empty `jobErrors` on timeout (poll-window fix), wrong BPMN agent inputs, and folder-binding mismatches — each traced from incident → element → fix.
+- **Publishing, CI, and Git.** Branch hygiene, commits, push, and the DEV → main pull request (with branch-preservation safeguards) were all created and merged through the agent.
+
+### Impact (estimated)
+
+> These figures are honest estimates based on this build, not precision telemetry.
+
+| Metric | Estimate |
+|---|---|
+| Share of code/config authored with coding agents | **~85–90%** (workflow JSON, BPMN edits, bindings, glue scripts) |
+| API-workflow build + debug time | **~1–2 hrs with agent** vs **~2–3 days manually** |
+| Test Manager API reverse-engineering | **~30 min with agent** vs **~1–2 days** of trial-and-error manually |
+| Build / publish / PR / CI plumbing | **minutes with agent** vs **hours manually** |
+| Overall delivery time | **~70–80% reduction** vs a manual build |
+
+The biggest gain wasn't typing speed — it was **collapsing the diagnose → fix → verify loop** against opaque APIs and a UI with latency, where a human would otherwise lose hours to retries.
+
+### Future plans
+
+The goal is **fully autonomous, end-to-end orchestration for quality and release assurance**, with coding agents at the core:
+
+- **Self-healing pipelines** — agents that detect failed test executions, triage them (defect vs. automation failure), and auto-open fixes/PRs.
+- **Autonomous test selection** — risk-based selection of which tests to run per change, driven by agents reading requirements, diffs, and historical results.
+- **Closed-loop release decisions** — agents that aggregate test results, coverage, and risk into a governed go/no-go decision with full evidence trails.
+- **Agent-authored automation maintenance** — coding agents continuously updating workflows, selectors, and API integrations as the platform and target apps evolve, keeping the suite green with minimal human intervention.
+
+The long-term vision: a human sets policy and reviews exceptions; coding agents do the building, testing, triaging, and shipping.
+
 ## License
 
 This project is proprietary software developed by QBotica for enterprise use.
