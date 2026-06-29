@@ -3,7 +3,7 @@
     "dsl": "1.0.0",
     "name": "Workflow",
     "tags": {
-      "projectId": "6e35c4d5",
+      "projectId": "5457a5d9",
       "solutionId": "76f39337"
     },
     "version": "0.0.1",
@@ -503,6 +503,25 @@
             }
           },
           {
+            "BuildStartBody": {
+              "run": {
+                "script": {
+                  "code": "function g(){return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g,function(c){var r=Math.random()*16|0,v=c==='x'?r:(r&0x3|0x8);return v.toString(16);});} return { correlationId: g() };",
+                  "language": "javascript",
+                  "arguments": "${{\n                        \"$context\": $context,\n                        \"$workflow\": $workflow,\n                        \"$input\": $input,\n                    }}"
+                }
+              },
+              "export": {
+                "as": "{ ...$context, outputs: { ...$context?.outputs, \"BuildStartBody\": $output } }"
+              },
+              "metadata": {
+                "activityType": "JsInvoke",
+                "displayName": "Build start-execution body",
+                "fullName": "JsInvoke"
+              }
+            }
+          },
+          {
             "HttpRequest_3": {
               "call": "UiPath.Http",
               "export": {
@@ -517,7 +536,8 @@
                 "bodyParameters": {
                   "authentication": "manual",
                   "method": "POST",
-                  "url": "${$context.variables.tmBase + '/api/v2/' + $context.variables.projectId + '/testsets/' + $context.variables.testSetId + '/startexecute'}",
+                  "url": "${$context.variables.tmBase + '/api/v2/' + $context.variables.projectId + '/testsets/' + $context.variables.testSetId + '/startexecute?executionType=Automated&asyncMode=true'}",
+                  "body": "${$context.outputs.BuildStartBody}",
                   "headers": {
                     "Authorization": "${'Bearer ' + $context.variables.accessToken}",
                     "accept": "application/json",
@@ -556,7 +576,7 @@
               "for": {
                 "in": "${ [1] }"
               },
-              "doWhile": "${ !['Passed','Failed','Completed','Cancelled','Error','Done','DidNotExecute'].includes($context.variables.execStatus) && $context.variables.pollCount < 60 }",
+              "doWhile": "${ !['Passed','Failed','Completed','Cancelled','Error','Done','DidNotExecute'].includes($context.variables.execStatus) && $context.variables.pollCount < 120 }",
               "do": [
                 {
                   "Do_While_1#Body": {

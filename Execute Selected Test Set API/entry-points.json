@@ -5,9 +5,9 @@
     {
       "filePath": "content/Workflow.json",
       "uniqueId": "4c90ba55-6547-446c-8bd1-cb08c7cc8507",
-      "type": "Api",
       "input": null,
-      "output": null
+      "output": null,
+      "type": "Api"
     }
   ]
 }
