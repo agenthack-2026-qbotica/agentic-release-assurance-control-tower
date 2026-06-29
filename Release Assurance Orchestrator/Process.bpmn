@@ -190,7 +190,7 @@
             <uipath:input name="_label" type="string" value="Agent" />
             <uipath:inputSchema type="jsonSchema"><![CDATA[{"$schema":"http://json-schema.org/draft-07/schema#","type":"object","properties":{"testResultsJson":{"type":"object"}},"required":["testResultsJson"]}]]></uipath:inputSchema>
           </uipath:context>
-          <uipath:input name="JobArguments" type="json" target="bodyField"><![CDATA[{"testResultsJson":"=js:vars.testSetReportJson"}]]></uipath:input>
+          <uipath:input name="JobArguments" type="json" target="bodyField"><![CDATA[{"testResultsJson":"=vars.error5"}]]></uipath:input>
           <uipath:output name="Error" type="jsonSchema" source="=Error" var="error8" />
           <uipath:output name="ReleaseDecision" type="string" source="=ReleaseDecision" var="releaseDecision" />
         </uipath:activity>
@@ -237,7 +237,7 @@
             <uipath:input name="_label" type="string" value="Failure Triage Agent" />
             <uipath:inputSchema type="jsonSchema"><![CDATA[{"$schema":"http://json-schema.org/draft-07/schema#","type":"object","properties":{"JobError":{"type":"array"},"Requirement":{"type":"string"}},"required":[]}]]></uipath:inputSchema>
           </uipath:context>
-          <uipath:input name="JobArguments" type="json" target="bodyField"><![CDATA[{"JobError":"=vars.jobErrors","Requirement":"=vars.response.body"}]]></uipath:input>
+          <uipath:input name="JobArguments" type="json" target="bodyField"><![CDATA[{"JobError":"=vars.error3","Requirement":"=vars.response.body"}]]></uipath:input>
           <uipath:output name="Error" type="jsonSchema" source="=Error" var="error7" />
           <uipath:output name="isDefect" type="boolean" source="=isDefect" var="isDefect" />
           <uipath:output name="isAutomationFailure" type="boolean" source="=isAutomationFailure" var="isAutomationFailure" />
@@ -412,10 +412,10 @@
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="edge_Activity_4KzsH3-Activity_cY5urhEBGspI" sourceRef="Activity_4KzsH3" targetRef="Activity_ig5dWf" />
     <bpmn:sequenceFlow id="edge_Gateway_6Cr8ts-Activity_GWqM6UsRBT1A" name="All Test Cases Passed" sourceRef="Gateway_6Cr8ts" targetRef="Activity_GWqM6U">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=js:vars.jobErrors.length === 0</bpmn:conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=js:vars.error5.code === ''</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="edge_Gateway_6Cr8ts-Activity_6M1PFAVDuB3w" name="At least 1 Test Case Failed" sourceRef="Gateway_6Cr8ts" targetRef="Activity_6M1PFA">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=js:vars.jobErrors.length &gt; 0</bpmn:conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=js:parseInt(vars.error5.code) &lt; 0</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="edge_Activity_GWqM6U-Activity_f21uUA6HfvWQ" sourceRef="Activity_GWqM6U" targetRef="Activity_f21uUA" />
     <bpmn:sequenceFlow id="edge_Activity_f21uUA-Event_5nsSE4MsAkVS" sourceRef="Activity_f21uUA" targetRef="Event_5nsSE4" />
@@ -929,8 +929,8 @@
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="BPMNEdge_edge_3baNEN" bpmnElement="edge_3baNEN">
         <di:waypoint x="2489" y="144" />
-        <di:waypoint x="2489" y="-96" />
-        <di:waypoint x="1356" y="-96" />
+        <di:waypoint x="2489" y="-32" />
+        <di:waypoint x="1356" y="-32" />
         <di:waypoint x="1356" y="304" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="BPMNEdge_edge_Fimg9M" bpmnElement="edge_Fimg9M">
